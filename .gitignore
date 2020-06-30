@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+yarn.lock
 
 # testing
 /coverage
@@ -28,3 +29,13 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+# PWA Generating Files
+/public/sw.js
+/public/sw.js.map
+/public/workbox-*.js
+/public/workbox-*.js.map
+
+# ENV
+.env
+.vercel
