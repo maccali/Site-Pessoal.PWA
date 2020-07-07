@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 
 // import Nav from '../components/utils/nav'
@@ -6,6 +6,10 @@ import { GiAcrobatic } from "react-icons/gi";
 
 
 function Home() {
+
+  useEffect(() => {
+    console.log('-- Index')
+  }, []);
 
   return (
     <>

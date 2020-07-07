@@ -1,3 +1,5 @@
+import React, { useEffect } from 'react'
+
 // External Libs
 import '../public/libs/bootstrap/bootstrap.min.css'
 
@@ -24,6 +26,11 @@ import FixedPlugin from '../components/utils/FixedPlugin'
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
+
+  useEffect(() => {
+    console.log('-- APP')
+  }, []);
+
   return <>
     {/* Other Custom Logic */}
     <Nav />
@@ -38,7 +45,7 @@ export default function MyApp({ Component, pageProps }) {
     {/* <Offline /> */}
     {/* <Meta /> */}
     <Component {...pageProps} />
-    <Footer/>
+    <Footer />
   </>
 }
 
