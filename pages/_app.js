@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 
 // External Libs
 import '../public/libs/bootstrap/bootstrap.min.css'
@@ -30,6 +30,16 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     console.log('-- APP')
   }, []);
+  
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  useLayoutEffect(async() => {
+    console.log('-- APP layout')
+    await sleep(2000);
+    console.log('-- APP layout')
+  }, [])
 
   return <>
     {/* Other Custom Logic */}
