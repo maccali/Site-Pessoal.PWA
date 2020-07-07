@@ -58,7 +58,6 @@
   box-sizing: border-box; }
 
 html {
-  font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -73,12 +72,9 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 400;
+  font-size: 1rem; 
   line-height: 1.5;
   color: #525f7f;
-  text-align: left;
   background-color: #1e1e2f; }
 
 [tabindex="-1"]:focus {
@@ -176,7 +172,6 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em; }
 
 pre {
@@ -1315,9 +1310,9 @@ pre {
 .form-control {
   display: block;
   width: 100%;
-  height: calc(2.25rem + 2px);
+  height: calc(3.25rem + 2px);
   padding: 0.5rem 0.7rem;
-  font-size: 0.875rem;
+  font-size: 1.2rem;
   line-height: 1.42857;
   color: rgba(255, 255, 255, 0.8);
   background-color: transparent;
@@ -1667,8 +1662,8 @@ textarea.form-control {
   vertical-align: middle;
   user-select: none;
   border: 1px solid transparent;
-  padding: 11px 40px;
-  font-size: 0.875rem;
+  padding: 11px 25px;
+  font-size: 1.2rem;
   line-height: 1.35em;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
@@ -4267,7 +4262,6 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4352,7 +4346,6 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7148,9 +7141,6 @@ button.bg-darker:focus {
   .mx-xl-auto {
     margin-left: auto !important; } }
 
-.text-monospace {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
-
 .text-justify {
   text-align: justify !important; }
 
@@ -8679,7 +8669,7 @@ fieldset[disabled]
 .form-control {
   border-color: #2b3553;
   border-radius: 0.4285rem;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
   -webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   -moz-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -8746,7 +8736,6 @@ fieldset[disabled]
 
 .has-success:after,
 .has-danger:after {
-  font-family: 'nucleo';
   content: "\ea1b";
   display: inline-block;
   position: absolute;
@@ -9942,12 +9931,6 @@ h1, h2, h3, h4, h5, h6,
 p {
   font-weight: 300; }
 
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: "Poppins", sans-serif; }
 
 .card h1, .card h2, .card h3, .card h4, .card h5, .card h6, .card p {
   color: rgba(255, 255, 255, 0.8); }
@@ -10244,7 +10227,6 @@ hr {
   background-color: #e14eca; }
 
 .form-check .form-check-sign::after {
-  font-family: 'nucleo';
   content: "\ea1b";
   top: 0px;
   text-align: center;
@@ -10816,7 +10798,7 @@ hr {
       margin: 10px 10px;
       color: #ffffff;
       line-height: 20px;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    }
     .sidebar .logo .simple-text,
     .off-canvas-sidebar .logo .simple-text {
       text-transform: uppercase;
@@ -12344,7 +12326,7 @@ textarea.form-control {
     border-radius: 50%;
     margin-bottom: 15px; }
   .card label {
-    font-size: 0.75rem;
+    font-size: 1.2rem;
     margin-bottom: 5px; }
   .card .card-footer {
     background-color: transparent;

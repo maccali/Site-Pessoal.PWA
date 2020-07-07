@@ -48,7 +48,7 @@ import {
   chartExample2,
   chartExample3,
   chartExample4
-} from "./charts.js";
+} from "../../helpers/charts";
 
 
 
