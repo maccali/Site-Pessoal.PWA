@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Btn from '../Btn'
-import { GiHouseKeys } from "react-icons/gi";
+import { IoIosKey } from "react-icons/io";
 
 import styles from './pageerror.module.css'
 
@@ -20,7 +20,7 @@ function Error({ statusCode, message, title, action, actionFunction }) {
                     <h1>{statusCode}</h1>
                     <h2>{message}</h2>
                     <Btn action={actionFunction}>
-                      <GiHouseKeys />
+                      <IoIosKey />
                       {action}
                     </Btn>
                   </div>

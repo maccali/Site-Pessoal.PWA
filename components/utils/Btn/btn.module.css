@@ -1,5 +1,16 @@
 .btn{
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  background-color: #e14eca;
+  padding: 11px 25px;
+  border-radius: 25px;
+  border: 0;
+  color: white;
+  font-size: 12px;
+}
+
+.btn svg{
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
 }

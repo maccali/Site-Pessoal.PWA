@@ -62,10 +62,7 @@ export default function MyApp({ Component, pageProps }) {
         title="Autenticação"
         action="Entrar no Sistema"
         actionFunction={() => {
-          // Router.push('/')
           window.location.href = '/'
-          // router.push('/')
-          // setAllowLoad(true)
         }}
       />}
     {!prohibitNavigationBars ? <Footer /> : ''}
