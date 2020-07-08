@@ -15,9 +15,8 @@ import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 import Nav from '../components/utils/Nav'
 import Footer from '../components/utils/Footer'
-import PageError from '../components/utils/PageError'
 import Auth from '../helpers/Auth.ts'
-import { route } from 'next/dist/next-server/server/router'
+import AuthError from '../components/content/AuthError'
 
 
 // This default export is required in a new `pages/_app.js` file.
@@ -35,8 +34,6 @@ export default function MyApp({ Component, pageProps }) {
     '/',
     '/registrar'
   ];
-
-
 
   useLayoutEffect(() => {
     if (!allowEntryPoints.includes(window.location.pathname)) {
@@ -56,15 +53,8 @@ export default function MyApp({ Component, pageProps }) {
     {!prohibitNavigationBars ? <Nav /> : ''}
     {allowLoad ?
       <Component {...pageProps} /> :
-      <PageError
-        statusCode="401"
-        message="Você não tem Acesso Aqui"
-        title="Autenticação"
-        action="Entrar no Sistema"
-        actionFunction={() => {
-          window.location.href = '/'
-        }}
-      />}
+      <AuthError />
+    }
     {!prohibitNavigationBars ? <Footer /> : ''}
   </>
 }

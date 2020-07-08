@@ -1,10 +1,8 @@
 import Head from 'next/head'
-import Btn from '../Btn'
-import { IoIosKey } from "react-icons/io";
 
 import styles from './pageerror.module.css'
 
-function Error({ statusCode, message, title, action, actionFunction }) {
+function Error({ statusCode, message, title, children }) {
   return (
     <>
       <Head>
@@ -19,10 +17,7 @@ function Error({ statusCode, message, title, action, actionFunction }) {
                   <div className={styles.text}>
                     <h1>{statusCode}</h1>
                     <h2>{message}</h2>
-                    <Btn action={actionFunction}>
-                      <IoIosKey />
-                      {action}
-                    </Btn>
+                    {children}
                   </div>
                 </div>
               </div>
