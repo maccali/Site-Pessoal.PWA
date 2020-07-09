@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { AiOutlineMore } from "react-icons/ai";
 import { motion } from "framer-motion"
 import Link from 'next/link'
+import Btn from '../Btn'
+
+
 import Router from 'next/router'
 import styles from './nav.module.css'
 
@@ -118,16 +121,16 @@ function Nav() {
             </div>
             <div className={styles.menulist}>
               {Object.keys(links).map((key) => (
-                <Link href={`${links[key].url}`}>
-                  <a className={styles.menuitem} aria-label="Calendar Button">
-                    <span>
-                      <i className="far fa-calendar-alt"></i>
-                    </span>
-                    <p>{links[key].nome}</p>
-                  </a>
-                </Link>
+                  <Btn href={`${links[key].url}`} noStyle>
+                    <a className={styles.menuitem} aria-label="Calendar Button">
+                      <span>
+                        <i className="far fa-calendar-alt"></i>
+                      </span>
+                      <p>{links[key].nome}</p>
+                    </a>
+                  </Btn>
               ))}
-             
+
               {installBtn ?
                 <a onClick={() => install()} className={styles.menuitem}><span><i class="far fa-arrow-alt-circle-down"></i></span><p>Install App</p></a>
                 : ''}

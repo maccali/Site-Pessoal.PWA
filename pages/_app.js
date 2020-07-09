@@ -24,11 +24,13 @@ export default function MyApp({ Component, pageProps }) {
 
   // const router = useRouter();
   const [allowLoad, setAllowLoad] = useState(false);
+  const [allowNav, setAllowNav] = useState(false);
 
   const allowEntryPoints = [
     '/',
     '/registrar',
-    // '/dashboard'
+    '/dashboard',
+    '/icons'
   ];
 
   const prohibitNavigationBars = [
@@ -37,7 +39,9 @@ export default function MyApp({ Component, pageProps }) {
   ];
 
   useLayoutEffect(() => {
-    if (!allowEntryPoints.includes(window.location.pathname)) {
+    var pathName = window.location.pathname
+
+    if (!allowEntryPoints.includes(pathName)) {
       console.log(`💋👀 Verificando Autenticidade para rota "${window.location.pathname}"`)
       if (!Auth.isAuth()) {
         setAllowLoad(false)
@@ -48,15 +52,21 @@ export default function MyApp({ Component, pageProps }) {
       console.log(`👌👍 Rota Livre "${window.location.pathname}"`)
       setAllowLoad(true)
     }
+
+    if (!prohibitNavigationBars.includes(pathName)) {
+      setAllowNav(true)
+    }
   }, [])
 
   return <>
-    {!prohibitNavigationBars ? <Nav /> : ''}
     {allowLoad ?
-      <Component {...pageProps} /> :
+      <>
+        {allowNav ? <Nav /> : ''}
+        <Component {...pageProps} />
+        {allowNav ? <Footer /> : ''}
+      </> :
       <AuthError />
     }
-    {!prohibitNavigationBars ? <Footer /> : ''}
   </>
 }
 
