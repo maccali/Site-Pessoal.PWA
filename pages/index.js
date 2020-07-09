@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Btn from '../components/utils/Btn'
 
 import {
-  Button,
   Card,
   CardHeader,
   CardBody,
@@ -57,15 +56,15 @@ function Home() {
                 </Form>
               </CardBody>
               <CardFooter className="justfy-content mb-3">
-                <Btn action={() => {}} textOnly>
+                <Btn href='/registrar' textOnly>
                   <span>Cadastrar</span>
                 </Btn>
-                <Btn action={() => {}} >
+                <Btn href='/dashboard' >
                   <p>👻</p>
                   <span>Entrar</span>
                 </Btn>
               </CardFooter>
-              <b>Esqueceu a senha? <span>Recupere</span></b>
+              <span>Esqueceu a senha? <b>Recupere</b></span>
 
             </Card>
           </div>

@@ -4,7 +4,8 @@ import styles from './btn.module.css'
 
 type BtnFace = {
   children: ReactNode;
-  action: Function;
+  href?: string;
+  action?: Function;
   pos?: Boolean;
   iconOnly?: Boolean;
   textOnly?: Boolean;
@@ -12,11 +13,17 @@ type BtnFace = {
 
 function Btn({
   children,
+  href,
   action,
   pos,
   iconOnly,
   textOnly
 }: BtnFace) {
+
+  function hrefReplace(href: string) {
+    window.location.href = href;
+  }
+
   return (
     <>
       <button
@@ -26,7 +33,7 @@ function Btn({
           ${iconOnly ? styles.icon : ''}
           ${textOnly ? styles.text : ''}
           `}
-        onClick={() => action()}>
+        onClick={() => (href) ? hrefReplace(href) : (action) ? action() : ''}>
         {children}
       </button>
     </>
