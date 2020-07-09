@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Head from 'next/head'
-
-// import Nav from '../components/utils/nav'
-import { GiAcrobatic } from "react-icons/gi";
+import Btn from '../components/utils/Btn'
 
 import {
   Button,
@@ -10,7 +8,6 @@ import {
   CardHeader,
   CardBody,
   CardFooter,
-  CardText,
   FormGroup,
   Form,
   Input,
@@ -20,13 +17,8 @@ import {
 
 function Home() {
 
-  useEffect(() => {
-    console.log('-- Index')
-  }, []);
-
   return (
     <>
-      {/* <Nav /> */}
       <Head>
         <title>🔑 Login | Admin</title>
       </Head>
@@ -35,7 +27,7 @@ function Home() {
           <div className="content flex-center">
             <div>
             </div>
-            <Card className="p-5 mt-5 card-fixed-width">
+            <Card className="p-4 card-fixed-width">
               <CardHeader>
                 <h2 className="title">Login</h2>
               </CardHeader>
@@ -47,7 +39,7 @@ function Home() {
                         <label htmlFor="email">
                           Email
                         </label>
-                        <Input placeholder="mike@email.com" type="email" class="form-control form-control-lg"/>
+                        <Input placeholder="mike@email.com" type="email" class="form-control form-control-lg" />
                       </FormGroup>
                     </Col>
                   </Row>
@@ -57,7 +49,7 @@ function Home() {
                         <label htmlFor="password">
                           Senha
                         </label>
-                        <Input placeholder="5555555" type="password" class="form-control form-control-lg"/>
+                        <Input placeholder="5555555" type="password" class="form-control form-control-lg" />
                       </FormGroup>
                     </Col>
                   </Row>
@@ -65,15 +57,16 @@ function Home() {
                 </Form>
               </CardBody>
               <CardFooter className="justfy-content mb-3">
-                <Button className="btn-fill" color="primary" type="submit">
-                  Cadastrar
-                  </Button>
-                <Button className="btn-fill" color="primary" type="submit">
-                  Entrar
-                  </Button>
+                <Btn action={() => {}} textOnly>
+                  <span>Cadastrar</span>
+                </Btn>
+                <Btn action={() => {}} >
+                  <p>👻</p>
+                  <span>Entrar</span>
+                </Btn>
               </CardFooter>
-              <b>Esquesceu a senha? <span>Recupere</span></b>
-              
+              <b>Esqueceu a senha? <span>Recupere</span></b>
+
             </Card>
           </div>
         </div>

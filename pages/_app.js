@@ -2,10 +2,10 @@ import React, { useLayoutEffect, useEffect, useState } from 'react'
 import Router from 'next/router'
 
 // External Libs
-import '../public/libs/bootstrap/bootstrap.min.css'
+// import '../public/libs/bootstrap/bootstrap.min.css's
 
 // Custom styles
-import '../public/custom/css/black-dashboard-react.css'
+import '../public/custom/css/black-dashboard-react.min.css'
 import '../public/custom/css/demo.css'
 import '../public/custom/css/template.css'
 
@@ -27,7 +27,8 @@ export default function MyApp({ Component, pageProps }) {
 
   const allowEntryPoints = [
     '/',
-    '/registrar'
+    '/registrar',
+    // '/dashboard'
   ];
 
   const prohibitNavigationBars = [

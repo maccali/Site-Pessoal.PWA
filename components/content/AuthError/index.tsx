@@ -17,9 +17,9 @@ function AuthError() {
         message="Você não tem Acesso Aqui"
         title="Autenticação"
       >
-        <Btn action={() => toLogin()} >
-          <IoIosKey />
+        <Btn action={() => toLogin()} pos>
           <span>Entrar no Sistema</span>
+          <IoIosKey />
         </Btn>
       </PageError>
     </>

@@ -3,15 +3,39 @@
   justify-content: center;
   background-color: #e14eca;
   padding: 11px 0;
-  border-radius: 25px;
+  border-radius: .4285rem;
   border: 0;
   color: white;
+  font-weight: bold;
   font-size: 12px;
+  transition: all .3s;
 }
 
-.btn svg{
+.btn:hover{
+  background-color: #00d6b4;
+  transform: scale(1.05);
+}
+
+.btn span, .btn svg{
+  transition: all .3s;
+}
+
+.btn:hover span, .btn:hover svg{
+  color: black;
+}
+
+.btn svg, .btn p{
   height: 20px;
   width: 20px;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.btn p{
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 0;
   margin-right: 16px;
   margin-left: 16px;
 }
@@ -22,4 +46,15 @@
 
 .pre span{
   margin-right: 16px;
+}
+
+.text span{
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.icon svg, .icon p{
+  margin-right: 11px;
+  margin-left: 11px;
+  margin-bottom: 0;
 }
