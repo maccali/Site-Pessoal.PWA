@@ -64,8 +64,11 @@ function Home() {
                   <span>Entrar</span>
                 </Btn>
               </CardFooter>
-              <span>Esqueceu a senha? <b>Recupere</b></span>
-
+              <span>Esqueceu a senha?
+                <Btn href='/recuperar' noStyle>
+                  <b>Recupere</b>
+                </Btn>
+              </span>
             </Card>
           </div>
         </div>

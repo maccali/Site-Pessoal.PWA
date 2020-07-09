@@ -1,35 +1,33 @@
-import Head from 'next/head'
-// import Nav from '../../components/utils/nav'
-import styles from './error.module.css'
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+import PageError from '../../components/utils/PageError';
+import Btn from '../../components/utils/Btn'
 
 function Error({ statusCode }) {
+
+  var message = ''
+
+  if (statusCode == 404) {
+    message = 'Pagina não existe'
+  } else {
+    message = 'Algum Erro Ocorreu'
+  }
+
+  function goBack() {
+    window.history.back();
+  }
+
   return (
     <>
-      {/* <Nav /> */}
-      <Head>
-        <title>Apod - Error</title>
-      </Head>
-      <main>
-        <div className="container-fluid bg-primary">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <div className={styles.card}>
-                  {statusCode
-                    ? <div className={styles.text}>
-                      <p>An error</p>
-                      <h2>{statusCode}</h2>
-                      <p>occurred on server</p>
-                    </div>
-                    : <div className={styles.text}>
-                      <p>An error occurred on client</p>
-                    </div>}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
+      <PageError
+        statusCode={statusCode}
+        message={message}
+        title="Erro"
+      >
+        <Btn action={() => goBack()} >
+          <AiOutlineArrowLeft />
+          <span>Voltar</span>
+        </Btn>
+      </PageError>
     </>
   )
 }

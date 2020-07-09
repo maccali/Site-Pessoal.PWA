@@ -1,8 +1,4 @@
-import React, { useLayoutEffect, useEffect, useState } from 'react'
-import Router from 'next/router'
-
-// External Libs
-// import '../public/libs/bootstrap/bootstrap.min.css's
+import React, { useLayoutEffect, useState } from 'react'
 
 // Custom styles
 import '../public/custom/css/black-dashboard-react.min.css'
@@ -14,7 +10,6 @@ import 'react-datepicker/dist/react-datepicker.css';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 import Nav from '../components/utils/Nav'
-import Footer from '../components/utils/Footer'
 import Auth from '../helpers/Auth.ts'
 import AuthError from '../components/content/AuthError'
 
@@ -63,7 +58,6 @@ export default function MyApp({ Component, pageProps }) {
       <>
         {allowNav ? <Nav /> : ''}
         <Component {...pageProps} />
-        {allowNav ? <Footer /> : ''}
       </> :
       <AuthError />
     }
