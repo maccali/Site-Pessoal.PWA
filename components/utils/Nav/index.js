@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { AiOutlineMore } from "react-icons/ai";
+import { AiOutlineMore, AiOutlineUser, AiOutlineLock } from "react-icons/ai";
+import { TiGroupOutline } from "react-icons/ti";
+import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion"
 import Link from 'next/link'
 import Btn from '../Btn'
@@ -10,28 +12,36 @@ import styles from './nav.module.css'
 
 function Nav() {
 
-  const [menuActive, setMenuActive] = useState(0);
+  const [menuActive, setMenuActive] = useState(true);
   const [menuBack, setMenuBack] = useState(false);
   const [installBtn, setInstallBtn] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState();
   const [links, setLinks] = useState([
-    { nome: 'Dashboard', url: '/dashboard' },
-    { nome: 'Icons', url: '/icons' },
-    { nome: 'Notifications', url: '/notifications' },
-    { nome: 'Table List', url: '/tablelist' },
-    { nome: 'Typografy', url: '/typografy' },
-    { nome: 'User Profile', url: '/userprofile' }
+    { icone: <TiGroupOutline />, nome: 'Grupos', url: '/grupos' },
+    { icone: <AiOutlineUser />, nome: 'Usuários', url: '/usuarios' },
+    { icone: <AiOutlineLock />, nome: 'Permissões', url: '/permissoes' },
+    // { nome: 'Dashboard', url: '/dashboard' },
+    // { nome: 'Icons', url: '/icons' },
+    // { nome: 'Notifications', url: '/notifications' },
+    // { nome: 'Table List', url: '/tablelist' },
+    // { nome: 'Typografy', url: '/typografy' },
+    // { nome: 'User Profile', url: '/userprofile' }
   ]);
+
+  function setMenuOpenWithWithSize() {
+    setMenuActive((window.innerWidth >= 1740))
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", function () {
+      setMenuOpenWithWithSize()
+    })
+    setMenuOpenWithWithSize()
+  }, [])
 
   useEffect(() => {
     (function () {
       (history.length > 1) ? setMenuBack(true) : setMenuBack(false)
-
-      // links.map(link => {
-      //   console.log(link)
-      //   console.log(link.nome)
-      //   console.log(link.url)
-      // })
 
       window.addEventListener('beforeinstallprompt', (e) => {
         // Prevent the mini-infobar from appearing on mobile
@@ -65,11 +75,11 @@ function Nav() {
       <div className="container" >
         <nav className={styles.nav}>
           <ul className={styles.menu}>
-            {menuBack ?
+            {/* {menuBack ?
               <li>
                 <a onClick={() => Router.back()} className={styles.seta} aria-label="Back Page"><i className="fas fa-arrow-left"></i></a>
               </li>
-              : ''}
+              : ''} */}
             <li>
               <div className={styles.img}>
                 <Link href="/">
@@ -91,13 +101,6 @@ function Nav() {
             </li>
           </ul>
           <ul className={styles.menu}>
-            <li>
-              <Link href="/images">
-                <a className={styles.seta} aria-label="List of Days">
-                  <i className="fas fa-list-ul"></i>
-                </a>
-              </Link>
-            </li>
             <ul className={styles.menu}>
               <li>
                 <a onClick={() => setMenuActive(!menuActive)} className={styles.seta} aria-label="Open Menu"><AiOutlineMore /></a>
@@ -110,7 +113,7 @@ function Nav() {
             <div className={styles.headercont}>
               <p>Menu</p>
               <a onClick={() => setMenuActive(!menuActive)} aria-label="Close Menu">
-                <i className="fas fa-times"></i>
+                <MdClose />
               </a>
             </div>
             <div className={styles.cardmenu}>
@@ -121,14 +124,14 @@ function Nav() {
             </div>
             <div className={styles.menulist}>
               {Object.keys(links).map((key) => (
-                  <Btn href={`${links[key].url}`} noStyle>
-                    <a className={styles.menuitem} aria-label="Calendar Button">
-                      <span>
-                        <i className="far fa-calendar-alt"></i>
-                      </span>
-                      <p>{links[key].nome}</p>
-                    </a>
-                  </Btn>
+                <Btn href={`${links[key].url}`} noStyle>
+                  <div className={styles.menuitem} aria-label="Calendar Button">
+                    <span>
+                      {links[key].icone}
+                    </span>
+                    <p>{links[key].nome}</p>
+                  </div>
+                </Btn>
               ))}
 
               {installBtn ?
