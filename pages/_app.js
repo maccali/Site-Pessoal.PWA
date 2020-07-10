@@ -24,13 +24,15 @@ export default function MyApp({ Component, pageProps }) {
   const allowEntryPoints = [
     '/',
     '/registrar',
+    '/recuperar',
     '/dashboard',
     '/icons'
   ];
-
+  
   const prohibitNavigationBars = [
     '/',
-    '/registrar'
+    '/registrar',
+    '/recuperar',
   ];
 
   useLayoutEffect(() => {

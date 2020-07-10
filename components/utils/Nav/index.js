@@ -12,7 +12,7 @@ import styles from './nav.module.css'
 
 function Nav() {
 
-  const [menuActive, setMenuActive] = useState(true);
+  const [menuActive, setMenuActive] = useState(false);
   const [menuBack, setMenuBack] = useState(false);
   const [installBtn, setInstallBtn] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState();
