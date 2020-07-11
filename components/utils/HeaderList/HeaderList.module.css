@@ -1,0 +1,27 @@
+.cont{
+  background-color: #27293d;
+  border-radius: .4285rem;
+}
+
+.node{
+  display: flex;
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+.node h3{
+  padding: 0;
+  margin: 0;
+}
+
+.left{
+  justify-content: flex-start;
+
+}
+.right{
+  justify-content: flex-end;
+}
+
+.right > *{
+  margin-left: 16px;
+}

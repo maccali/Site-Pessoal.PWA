@@ -69,7 +69,7 @@ class Dashboard extends React.Component {
       <>
         <div className="container-fluid">
           <div className="container">
-            <div className="content">
+            <div className="content mt-4">
               <Row>
                 <Col xs="12">
                   <Card className="card-chart">

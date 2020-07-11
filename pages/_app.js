@@ -26,6 +26,7 @@ export default function MyApp({ Component, pageProps }) {
     '/registrar',
     '/recuperar',
     '/dashboard',
+    '/grupos',
     '/icons'
   ];
   

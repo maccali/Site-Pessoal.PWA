@@ -2,7 +2,7 @@
   width: 100%;
   position: fixed;
   z-index: 100 !important;
-  background-color: var(--primary-color);
+  background-color: #1e1e2f;
 }
 
 .space{
