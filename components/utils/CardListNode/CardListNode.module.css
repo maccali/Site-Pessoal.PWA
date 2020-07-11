@@ -1,0 +1,10 @@
+.node{
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.node b{
+  margin-bottom: 4px;
+}

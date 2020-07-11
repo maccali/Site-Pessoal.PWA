@@ -1,0 +1,10 @@
+.cont{
+  background-color: #27293d;
+  border-radius: .4285rem;
+  padding: 16px !important;
+  color: #d0cfcf;
+}
+
+.cont h4{
+  font-weight: bold
+}
