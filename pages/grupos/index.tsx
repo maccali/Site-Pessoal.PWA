@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import { RiFilter2Line } from 'react-icons/ri';
 import { TiPlus } from 'react-icons/ti';
@@ -9,17 +9,24 @@ import CardList from '../../components/utils/CardList'
 import CardListNode from '../../components/utils/CardListNode'
 import CardListActions from '../../components/utils/CardListActions'
 import Btn from '../../components/utils/Btn'
-
+import BtnIconCard from '../../components/utils/BtnIconCard'
 
 
 function Grupos() {
+
+  const [grupos, setGrupos] = useState([
+    { title: 'Administradores', utility: "Comandar a parada toda" },
+    { title: 'Administradores2', utility: "Comandar a parada toda" },
+    { title: 'Administradores3', utility: "Comandar a parada toda" },
+    { title: 'Administradores4', utility: "Comandar a parada toda" },
+  ])
 
   return (
     <>
       <Head>
         <title>👨‍👩‍👦‍👦 Grupos</title>
       </Head>
-      <main className="mt-4">
+      <main className="mt-4 mb-4">
         <HeaderList title="Grupos" >
           <Btn action={() => { console.log('😋 Abre filtro') }} iconOnly>
             <RiFilter2Line />
@@ -28,30 +35,29 @@ function Grupos() {
             <TiPlus />
           </Btn>
         </HeaderList>
-        <CardList title="Grupo">
-          <CardListNode col="col-12 col-md-4" field="Qualificação" value="Administradores" />
-          <CardListNode col="col-12 col-md-4" field="Função" value="Comandar a parada toda" />
-          <CardListNode col="col-12 col-md-4" field="Nome" value="Grupo 1" />
-          <CardListNode col="col-12 col-md-4" field="Nome" value="Grupo 1" />
-          <CardListNode col="col-12 col-md-4" field="Nome" value="Grupo 1" />
-          <CardListActions>
-            <Btn action={() => { console.log('😎 Ver Grupo') }} iconOnly>
-              <AiOutlineEye />
-            </Btn>
-            <Btn action={() => { console.log('😎 Editar Grupo') }} iconOnly>
-              <AiOutlineEdit />
-            </Btn>
-            <Btn action={() => { console.log('😎 Excluir grupo') }} iconOnly>
-              <AiOutlineClose />
-            </Btn>
-          </CardListActions>
-        </CardList>
-
-        <CardList title="Grupo 2">
-        </CardList>
-
-        <CardList title="Grupo 3">
-        </CardList>
+        {grupos.map(grupo =>
+          <CardList key={`${grupo.title}`} title={`${grupo.title}`}>
+            <CardListNode col="col-12 col-md-4" field="Utilidade" value={`${grupo.utility}`} />
+            <CardListNode col="col-12 col-md-4" field="Utilidade" value={`${grupo.utility}`} />
+            <CardListActions>
+              <Btn action={() => { console.log('😎 Ver Grupo') }} iconOnly noStyle>
+                <BtnIconCard>
+                  <AiOutlineEye />
+                </BtnIconCard>
+              </Btn>
+              <Btn action={() => { console.log('😎 Editar Grupo') }} iconOnly noStyle>
+                <BtnIconCard>
+                  <AiOutlineEdit />
+                </BtnIconCard>
+              </Btn>
+              <Btn action={() => { console.log('😎 Excluir grupo') }} iconOnly noStyle>
+                <BtnIconCard>
+                  <AiOutlineClose />
+                </BtnIconCard>
+              </Btn>
+            </CardListActions>
+          </CardList>
+        )}
       </main>
     </>
   )

@@ -1,0 +1,16 @@
+
+.btn{
+  transition: all .3s;
+  padding: 10px;
+}
+
+.btn:hover{
+  background-color: rgba(255, 255, 255, 0.39);
+  transition: all .3s;
+  border-radius: 45px;
+}
+
+.btn svg{
+  width: 23px;
+  height: 23px;
+}

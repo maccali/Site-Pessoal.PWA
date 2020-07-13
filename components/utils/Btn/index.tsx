@@ -27,13 +27,20 @@ function Btn({
   }
 
   if (noStyle) {
-    return (
-      <>
-        <a href={`${href}`}>
+    if (href) {
+      return (
+        <a href={href}>
           {children}
         </a>
-      </>
-    )
+      )
+    } else {
+      return (
+        <a onClick={() => (action) ? action() : ''}>
+          {children}
+        </a>
+      )
+
+    }
   } else {
     return (
       <>
