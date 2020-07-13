@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { RiFilter2Line } from 'react-icons/ri';
 import { TiPlus } from 'react-icons/ti';
@@ -16,10 +16,14 @@ function Grupos() {
 
   const [grupos, setGrupos] = useState([
     { title: 'Administradores', utility: "Comandar a parada toda" },
-    { title: 'Administradores2', utility: "Comandar a parada toda" },
-    { title: 'Administradores3', utility: "Comandar a parada toda" },
-    { title: 'Administradores4', utility: "Comandar a parada toda" },
+    { title: 'Administradores 2', utility: "Comandar a parada toda" },
+    { title: 'Administradores 3', utility: "Comandar a parada toda" },
+    { title: 'Administradores 4', utility: "Comandar a parada toda" },
   ])
+
+  useEffect(() => {
+    console.log('😁 Pegando grupos')
+  }, [])
 
   return (
     <>
