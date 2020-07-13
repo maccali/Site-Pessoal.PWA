@@ -2,7 +2,11 @@ import { AiOutlineArrowLeft } from 'react-icons/ai';
 import PageError from '../../components/utils/PageError';
 import Btn from '../../components/utils/Btn'
 
-function Error({ statusCode }) {
+type ErrorFace = {
+  statusCode: number
+}
+
+function Error({ statusCode }: ErrorFace) {
 
   var message = ''
 

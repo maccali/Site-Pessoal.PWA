@@ -27,7 +27,12 @@ export default function MyApp({ Component, pageProps }) {
     '/recuperar',
     '/dashboard',
     '/grupos',
-    '/icons'
+    '/icons',
+    '/notifications',
+    // '/examples',
+    // '/examples/tablelist',
+    // '/examples/typografy',
+    // '/examples/userprofile',
   ];
   
   const prohibitNavigationBars = [

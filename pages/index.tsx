@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import Btn from '../components/utils/Btn'
 
@@ -15,6 +15,9 @@ import {
 } from "reactstrap";
 
 function Home() {
+
+  const [email, setEmail] = useState<string>('admin@gmail.com');
+  const [password, setPassword] = useState<string>('password');
 
   return (
     <>
