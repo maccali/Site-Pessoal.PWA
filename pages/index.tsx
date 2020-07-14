@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import * as yup from "yup";
+import YupHelper from '../helpers/YupHelper'
+
 import Head from 'next/head'
 import Btn from '../components/utils/Btn'
 
@@ -14,10 +17,56 @@ import {
   Col
 } from "reactstrap";
 
+
+const LoginSchema = yup.object().shape({
+  email: yup
+    .string()
+    .email('O valor digitado deve ser um Email')
+    .required('Digite um email'),
+  password: yup
+    .string()
+    .required('Digite uma senha'),
+});
+
+
 function Home() {
 
   const [email, setEmail] = useState<string>('admin@gmail.com');
   const [password, setPassword] = useState<string>('password');
+
+  const [emailError, setEmailError] = useState<boolean>(false);
+  const [passwordError, setPasswordError] = useState<boolean>(false);
+
+  const [emailErrorMsg, setEmailErrorMsg] = useState<string>('');
+  const [passwordErrorMsg, setPasswordErrorMsg] = useState<string>('');
+
+
+  function handleSubmit() {
+
+    LoginSchema.validate({
+      email,
+      password,
+    }, { abortEarly: false }).then((data) => {
+      console.log('😘 Dados válidos')
+      console.log(data)
+    })
+      .catch(function (err) {
+        console.log('😥 Dados inválidos')
+
+        var errors = YupHelper.errorTreatment(err)
+
+        errors.map((item) => {
+          if (item.field === "email") {
+            setEmailError(true)
+            setEmailErrorMsg(item.message)
+          }
+          if (item.field === "password") {
+            setPasswordError(true)
+            setPasswordErrorMsg(item.message)
+          }
+        })
+      });
+  }
 
   return (
     <>
@@ -41,7 +90,15 @@ function Home() {
                         <label htmlFor="email">
                           Email
                         </label>
-                        <Input placeholder="mike@email.com" type="email" class="form-control form-control-lg" />
+                        <Input
+                          value={email}
+                          onChange={(e) => { setEmail(e.target.value) }}
+                          placeholder="mike@email.com"
+                          type="email"
+                          name="email"
+                          className="form-control form-control-lg"
+                        />
+                        {(emailError ? emailErrorMsg : '')}
                       </FormGroup>
                     </Col>
                   </Row>
@@ -51,7 +108,16 @@ function Home() {
                         <label htmlFor="password">
                           Senha
                         </label>
-                        <Input placeholder="5555555" type="password" class="form-control form-control-lg" />
+                        <Input
+                          value={password}
+                          onChange={(e) => { setPassword(e.target.value) }}
+                          placeholder="5555555"
+                          type="password"
+                          name="password"
+                          className="form-control form-control-lg"
+                        />
+
+                        {(passwordError ? passwordErrorMsg : '')}
                       </FormGroup>
                     </Col>
                   </Row>
@@ -62,7 +128,7 @@ function Home() {
                 <Btn href='/registrar' textOnly>
                   <span>Cadastrar</span>
                 </Btn>
-                <Btn href='/dashboard' >
+                <Btn action={() => handleSubmit()} >
                   <p>👻</p>
                   <span>Entrar</span>
                 </Btn>
