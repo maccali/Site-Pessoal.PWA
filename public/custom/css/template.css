@@ -26,9 +26,15 @@
   border-radius: 10px;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
 .container-full-height{
   height: 100vh;
 }
+
+
 
 .flex-center{
   display: flex;
@@ -54,3 +60,16 @@
 .button{
   font-size: 1rem !important;
 }
+
+.form-control{
+  margin-bottom: 5px !important;
+}
+
+.text-danger{
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.form-group{
+  margin-bottom: 20px !important;
+} 

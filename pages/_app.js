@@ -29,10 +29,10 @@ export default function MyApp({ Component, pageProps }) {
     '/grupos',
     '/icons',
     '/notifications',
-    // '/examples',
-    // '/examples/tablelist',
-    // '/examples/typografy',
-    // '/examples/userprofile',
+    '/examples',
+    '/examples/tablelist',
+    '/examples/typografy',
+    '/examples/userprofile',
   ];
   
   const prohibitNavigationBars = [

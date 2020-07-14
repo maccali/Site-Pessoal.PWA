@@ -31,7 +31,10 @@ const Auth = {
     localStorage.removeItem('end_date')
   },
 
-  getToken() {
+  getToken: () => {
+    if (typeof localStorage === 'undefined') {
+      return false
+    }
     return {
       token: localStorage.getItem('token'),
       expires_in: localStorage.getItem('expires_in'),
@@ -41,3 +44,4 @@ const Auth = {
 }
 
 export default Auth
+

@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import * as yup from "yup";
 import YupHelper from '../helpers/YupHelper'
 
+
+import api from '../services/api'
+import Auth from '../helpers/Auth'
+
 import Head from 'next/head'
 import Btn from '../components/utils/Btn'
+
 
 import {
   Card,
@@ -16,6 +21,7 @@ import {
   Row,
   Col
 } from "reactstrap";
+
 
 
 const LoginSchema = yup.object().shape({
@@ -31,8 +37,8 @@ const LoginSchema = yup.object().shape({
 
 function Home() {
 
-  const [email, setEmail] = useState<string>('admin@gmail.com');
-  const [password, setPassword] = useState<string>('password');
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
 
   const [emailError, setEmailError] = useState<boolean>(false);
   const [passwordError, setPasswordError] = useState<boolean>(false);
@@ -40,16 +46,42 @@ function Home() {
   const [emailErrorMsg, setEmailErrorMsg] = useState<string>('');
   const [passwordErrorMsg, setPasswordErrorMsg] = useState<string>('');
 
+  const [serverError, setServerError] = useState<boolean>(false);
+  const [serverErrorMsg, setServerErrorMsg] = useState<string>('');
+
+
+
+  async function sendRequest(data: any) {
+    api.post('/api/auth/login', data)
+      .then((response: any) => {
+        if (response.status === 200) {
+          const { access_token, expires_in } = response.data
+
+          Auth.saveToken(access_token, String(expires_in))
+
+          console.log(Auth.getToken())
+
+          window.location.href = '/dashboard'
+
+        }
+      }).catch((error) => {
+        if(error.response.status === 401){
+          setServerErrorMsg('Email ou senha errados')
+        }
+        setServerError(true)
+      })
+  }
 
   function handleSubmit() {
 
     LoginSchema.validate({
       email,
       password,
-    }, { abortEarly: false }).then((data) => {
-      console.log('😘 Dados válidos')
-      console.log(data)
-    })
+    }, { abortEarly: false })
+      .then((data) => {
+        console.log('😘 Dados válidos')
+        sendRequest(data)
+      })
       .catch(function (err) {
         console.log('😥 Dados inválidos')
 
@@ -93,12 +125,12 @@ function Home() {
                         <Input
                           value={email}
                           onChange={(e) => { setEmail(e.target.value) }}
-                          placeholder="mike@email.com"
+                          placeholder="Digite seu email"
                           type="email"
                           name="email"
                           className="form-control form-control-lg"
                         />
-                        {(emailError ? emailErrorMsg : '')}
+                        {(emailError ? <p className="text-danger">{emailErrorMsg}</p> : '')}
                       </FormGroup>
                     </Col>
                   </Row>
@@ -111,15 +143,18 @@ function Home() {
                         <Input
                           value={password}
                           onChange={(e) => { setPassword(e.target.value) }}
-                          placeholder="5555555"
+                          placeholder="Digite sua senha"
                           type="password"
                           name="password"
                           className="form-control form-control-lg"
                         />
 
-                        {(passwordError ? passwordErrorMsg : '')}
+                        {(passwordError ? <p className="text-danger">{passwordErrorMsg}</p> : '')}
                       </FormGroup>
                     </Col>
+                  </Row>
+                  <Row>
+                    {serverError ? <p className="text-danger">{serverErrorMsg}</p> : ''}
                   </Row>
 
                 </Form>
@@ -135,7 +170,7 @@ function Home() {
               </CardFooter>
               <span>Esqueceu a senha?
                 <Btn href='/recuperar' noStyle>
-                  <b>Recupere</b>
+                  <b className="ml-1">Recupere</b>
                 </Btn>
               </span>
             </Card>
