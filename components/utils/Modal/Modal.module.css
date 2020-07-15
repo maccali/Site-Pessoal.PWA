@@ -1,7 +1,11 @@
 .fixedcont{
   position: fixed;
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: #1e1e2f;
+}
+
+.mt60 {
+  margin-top: 60px;
 }
 
 .contaside{
@@ -10,7 +14,7 @@
   right: 0;
   top: 0;
   height: 100vh;
-  background-color: var(--bg-primary);
+  background-color: #27293d;
   color: #fff;
   width: 0;
   transition: all .25s;
@@ -22,7 +26,7 @@
 }
 
 .bgprimary{
-  background-color: var(--bg-primary);
+  background-color: #27293d;
 }
 
 .contaside::-webkit-scrollbar {
@@ -36,7 +40,7 @@
 .contasidefix{
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-color);
+  background-color: #27293d;
   width: 100vw;
 }
 
@@ -76,11 +80,6 @@
   width: 28px;
   height: 28px;
   color: #fff;
-}
-
-.spacer{
-  height: 60px;
-  background-color: var(--bg-primary);
 }
 
 .img {

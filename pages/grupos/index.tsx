@@ -10,6 +10,7 @@ import CardListNode from '../../components/utils/CardListNode'
 import CardListActions from '../../components/utils/CardListActions'
 import Btn from '../../components/utils/Btn'
 import BtnIconCard from '../../components/utils/BtnIconCard'
+import Modal from '../../components/utils/Modal'
 
 
 function Grupos() {
@@ -20,6 +21,11 @@ function Grupos() {
     { title: 'Administradores 3', utility: "Comandar a parada toda" },
     { title: 'Administradores 4', utility: "Comandar a parada toda" },
   ])
+
+  const [modalEdit, setModalEdit] = useState(false)
+  const [modalInsert, setModalInsert] = useState(false)
+  const [modalViewer, setModalViewer] = useState(false)
+  const [modalFilter, setModalFilter] = useState(false)
 
   useEffect(() => {
     console.log('😁 Pegando grupos')
@@ -32,10 +38,10 @@ function Grupos() {
       </Head>
       <main className="mt-4 mb-4">
         <HeaderList title="Grupos" >
-          <Btn action={() => { console.log('😋 Abre filtro') }} iconOnly>
+          <Btn action={() => { setModalFilter(true) }} iconOnly>
             <RiFilter2Line />
           </Btn>
-          <Btn action={() => { console.log('😎 Abre Adicioner') }} iconOnly>
+          <Btn action={() => { setModalInsert(true) }} iconOnly>
             <TiPlus />
           </Btn>
         </HeaderList>
@@ -44,12 +50,12 @@ function Grupos() {
             <CardListNode col="col-12 col-md-4" field="Utilidade" value={`${grupo.utility}`} />
             <CardListNode col="col-12 col-md-4" field="Utilidade" value={`${grupo.utility}`} />
             <CardListActions>
-              <Btn action={() => { console.log('😎 Ver Grupo') }} iconOnly noStyle>
+              <Btn action={() => { setModalViewer(true) }} iconOnly noStyle>
                 <BtnIconCard>
                   <AiOutlineEye />
                 </BtnIconCard>
               </Btn>
-              <Btn action={() => { console.log('😎 Editar Grupo') }} iconOnly noStyle>
+              <Btn action={() => { setModalEdit(true) }} iconOnly noStyle>
                 <BtnIconCard>
                   <AiOutlineEdit />
                 </BtnIconCard>
@@ -63,6 +69,20 @@ function Grupos() {
           </CardList>
         )}
       </main>
+
+      <Modal open={modalInsert} setClose={() => setModalInsert(!modalInsert)}  >
+        INSERT
+      </Modal>
+      <Modal open={modalEdit} setClose={() => setModalEdit(!modalEdit)}  >
+        EDIT
+      </Modal>
+      <Modal open={modalViewer} setClose={() => setModalViewer(!modalViewer)}  >
+        VIEW
+      </Modal>
+      <Modal open={modalFilter} setClose={() => setModalFilter(!modalFilter)}  >
+        Filter
+      </Modal>
+
     </>
   )
 }

@@ -4,13 +4,13 @@ import styles from './Modal.module.css'
 
 type ModalFace = {
   open: Boolean,
-  closeFunction: Function,
+  setClose: Function,
   children: ReactNode
 }
 
 function Modal({
   open,
-  closeFunction,
+  setClose,
   children
 }: ModalFace) {
 
@@ -26,7 +26,7 @@ function Modal({
                     <div className={styles.img}>
                       <img src="/icons/icon126t.png" alt="Site Logo" />
                     </div>
-                    <a onClick={() => closeFunction(!open)} aria-label="Close Menu">
+                    <a onClick={() => setClose(!open)} aria-label="Close Menu">
                       <AiOutlineClose />
                     </a>
                   </div>
@@ -34,12 +34,12 @@ function Modal({
               </div>
             </div>
           </div>
-          <div className="col-12">
-            <div className={styles.spacer}></div>
-            <div className={styles.bgprimary}>
-              {children}
+          <div className={`col-12 ${styles.mt60}`}>
+            <div className='mt-5 mb-5'>
+              <div className={styles.bgprimary}>
+                {children}
+              </div>
             </div>
-            <div className={styles.spacer}></div>
           </div>
         </div>
       </div>
