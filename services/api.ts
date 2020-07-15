@@ -5,8 +5,11 @@ const api: AxiosInstance = axios.create({
   baseURL: process.env.API_URL
 })
 
-const { token } = Auth.getToken()
+const authKeys = Auth.getToken()
 
-api.defaults.headers.common = { 'Authorization': `bearer ${token}` }
+if (authKeys !== false) {
+  const { token } = authKeys
+  api.defaults.headers.common = { 'Authorization': `bearer ${token}` }
+}
 
 export default api

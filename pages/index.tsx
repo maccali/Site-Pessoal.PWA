@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import * as yup from "yup";
 import YupHelper from '../helpers/YupHelper'
 
@@ -49,9 +49,10 @@ function Home() {
   const [serverError, setServerError] = useState<boolean>(false);
   const [serverErrorMsg, setServerErrorMsg] = useState<string>('');
 
-
+  const [load, setLoad] = useState<boolean>(false);
 
   async function sendRequest(data: any) {
+    setLoad(true)
     api.post('/api/auth/login', data)
       .then((response: any) => {
         if (response.status === 200) {
@@ -64,11 +65,13 @@ function Home() {
           window.location.href = '/dashboard'
 
         }
+        setLoad(false)
       }).catch((error) => {
-        if(error.response.status === 401){
+        if (error.response.status === 401) {
           setServerErrorMsg('Email ou senha errados')
         }
         setServerError(true)
+        setLoad(false)
       })
   }
 
@@ -163,7 +166,7 @@ function Home() {
                 <Btn href='/registrar' textOnly>
                   <span>Cadastrar</span>
                 </Btn>
-                <Btn action={() => handleSubmit()} >
+                <Btn action={() => handleSubmit()} load={load} >
                   <p>👻</p>
                   <span>Entrar</span>
                 </Btn>

@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useRef, useEffect, useState } from 'react'
+import { ClipLoader } from 'react-spinners'
 
 import styles from './btn.module.css'
 
@@ -6,6 +7,7 @@ type BtnFace = {
   children: ReactNode;
   href?: string;
   action?: Function;
+  load?: Boolean;
   pos?: Boolean;
   iconOnly?: Boolean;
   textOnly?: Boolean;
@@ -19,11 +21,40 @@ function Btn({
   pos,
   iconOnly,
   textOnly,
-  noStyle
+  noStyle,
+  load
 }: BtnFace) {
+
+  const ref = useRef(null);
+  const [width, setWidth] = useState<Number>(0)
+  const [height, setHeight] = useState<Number>(0)
 
   function hrefReplace(href: string) {
     window.location.href = href;
+  }
+
+  useEffect(() => {
+    console.log(ref)
+    // @ts-ignore: Object is possibly 'null'.
+    ref.current ? setWidth(ref.current.offsetWidth) : 0;
+    // @ts-ignore: Object is possibly 'null'.
+    ref.current ? setHeight(ref.current.offsetHeight) : 0;
+  }, [ref.current]);
+
+  if (load) {
+    return (
+      <>
+        <div
+          className={styles.load}
+          style={{
+            width: Number(width),
+            height: Number(height)
+          }}
+        >
+          <ClipLoader size={23} color="#00d6b4" />
+        </div>
+      </>
+    )
   }
 
   if (noStyle) {
@@ -45,7 +76,9 @@ function Btn({
     return (
       <>
         <button
+          ref={ref}
           className={`
+             
             ${styles.btn} 
             ${pos ? styles.pos : styles.pre}
             ${iconOnly ? styles.icon : ''}

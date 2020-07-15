@@ -14,7 +14,7 @@ import BtnIconCard from '../../components/utils/BtnIconCard'
 
 function Grupos() {
 
-  const [grupos, setGrupos] = useState([
+  const [grupos] = useState([
     { title: 'Administradores', utility: "Comandar a parada toda" },
     { title: 'Administradores 2', utility: "Comandar a parada toda" },
     { title: 'Administradores 3', utility: "Comandar a parada toda" },

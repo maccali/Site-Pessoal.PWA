@@ -58,3 +58,10 @@
   margin-left: 11px;
   margin-bottom: 0;
 }
+
+.load{
+  display: flex;
+  align-items: center;
+  content: 'entrar';
+  justify-content: center;
+}
