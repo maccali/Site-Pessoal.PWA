@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useLayoutEffect, useState, useEffect } from 'react'
 
 // Custom styles
 import '../public/custom/css/black-dashboard-react.min.css'
@@ -20,6 +20,8 @@ export default function MyApp({ Component, pageProps }) {
   // const router = useRouter();
   const [allowLoad, setAllowLoad] = useState(false);
   const [allowNav, setAllowNav] = useState(false);
+  const [takeOff, setTakeOff] = useState(false);
+
 
   const allowEntryPoints = [
     '/',
@@ -34,14 +36,16 @@ export default function MyApp({ Component, pageProps }) {
     '/examples/typografy',
     '/examples/userprofile',
   ];
-  
+
   const prohibitNavigationBars = [
     '/',
     '/registrar',
     '/recuperar',
   ];
 
+
   useLayoutEffect(() => {
+    setTakeOff(false)
     var pathName = window.location.pathname
 
     if (!allowEntryPoints.includes(pathName)) {
@@ -59,16 +63,18 @@ export default function MyApp({ Component, pageProps }) {
     if (!prohibitNavigationBars.includes(pathName)) {
       setAllowNav(true)
     }
+    setTakeOff(true)
   }, [])
 
   return <>
-    {allowLoad ?
-      <>
-        {allowNav ? <Nav /> : ''}
-        <Component {...pageProps} />
-      </> :
-      <AuthError />
-    }
+    {takeOff ?
+      allowLoad ?
+        <>
+          {allowNav ? <Nav /> : ''}
+          < Component {...pageProps} />
+        </> :
+        <AuthError />
+      : ''}
   </>
 }
 

@@ -13,7 +13,7 @@ function AuthError() {
   return (
     <>
       <PageError
-        statusCode="401"
+        statusCode={401}
         message="Você não tem Acesso Aqui"
         title="Autenticação"
       >

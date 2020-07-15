@@ -1,8 +1,22 @@
+import React, { ReactNode } from 'react'
+
 import Head from 'next/head'
 
-import styles from './pageerror.module.css'
+import styles from './PageError.module.css'
 
-function Error({ statusCode, message, title, children }) {
+type ErrorFace = {
+  statusCode: Number,
+  title: string,
+  message: string,
+  children: ReactNode,
+}
+
+function Error({
+  statusCode,
+  message,
+  title,
+  children
+}: ErrorFace) {
   return (
     <>
       <Head>
@@ -15,9 +29,11 @@ function Error({ statusCode, message, title, children }) {
               <div className="col-12">
                 <div className={styles.card}>
                   <div className={styles.text}>
-                    <h1>{statusCode}</h1>
-                    <h2>{message}</h2>
-                    {children}
+                    <h1 className="mt-5">{statusCode}</h1>
+                    <h2 className="mt-3">{message}</h2>
+                    <div className="mt-5">
+                      {children}
+                    </div>
                   </div>
                 </div>
               </div>
