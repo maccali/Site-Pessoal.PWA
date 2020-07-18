@@ -69,7 +69,11 @@ function Permissoes() {
         {permissoes.map(permissao =>
           <CardList key={`${permissao.title}`} title={`${permissao.title}`}>
             {Object.entries(permissao.acoes).map(([key, item]) =>
-              < CardListNode col="col-12 col-md-3" field={`${key}`} value={`${item}`} />
+              < CardListNode
+                col="col-12 col-md-3"
+                field={`${key}`}
+                value={item ? 'Ativo' : 'Inativo' }
+                tag={item ? '#98ec65' : '#ff5555' } />
             )}
             <CardListActions>
               <Btn action={() => { setModalViewer(true) }} iconOnly noStyle>
