@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import * as yup from "yup";
 import YupHelper from '../helpers/YupHelper'
+import ErrorHelper from '../helpers/ErrorHelper'
 
 
 import api from '../services/api'
@@ -67,7 +68,15 @@ function Home() {
         }
         setLoad(false)
       }).catch((error) => {
-        if (error.response.status === 401) {
+
+        var solve = ErrorHelper.interpreter(error)
+        setServerErrorMsg('Ocorreu um erro tente novamente')
+        
+        if (solve) {
+          setServerErrorMsg(solve)
+        }
+        
+        if (error.status === 401) {
           setServerErrorMsg('Email ou senha errados')
         }
         setServerError(true)

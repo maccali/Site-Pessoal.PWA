@@ -17,7 +17,7 @@ function CardList({
     <>
       <div className="container-fluid mt-4">
         <div className={`container ${styles.cont}`}>
-          <h4>{title}</h4>
+          <h4 className="mb-3">{title}</h4>
           <div className="row">
             {children}
           </div>
