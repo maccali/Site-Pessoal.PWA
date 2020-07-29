@@ -1,7 +1,6 @@
 import React from 'react'
 
 import styles from './CardListNode.module.css'
-import { spawn } from 'child_process'
 
 type CardListNodeFace = {
   col: string;
@@ -28,7 +27,7 @@ function CardListNode({
                 className={styles.tag}
                 style={{
                   backgroundColor: tag,
-                }}></span> : 'k'}
+                }}></span> : ''}
             {value}
           </div>
         </div>

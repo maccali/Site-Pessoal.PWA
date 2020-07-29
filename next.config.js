@@ -17,5 +17,8 @@ module.exports = withPWA({
   },
   env: {
     API_URL: process.env.API_URL,
+    MARVEL_API_PUBLIC_KEY: process.env.MARVEL_API_PUBLIC_KEY,
+    MARVEL_API_PRIVATE_KEY: process.env.MARVEL_API_PRIVATE_KEY,
+    MARVEL_API_TS: process.env.MARVEL_API_TS,
   },
 })

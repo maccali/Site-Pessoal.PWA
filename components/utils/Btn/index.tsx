@@ -60,13 +60,19 @@ function Btn({
   if (noStyle) {
     if (href) {
       return (
-        <a href={href}>
+        <a
+          className={styles.taglink}
+          href={href}
+        >
           {children}
         </a>
       )
     } else {
       return (
-        <a onClick={() => (action) ? action() : ''}>
+        <a
+          className={styles.taglink}
+          onClick={() => (action) ? action() : ''}
+        >
           {children}
         </a>
       )

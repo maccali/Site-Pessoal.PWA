@@ -6,8 +6,6 @@ import { motion } from "framer-motion"
 import Link from 'next/link'
 import Btn from '../Btn'
 
-
-import Router from 'next/router'
 import styles from './nav.module.css'
 
 function Nav() {
@@ -17,19 +15,12 @@ function Nav() {
   const [installBtn, setInstallBtn] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState();
   const [links, setLinks] = useState([
-    { icone: <TiGroupOutline />, nome: 'Grupos', url: '/grupos' },
-    { icone: <AiOutlineUser />, nome: 'Usuários', url: '/usuarios' },
-    { icone: <AiOutlineLock />, nome: 'Permissões', url: '/permissoes' },
-    // { nome: 'Dashboard', url: '/dashboard' },
-    // { nome: 'Icons', url: '/icons' },
-    // { nome: 'Notifications', url: '/notifications' },
-    // { nome: 'Table List', url: '/tablelist' },
-    // { nome: 'Typografy', url: '/typografy' },
-    // { nome: 'User Profile', url: '/userprofile' }
+    { icone: <TiGroupOutline />, nome: 'About', url: '/about' },
   ]);
 
   function setMenuOpenWithWithSize() {
-    setMenuActive((window.innerWidth >= 1740))
+    // setMenuActive((window.innerWidth >= 1740))
+    setMenuActive(false)
   }
 
   useEffect(() => {
@@ -68,18 +59,11 @@ function Nav() {
     });
   }
 
-  console.log(links)
-
   return (<>
     <div className="container-fluid" className={styles.cont}>
       <div className="container" >
         <nav className={styles.nav}>
           <ul className={styles.menu}>
-            {/* {menuBack ?
-              <li>
-                <a onClick={() => Router.back()} className={styles.seta} aria-label="Back Page"><i className="fas fa-arrow-left"></i></a>
-              </li>
-              : ''} */}
             <li>
               <div className={styles.img}>
                 <Link href="/">
@@ -112,15 +96,15 @@ function Nav() {
           <div className={styles.contasidefix}>
             <div className={styles.headercont}>
               <p>Menu</p>
-              <a onClick={() => setMenuActive(!menuActive)} aria-label="Close Menu">
+              <Btn action={() => setMenuActive(!menuActive)} noStyle>
                 <MdClose />
-              </a>
+              </Btn>
             </div>
             <div className={styles.cardmenu}>
               <div>
-                <img src="/icons/icon126t.png" alt="Foto do Perfil" />
+                <img src="/icons/icon126t.png" />
               </div>
-              <span>Apod Pictu</span>
+              <span>Marvel Games Shop</span>
             </div>
             <div className={styles.menulist}>
               {Object.keys(links).map((key) => (

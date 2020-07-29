@@ -1,1 +1,1 @@
-console.log("😘 Bem-vindo ao Power PWA 🙃")
+console.log("🎮😘 Bem-vindo ao Marvel Games Shop PWA 🙃🕹")

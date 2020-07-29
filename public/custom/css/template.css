@@ -22,12 +22,17 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #00d6b4;
-  border-radius: 10px;
+  background: #f1555b;
 }
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #BABABA;
 }
 
 .container-full-height{

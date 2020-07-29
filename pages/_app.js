@@ -1,8 +1,6 @@
 import React, { useLayoutEffect, useState, useEffect } from 'react'
 
 // Custom styles
-import '../public/custom/css/black-dashboard-react.min.css'
-import '../public/custom/css/demo.css'
 import '../public/custom/css/template.css'
 
 // External Components
@@ -25,22 +23,11 @@ export default function MyApp({ Component, pageProps }) {
 
   const allowEntryPoints = [
     '/',
-    '/registrar',
-    '/recuperar',
-    '/dashboard',
-    '/grupos',
-    '/icons',
-    '/notifications',
-    '/examples',
-    '/examples/tablelist',
-    '/examples/typografy',
-    '/examples/userprofile',
+    '/cart',
   ];
 
   const prohibitNavigationBars = [
-    '/',
-    '/registrar',
-    '/recuperar',
+   
   ];
 
 
