@@ -4,6 +4,7 @@ import { ClipLoader } from 'react-spinners'
 import styles from './btn.module.css'
 
 type BtnFace = {
+  title: string;
   children: ReactNode;
   href?: string;
   action?: Function;
@@ -15,6 +16,7 @@ type BtnFace = {
 }
 
 function Btn({
+  title,
   children,
   href,
   action,
@@ -61,6 +63,7 @@ function Btn({
     if (href) {
       return (
         <a
+          title={title}
           className={styles.taglink}
           href={href}
         >
@@ -70,6 +73,7 @@ function Btn({
     } else {
       return (
         <a
+          title={title}
           className={styles.taglink}
           onClick={() => (action) ? action() : ''}
         >
@@ -82,6 +86,7 @@ function Btn({
     return (
       <>
         <button
+          title={title}
           ref={ref}
           className={`
              

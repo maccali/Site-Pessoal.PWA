@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { AiOutlineMore, AiOutlineUser, AiOutlineLock } from "react-icons/ai";
 import { TiGroupOutline } from "react-icons/ti";
+import { FiShoppingCart, FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion"
 import Link from 'next/link'
@@ -85,18 +85,19 @@ function Nav() {
             </li>
           </ul>
           <ul className={styles.menu}>
-            <ul className={styles.menu}>
-              <li>
-                <a onClick={() => setMenuActive(!menuActive)} className={styles.seta} aria-label="Open Menu"><AiOutlineMore /></a>
-              </li>
-            </ul>
+            <Btn href="/cart" noStyle>
+              <FiShoppingCart />
+            </Btn>
+            <Btn action={() => setMenuActive(!menuActive)} noStyle>
+              <FiMenu />
+            </Btn>
           </ul>
         </nav>
         <div className={(menuActive) ? `${styles.contaside} ${styles.contasideativado}` : styles.contaside}>
           <div className={styles.contasidefix}>
             <div className={styles.headercont}>
               <p>Menu</p>
-              <Btn action={() => setMenuActive(!menuActive)} noStyle>
+              <Btn title="Access Cart" action={() => setMenuActive(!menuActive)} noStyle>
                 <MdClose />
               </Btn>
             </div>
