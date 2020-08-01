@@ -1,18 +1,17 @@
 .btn{
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #b71e23;
   padding: 11px 0;
-  border-radius: .4285rem;
   border: 0;
   color: white;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   transition: all .3s;
 }
 
 .btn:hover{
-  background-color: #ef474d;
   transform: scale(1.05);
 }
 
@@ -21,7 +20,7 @@
 }
 
 .btn:hover span, .btn:hover svg{
-  color: black;
+  /* color: black; */
 }
 
 .btn svg, .btn p{
@@ -67,5 +66,5 @@
 }
 
 .taglink{
-  text-decoration: none;
+  text-decoration: none !important;
 }

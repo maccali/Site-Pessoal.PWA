@@ -4,12 +4,17 @@
   height: calc(100vh - 200px);
 }
 
+
 .text{
   align-self: center;
 }
 
-.text p, .text h2{
-  color: white;
+.text > *{
+  margin-bottom: 20px;
+}
+
+.text p, .text h1, .text h2{
+  color: black;
 }
 
 .text p{

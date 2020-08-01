@@ -1,5 +1,8 @@
 import React, { useLayoutEffect, useState, useEffect } from 'react'
 
+// External Libs
+import '../public/libs/bootstrap/bootstrap.min.css'
+
 // Custom styles
 import '../public/custom/css/template.css'
 

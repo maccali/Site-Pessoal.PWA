@@ -11,12 +11,12 @@
     "moduleResolution": "node",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "noUnusedLocals": false,
   },
   "exclude": ["node_modules"],
   "include": ["**/*.ts", "**/*.tsx", "pages/dashboard/index.js"]

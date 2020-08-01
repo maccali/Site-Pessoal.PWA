@@ -1,0 +1,31 @@
+.title{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.img{
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 70vh;
+}
+
+.img img{
+  object-fit: contain;
+}
+
+.price{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.description{
+  margin-top: 40px;
+}
+
+.description p{
+  text-indent: 1.4em;
+  text-align: justify;
+}
