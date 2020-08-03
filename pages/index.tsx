@@ -1,23 +1,30 @@
 import React, { useState, useEffect } from 'react'
 
+// External Libs
+import Head from 'next/head'
+import NumberFormat from 'react-number-format';
+
+// Intenal Utils
+import Modal from '../components/utils/Modal'
+import Erro from '../components/utils/Error'
+import Btn from '../components/utils/Btn'
+import Spinner from '../components/utils/Spinner';
+import Pagination from '../components/utils/Pagination'
+
+// Product Card and Contents
 import ProductCard from '../components/cards/ProductCard'
 import ProductContent from '../components/content/ProductContent'
-import Modal from '../components/utils/Modal'
 
-
+// Api Config
 import api from '../services/api'
-
-import Head from 'next/head'
-import Btn from '../components/utils/Btn'
 
 
 function Home() {
 
-
   const [comics, setComics] = useState([]);
   const [load, setLoad] = useState<boolean>(false);
   const [page, setPage] = useState<number>(1);
-  const [limit, setLimit] = useState<number>(20);
+  const [limit, setLimit] = useState<number>(9);
   const [offset, setOffset] = useState<number>(0);
 
   const [current, setCurrent] = useState<any>(null);
@@ -46,24 +53,21 @@ function Home() {
   async function getData() {
 
     setOffset(page * limit)
+    setLoad(true)
 
     api.get(`/v1/public/comics?limit=${limit}&offset=${offset}`)
       .then((response: any) => {
         if (response.status === 200) {
-          console.log('certo')
-          console.log(response)
 
           var { results } = response.data.data
 
           setComics(comics.concat(results))
 
         }
+        setPage(page + 1)
         setLoad(false)
       }).catch((error) => {
-        // Erro
-        console.log('Erro')
-        console.log(error)
-        console.log(error.response)
+
         setLoad(false)
       })
   }
@@ -86,9 +90,7 @@ function Home() {
     bodyControl(false)
     setModal(true)
     setCurrent(current)
-    // tslint:disable-next-line
     document.getElementById('scroll').scrollTop = 0
-
   }
 
   function closeModal() {
@@ -122,6 +124,21 @@ function Home() {
                   </Btn>
                 </div>
               )}
+            </div>
+            <div className="row">
+
+              {error ? <Erro message={errorMsg} noImg /> : ''}
+              {load ? <Spinner />
+                : <Pagination
+                  action={() => getData()}
+                >
+                  <NumberFormat
+                    type="text"
+                    value={String(page)}
+                    onChange={e => setPage(Number(e.target.value))}
+                    decimalSeparator={false}
+                  />
+                </Pagination>}
             </div>
           </div>
         </div>

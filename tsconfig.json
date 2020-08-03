@@ -17,6 +17,7 @@
     "strict": true,
     "target": "esnext",
     "noUnusedLocals": false,
+    "strictNullChecks": false,
   },
   "exclude": ["node_modules"],
   "include": ["**/*.ts", "**/*.tsx", "pages/dashboard/index.js"]

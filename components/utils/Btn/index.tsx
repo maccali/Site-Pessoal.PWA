@@ -1,7 +1,7 @@
 import React, { ReactNode, useRef, useEffect, useState } from 'react'
 import { ClipLoader } from 'react-spinners'
 
-import styles from './btn.module.css'
+import styles from './Btn.module.css'
 
 type BtnFace = {
   title: string;
