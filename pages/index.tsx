@@ -86,9 +86,8 @@ function Home() {
     bodyControl(false)
     setModal(true)
     setCurrent(current)
-    // if(document.getElementById('scroll') !== null){
+    // tslint:disable-next-line
     document.getElementById('scroll').scrollTop = 0
-    // }
 
   }
 
@@ -105,7 +104,7 @@ function Home() {
       </Head>
       <main>
         <div className="container-fluid">
-          <div className="container">
+          <div className="container p-0">
             <div className="row">
               {comics.map((comic: ComicFace) =>
                 <div className="col-12 col-sm-6 col-md-4">

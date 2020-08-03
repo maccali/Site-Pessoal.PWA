@@ -31,10 +31,8 @@
 
 .menu li a{
   display: inline-flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
   color: #fff;
   font-size: 17px;
   transition: all .3s;
@@ -52,9 +50,12 @@
 
 .menu a{
   display: flex;
+  justify-content: center;
   align-items: center;
   height: inherit;
   transition: all .2s;
+  width: 60px;
+  height: 60px;
 }
 
 .menu a:hover{
@@ -65,9 +66,7 @@
 .menu a svg{
   width: 21px;
   height: 21px;
-  padding-left: 18px;
-  padding-right: 18px;
-  color: #fff;
+  color: #fff !important;
 }
 
 .img {

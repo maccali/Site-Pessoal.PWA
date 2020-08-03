@@ -20,7 +20,7 @@
 }
 
 .btn:hover span, .btn:hover svg{
-  /* color: black; */
+  color: white;
 }
 
 .btn svg, .btn p{

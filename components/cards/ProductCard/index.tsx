@@ -11,7 +11,6 @@ type ProductCardFace = {
 function ProductCard({
   title,
   imgUrl,
-  description,
   price,
 }: ProductCardFace) {
 
@@ -30,9 +29,6 @@ function ProductCard({
             : <p>${price}</p>
           }
         </div>
-        {/* <div className={styles.description}>
-            {description}
-          </div> */}
       </div>
     </>
   )
