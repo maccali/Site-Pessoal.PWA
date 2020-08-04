@@ -31,3 +31,15 @@
   text-indent: 1.4em;
   text-align: justify;
 }
+
+.pricerelations{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.addtocart button{
+  background-color: #0c9637;
+}

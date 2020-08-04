@@ -1,8 +1,13 @@
-import Btn from '../../utils/Btn'
 
 import React, { useEffect } from 'react'
 
+import { MdAddShoppingCart } from 'react-icons/md'
+
 import styles from './ProductContent.module.css'
+import Btn from '../../utils/Btn'
+
+import CartHelper from '../../../helpers/CartHelper'
+
 
 type ThumbnailFace = {
   path: string,
@@ -50,24 +55,39 @@ function ProductContent({
                   </div>
                 </div>
                 <div className="col-12 col-md-6">
-                  <p className={styles.price}>
-                    {product.prices[0].price === 0 ? 'Free' :
-                      `$ ${product.prices[0].price}`
-                    }
-                  </p>
-                  {product.description ?
-                    <div className={styles.description}>
-                      <p>
-                        {product.description}
-                      </p>
+                  <div className={styles.pricerelations}>
+
+                    <p className={styles.price}>
+                      {product.prices[0].price === 0 ? 'Free' :
+                        `$ ${product.prices[0].price}`
+                      }
+                    </p>
+
+                    <div className={styles.addtocart}>
+                      <Btn
+                        title="Add To Cart"
+                        action={() => CartHelper.addToCart(product)}
+                        pos
+                      >
+                        <span>Add To Cart</span>
+                        <MdAddShoppingCart />
+                      </Btn>
                     </div>
-                    : ''}
+                  </div>
                 </div>
+                {product.description ?
+                  <div className={styles.description}>
+                    <p>
+                      {product.description}
+                    </p>
+                  </div>
+                  : ''}
               </div>
             </div>
           </div>
         </section>
-        : ''}
+        : ''
+      }
     </>
   )
 }
