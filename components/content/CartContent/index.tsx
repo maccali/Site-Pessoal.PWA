@@ -14,21 +14,35 @@ function CartContent() {
   const [totalPrice, setTotalPrice] = useState<number>(0);
   const [totalQuantity, setTotalQuantity] = useState<number>(0);
 
+  function clear(){
+    setTotalPrice(0)
+    setTotalQuantity(0)
+  }
+
   function getTotals() {
-    items.map(item => {
-      setTotalPrice(totalPrice + item.prices[0].price)
-      setTotalQuantity(totalQuantity + item.quantity)
-    })
+    setTotalPrice(CartHelper.getTotalPrice())
+    setTotalQuantity(CartHelper.getTotalQuantity())
   }
 
   function getData() {
     setItems(CartHelper.getCart())
+  }
+
+  function run(){
+    clear()
+    getData()
     getTotals()
   }
 
   useEffect(() => {
-    getData()
+    run()
   }, []);
+
+
+  // useEffect(() => {
+  //   clear()
+  //   getData()
+  // }, []);
 
   return (
     <>
@@ -48,6 +62,18 @@ function CartContent() {
                   price={item.prices[0].price}
                   quantity={item.quantity}
                   total={item.total}
+                  addFunction={() => {
+                    CartHelper.addToCart(item)
+                    run()
+                  }}
+                  minusFunction={() => { 
+                    CartHelper.removeToCart(item.id) 
+                    run()
+                  }}
+                  removeFunction={() => {
+                    CartHelper.removeToCart(item.id, true)
+                    run()
+                  }}
                 />
               )
               :
@@ -62,7 +88,7 @@ function CartContent() {
                 <div className={styles.totalprice}>
                   {totalPrice}
                 </div>
-                <div className={styles.totalprice}>
+                <div className={styles.totalquantity}>
                   {totalQuantity}
                 </div>
               </div>

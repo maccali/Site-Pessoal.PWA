@@ -22,8 +22,6 @@ const CartHelper = {
     var cartArr: Array<ProductFace> = CartHelper.getCart()
     var isAdd = false
 
-    console.log(typeof cartArr)
-
     product.quantity = 1
     product.total = product.prices[0].price
 
@@ -32,11 +30,11 @@ const CartHelper = {
       cartArr.push(product)
     } else {
 
-      // cartArr.includes(item.id)
       cartArr.map((item) => {
         if (Number(item.id) === Number(product.id)) {
-          item.quantity = item.quantity + 1
-          item.total = item.total * item.quantity
+          item.quantity = Number(item.quantity) + 1
+          item.total = item.prices[0].price * item.quantity
+          item.total = Number(item.total.toFixed(2))
           isAdd = true
         }
       })
@@ -53,21 +51,53 @@ const CartHelper = {
 
   removeToCart: (
     productId: number,
+    all?: boolean,
   ) => {
     var cartArr: Array<ProductFace> = CartHelper.getCart()
 
     cartArr.map((item) => {
       if (Number(item.id) === productId) {
-        item.quantity = item.quantity - 1
+        if(all){
+          item.quantity = 0 
+        }else {
+          item.quantity = item.quantity - 1
+          item.total = item.prices[0].price * item.quantity
+          item.total = Number(item.total.toFixed(2))
+        }
       }
     })
 
-    cartArr.filter((item) => {
-      return item.quantity > 0
+    var newCartArr = cartArr.filter(
+      function isZero(item) {
+        return item.quantity > 0
+      }
+    )
+
+    localStorage.setItem(CartLocalKey, JSON.stringify(newCartArr))
+  },
+
+  getTotalPrice: () => {
+    var cartArr: Array<ProductFace> = CartHelper.getCart()
+    var total = 0
+
+    cartArr.map((item) => {
+      total = total + item.total
     })
 
-    localStorage.setItem(CartLocalKey, JSON.stringify(cartArr))
+    return total.toFixed(2)
   },
+
+  getTotalQuantity: () => {
+    var cartArr: Array<ProductFace> = CartHelper.getCart()
+    var total = 0
+
+    cartArr.map((item) => {
+      total = total + item.quantity
+    })
+
+    return total
+  },
+
 
   getCart: () => {
     try {

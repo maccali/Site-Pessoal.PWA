@@ -13,6 +13,9 @@ type CartCardFace = {
   price: number;
   total: number;
   quantity: number;
+  addFunction: Function;
+  minusFunction: Function;
+  removeFunction: Function;
 }
 
 function CartCard({
@@ -20,7 +23,10 @@ function CartCard({
   imgUrl,
   price,
   total,
-  quantity
+  quantity,
+  addFunction,
+  minusFunction,
+  removeFunction,
 }: CartCardFace) {
 
   return (
@@ -53,15 +59,15 @@ function CartCard({
         <div className={styles.ajusts}>
           <Btn
             title={`Remove One ${title}`}
-            action={() => { }}
+            action={() => minusFunction()}
             noStyle
           >
             <FiMinus />
           </Btn>
-          
+
           <Btn
             title={`Add One ${title}`}
-            action={() => { }}
+            action={() => addFunction()}
             noStyle
           >
             <FiPlus />
@@ -69,7 +75,7 @@ function CartCard({
 
           <Btn
             title={`Remove All ${title}`}
-            action={() => { }}
+            action={() => removeFunction()}
             noStyle
           >
             <FiTrash2 />
