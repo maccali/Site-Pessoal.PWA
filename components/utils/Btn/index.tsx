@@ -36,10 +36,7 @@ function Btn({
   }
 
   useEffect(() => {
-    console.log(ref)
-    // @ts-ignore: Object is possibly 'null'.
     ref.current ? setWidth(ref.current.offsetWidth) : 0;
-    // @ts-ignore: Object is possibly 'null'.
     ref.current ? setHeight(ref.current.offsetHeight) : 0;
   }, [ref.current]);
 
@@ -80,7 +77,6 @@ function Btn({
           {children}
         </a>
       )
-
     }
   } else {
     return (
@@ -89,7 +85,6 @@ function Btn({
           title={title}
           ref={ref}
           className={`
-             
             ${styles.btn} 
             ${pos ? styles.pos : styles.pre}
             ${iconOnly ? styles.icon : ''}
@@ -101,8 +96,6 @@ function Btn({
       </>
     )
   }
-
-
 }
 
 export default Btn

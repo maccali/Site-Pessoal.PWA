@@ -8,24 +8,6 @@ import Btn from '../../utils/Btn'
 
 import CartHelper from '../../../helpers/CartHelper'
 
-
-type ThumbnailFace = {
-  path: string,
-  extension: string,
-}
-
-type PricesFace = {
-  type: string,
-  price: number
-}
-
-type ComicFace = {
-  title: string,
-  description?: string,
-  thumbnail: ThumbnailFace,
-  prices: Array<PricesFace>
-}
-
 type Capsule = {
   product: ComicFace
 }

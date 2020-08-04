@@ -1,4 +1,3 @@
-import { object } from "prop-types"
 
 const CartLocalKey = 'MarketCart'
 
@@ -17,7 +16,7 @@ type ProductFace = {
 
 const CartHelper = {
   addToCart: (
-    product: ProductFace,
+    product: ComicFace,
   ) => {
 
     var cartArr: Array<ProductFace> = CartHelper.getCart()

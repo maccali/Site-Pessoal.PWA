@@ -16,7 +16,6 @@ function Cart() {
       <main>
         <CartContent />
       </main>
-
     </>
   )
 }
