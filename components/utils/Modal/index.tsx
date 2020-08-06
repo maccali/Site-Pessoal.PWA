@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useEffect } from 'react'
 import { AiOutlineClose } from "react-icons/ai";
 import styles from './Modal.module.css'
 
@@ -13,6 +13,32 @@ function Modal({
   setClose,
   children
 }: ModalFace) {
+
+  function bodyControl(flag: boolean) {
+    let { body } = document;
+    if (flag) {
+      body.classList.remove('scroll-off')
+    } else {
+      body.classList.add('scroll-off')
+    }
+  }
+
+  function openModal() {
+    bodyControl(false)
+    document.getElementById('scroll').scrollTop = 0
+  }
+
+  function closeModal() {
+    bodyControl(true)
+  }
+
+  useEffect(() => {
+    if(open){
+      openModal()
+    } else{
+      closeModal()
+    }
+  }, [open]);
 
   return (
     <>

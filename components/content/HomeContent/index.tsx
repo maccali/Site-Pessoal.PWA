@@ -77,25 +77,12 @@ function HomeContent() {
     getData()
   }, []);
 
-
-  function bodyControl(flag: boolean) {
-    let { body } = document;
-    if (flag) {
-      body.classList.remove('scroll-off')
-    } else {
-      body.classList.add('scroll-off')
-    }
-  }
-
   function openModal(current: any) {
-    bodyControl(false)
     setModal(true)
     setCurrent(current)
-    document.getElementById('scroll').scrollTop = 0
   }
 
   function closeModal() {
-    bodyControl(true)
     setModal(false)
   }
 

@@ -57,9 +57,9 @@ const CartHelper = {
 
     cartArr.map((item) => {
       if (Number(item.id) === productId) {
-        if(all){
-          item.quantity = 0 
-        }else {
+        if (all) {
+          item.quantity = 0
+        } else {
           item.quantity = item.quantity - 1
           item.total = item.prices[0].price * item.quantity
           item.total = Number(item.total.toFixed(2))
@@ -80,9 +80,11 @@ const CartHelper = {
     var cartArr: Array<ProductFace> = CartHelper.getCart()
     var total = 0
 
-    cartArr.map((item) => {
-      total = total + item.total
-    })
+    if (cartArr) {
+      cartArr.map((item) => {
+        total = total + item.total
+      })
+    }
 
     return total.toFixed(2)
   },
@@ -90,10 +92,12 @@ const CartHelper = {
   getTotalQuantity: () => {
     var cartArr: Array<ProductFace> = CartHelper.getCart()
     var total = 0
-
-    cartArr.map((item) => {
-      total = total + item.quantity
-    })
+    
+    if (cartArr) {
+      cartArr.map((item) => {
+        total = total + item.quantity
+      })
+    }
 
     return total
   },
@@ -111,7 +115,9 @@ const CartHelper = {
     return cart
   },
 
-
+  removeAll: () => {
+    localStorage.setItem(CartLocalKey, null)
+  }
 }
 
 export default CartHelper
