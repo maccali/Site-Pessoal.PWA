@@ -28,8 +28,8 @@ function Btn({
 }: BtnFace) {
 
   const ref = useRef(null);
-  const [width, setWidth] = useState<Number>(0)
-  const [height, setHeight] = useState<Number>(0)
+  const [width, setWidth] = useState<number>(0)
+  const [height, setHeight] = useState<number>(0)
 
   function hrefReplace(href: string) {
     window.location.href = href;
