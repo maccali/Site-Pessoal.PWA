@@ -2,21 +2,21 @@ import React, { ReactNode } from 'react'
 
 import Head from 'next/head'
 
-import styles from './pageerror.module.css'
+import styles from './errorpage.module.css'
 
-type ErrorFace = {
+type ErrorPageFace = {
   statusCode: Number,
   title: string,
   message: string,
   children: ReactNode,
 }
 
-function PageError({
+function ErrorPage({
   statusCode,
   message,
   title,
   children
-}: ErrorFace) {
+}: ErrorPageFace) {
   return (
     <>
       <Head>
@@ -45,4 +45,4 @@ function PageError({
   )
 }
 
-export default PageError
+export default ErrorPage

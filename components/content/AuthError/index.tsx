@@ -1,7 +1,7 @@
 import { IoIosKey } from "react-icons/io";
 
 import Button from '../../utils/button'
-import PageError from '../../utils/pageerror'
+import PageError from '../../utils/errorpage'
 
 
 function AuthError() {
