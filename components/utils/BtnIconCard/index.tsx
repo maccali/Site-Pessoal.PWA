@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 
-import styles from './BtnIconCard.module.css'
+import styles from './btniconcard.module.css'
 
 type BtnIconCardFace = {
   children: ReactNode;

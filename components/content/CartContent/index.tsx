@@ -8,7 +8,7 @@ import ErrorHelper from '../../../helpers/ErrorHelper'
 import CartHelper from '../../../helpers/CartHelper'
 import CartCard from '../../cards/CartCard'
 
-import styles from './CartContent.module.css'
+import styles from './cartcontent.module.css'
 import Btn from '../../utils/Btn'
 import Input from '../../utils/Input'
 import Modal from '../../utils/Modal'

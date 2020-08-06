@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './Input.module.css'
+import styles from './input.module.css'
 
 type InputFace = {
   title: string;

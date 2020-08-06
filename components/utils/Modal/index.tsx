@@ -1,6 +1,6 @@
 import React, { ReactNode, useEffect } from 'react'
 import { AiOutlineClose } from "react-icons/ai";
-import styles from './Modal.module.css'
+import styles from './modal.module.css'
 
 type ModalFace = {
   open: Boolean,

@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 
-import styles from './HeaderList.module.css'
+import styles from './headerlist.module.css'
 
 type HeaderListFace = {
   title: string;

@@ -1,8 +1,0 @@
-.node{
-  display: flex;
-  justify-content: flex-end;
-}
-
-.node > *{
-  margin-left: 16px;
-}

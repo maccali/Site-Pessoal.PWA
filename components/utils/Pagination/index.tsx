@@ -2,7 +2,7 @@ import React, { useState, ReactNode } from 'react'
 import NumberFormat from 'react-number-format';
 import { AiOutlinePlus } from "react-icons/ai"
 
-import styles from './Pagination.module.css'
+import styles from './pagination.module.css'
 
 type PaginationFace = {
   children: ReactNode,

@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 
 import { MdAddShoppingCart } from 'react-icons/md'
 
-import styles from './ProductContent.module.css'
+import styles from './productcontent.module.css'
 import Btn from '../../utils/Btn'
 
 import CartHelper from '../../../helpers/CartHelper'

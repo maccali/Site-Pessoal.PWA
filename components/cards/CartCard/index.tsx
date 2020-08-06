@@ -2,7 +2,7 @@ import React from 'react'
 
 import { FiMinus, FiPlus, FiTrash2 } from 'react-icons/fi'
 
-import styles from './CartCard.module.css'
+import styles from './cartcard.module.css'
 import Btn from '../../utils/Btn'
 
 

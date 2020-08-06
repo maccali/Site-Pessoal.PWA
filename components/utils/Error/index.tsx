@@ -1,6 +1,6 @@
 import React from 'react'
 import { AiOutlineReload } from "react-icons/ai";
-import styles from './Error.module.css'
+import styles from './error.module.css'
 
 type ErrorFace = {
   message: string,
