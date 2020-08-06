@@ -67,7 +67,7 @@ function HomeContent() {
         }
         setPage(page + 1)
         setLoad(false)
-      }).catch((error) => {
+      }).catch((_error) => {
 
         setLoad(false)
       })

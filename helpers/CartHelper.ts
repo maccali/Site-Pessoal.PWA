@@ -86,7 +86,7 @@ const CartHelper = {
       })
     }
 
-    return total.toFixed(2)
+    return Number(total.toFixed(2))
   },
 
   getTotalQuantity: () => {
@@ -99,7 +99,7 @@ const CartHelper = {
       })
     }
 
-    return total
+    return Number(total)
   },
 
 

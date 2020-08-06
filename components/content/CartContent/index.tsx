@@ -63,7 +63,7 @@ function CartContent() {
     AdressSchema.validate({
       email
     }, { abortEarly: false })
-      .then((data) => {
+      .then((_data) => {
         console.log('😘 Dados válidos')
         // sendRequest(data)
         setEmailError(false)
