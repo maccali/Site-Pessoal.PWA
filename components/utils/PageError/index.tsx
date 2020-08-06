@@ -11,7 +11,7 @@ type ErrorFace = {
   children: ReactNode,
 }
 
-function Error({
+function PageError({
   statusCode,
   message,
   title,
@@ -45,4 +45,4 @@ function Error({
   )
 }
 
-export default Error
+export default PageError
