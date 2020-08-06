@@ -1,6 +1,6 @@
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-import PageError from '../../components/utils/PageError';
-import Btn from '../../components/utils/Btn'
+import PageError from '../../components/utils/pageerror';
+import Btn from '../../components/utils/button'
 
 type ErrorFace = {
   statusCode: number

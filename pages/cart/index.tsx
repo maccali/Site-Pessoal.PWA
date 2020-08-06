@@ -4,7 +4,7 @@ import React from 'react'
 import Head from 'next/head'
 
 // Page Content
-import CartContent from '../../components/content/CartContent'
+import CartContent from '../../components/content/cart'
 
 function Cart() {
 

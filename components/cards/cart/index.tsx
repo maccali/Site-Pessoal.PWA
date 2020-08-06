@@ -3,7 +3,7 @@ import React from 'react'
 import { FiMinus, FiPlus, FiTrash2 } from 'react-icons/fi'
 
 import styles from './cartcard.module.css'
-import Btn from '../../utils/Btn'
+import Button from '../../utils/button'
 
 
 type CartCardFace = {
@@ -57,29 +57,29 @@ function CartCard({
           }
         </div>
         <div className={styles.ajusts}>
-          <Btn
+          <Button
             title={`Remove One ${title}`}
             action={() => minusFunction()}
             noStyle
           >
             <FiMinus />
-          </Btn>
+          </Button>
 
-          <Btn
+          <Button
             title={`Add One ${title}`}
             action={() => addFunction()}
             noStyle
           >
             <FiPlus />
-          </Btn>
+          </Button>
 
-          <Btn
+          <Button
             title={`Remove All ${title}`}
             action={() => removeFunction()}
             noStyle
           >
             <FiTrash2 />
-          </Btn>
+          </Button>
         </div>
       </div>
     </>

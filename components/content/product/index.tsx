@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 import { MdAddShoppingCart } from 'react-icons/md'
 
 import styles from './productcontent.module.css'
-import Btn from '../../utils/Btn'
+import Button from '../../utils/button'
 
 import CartHelper from '../../../helpers/CartHelper'
 
@@ -46,14 +46,14 @@ function ProductContent({
                     </p>
 
                     <div className={styles.addtocart}>
-                      <Btn
+                      <Button
                         title="Add To Cart"
                         action={() => CartHelper.addToCart(product)}
                         pos
                       >
                         <span>Add To Cart</span>
                         <MdAddShoppingCart />
-                      </Btn>
+                      </Button>
                     </div>
                   </div>
                 </div>

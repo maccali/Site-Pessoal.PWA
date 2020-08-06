@@ -1,9 +1,9 @@
 import React, { ReactNode, useRef, useEffect, useState } from 'react'
 import { ClipLoader } from 'react-spinners'
 
-import styles from './btn.module.css'
+import styles from './button.module.css'
 
-type BtnFace = {
+type ButtonFace = {
   title: string;
   children: ReactNode;
   href?: string;
@@ -15,7 +15,7 @@ type BtnFace = {
   noStyle?: Boolean
 }
 
-function Btn({
+function Button({
   title,
   children,
   href,
@@ -25,7 +25,7 @@ function Btn({
   textOnly,
   noStyle,
   load
-}: BtnFace) {
+}: ButtonFace) {
 
   const ref = useRef(null);
   const [width, setWidth] = useState<number>(0)
@@ -98,4 +98,4 @@ function Btn({
   }
 }
 
-export default Btn
+export default Button

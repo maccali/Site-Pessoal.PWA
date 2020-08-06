@@ -4,7 +4,7 @@ import React from 'react'
 import Head from 'next/head'
 
 // Page Content
-import HomeContent from '../components/content/HomeContent'
+import HomeContent from '../components/content/home'
 
 function Home() {
 

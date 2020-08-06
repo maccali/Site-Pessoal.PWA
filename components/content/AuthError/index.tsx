@@ -1,7 +1,7 @@
 import { IoIosKey } from "react-icons/io";
 
-import Btn from '../../utils/Btn'
-import PageError from '../../utils/PageError'
+import Button from '../../utils/button'
+import PageError from '../../utils/pageerror'
 
 
 function AuthError() {
@@ -17,10 +17,10 @@ function AuthError() {
         message="Você não tem Acesso Aqui"
         title="Autenticação"
       >
-        <Btn title="Entrar No Sistema" action={() => toLogin()} pos>
+        <Button title="Entrar No Sistema" action={() => toLogin()} pos>
           <span>Entrar no Sistema</span>
           <IoIosKey />
-        </Btn>
+        </Button>
       </PageError>
     </>
   )

@@ -4,7 +4,7 @@ import { FiShoppingCart, FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion"
 import Link from 'next/link'
-import Btn from '../Btn'
+import Button from '../button'
 
 import styles from './nav.module.css'
 

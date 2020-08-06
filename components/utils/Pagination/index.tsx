@@ -1,5 +1,4 @@
-import React, { useState, ReactNode } from 'react'
-import NumberFormat from 'react-number-format';
+import React, { ReactNode } from 'react'
 import { AiOutlinePlus } from "react-icons/ai"
 
 import styles from './pagination.module.css'

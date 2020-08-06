@@ -6,15 +6,15 @@ import Head from 'next/head'
 import NumberFormat from 'react-number-format';
 
 // Intenal Utils
-import Modal from '../../../components/utils/Modal'
-import Erro from '../../../components/utils/Error'
-import Btn from '../../../components/utils/Btn'
-import Spinner from '../../../components/utils/Spinner';
-import Pagination from '../../../components/utils/Pagination'
+import Modal from '../../utils/modal'
+import Erro from '../../utils/error'
+import Button from '../../utils/button'
+import Spinner from '../../utils/spinner';
+import Pagination from '../../utils/pagination'
 
 // Product Card and Contents
-import ProductCard from '../../../components/cards/ProductCard'
-import ProductContent from '../../../components/content/ProductContent'
+import ProductCard from '../../cards/product'
+import ProductContent from '../product'
 
 // Api Config
 import api from '../../../services/api'
@@ -93,7 +93,7 @@ function HomeContent() {
           <div className="row">
             {comics.map((comic: ComicFace) =>
               <div className="col-12 col-sm-6 col-md-4">
-                <Btn
+                <Button
                   title={comic.title}
                   action={() => openModal(comic)}
                   noStyle
@@ -104,7 +104,7 @@ function HomeContent() {
                     description={comic.description}
                     price={comic.prices[0].price}
                   />
-                </Btn>
+                </Button>
               </div>
             )}
           </div>

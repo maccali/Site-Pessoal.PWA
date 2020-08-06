@@ -9,9 +9,9 @@ import CartHelper from '../../../helpers/CartHelper'
 import CartCard from '../../cards/cart'
 
 import styles from './cartcontent.module.css'
-import Btn from '../../utils/Btn'
-import Input from '../../utils/Input'
-import Modal from '../../utils/Modal'
+import Button from '../../utils/button'
+import Input from '../../utils/input'
+import Modal from '../../utils/modal'
 
 
 const AdressSchema = yup.object().shape({
@@ -183,14 +183,14 @@ function CartContent() {
               <div className="row">
                 <div className="col-xs-12">
                   <div className={styles.checkout}>
-                    <Btn
+                    <Button
                       title="Checkot"
                       action={() => { handleSubmit() }}
                       load={load}
                       textOnly
                     >
                       <span>Checkout</span>
-                    </Btn>
+                    </Button>
                   </div>
                 </div>
               </div>
