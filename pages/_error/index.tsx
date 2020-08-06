@@ -1,6 +1,6 @@
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import PageError from '../../components/utils/pageerror';
-import Btn from '../../components/utils/button'
+import Button from '../../components/utils/button'
 
 type ErrorFace = {
   statusCode: number
@@ -27,10 +27,10 @@ function Error({ statusCode }: ErrorFace) {
         message={message}
         title="Erro"
       >
-        <Btn title="Go Back" action={() => goBack()} >
+        <Button title="Go Back" action={() => goBack()} >
           <AiOutlineArrowLeft />
           <span>Go Back</span>
-        </Btn>
+        </Button>
       </PageError>
     </>
   )
