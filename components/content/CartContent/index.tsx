@@ -6,7 +6,7 @@ import YupHelper from '../../../helpers/YupHelper'
 import ErrorHelper from '../../../helpers/ErrorHelper'
 
 import CartHelper from '../../../helpers/CartHelper'
-import CartCard from '../../cards/CartCard'
+import CartCard from '../../cards/cart'
 
 import styles from './cartcontent.module.css'
 import Btn from '../../utils/Btn'
