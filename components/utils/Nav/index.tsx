@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
 // Icons import 
-import { TiGroupOutline } from "react-icons/ti";
 import { FiMenu } from "react-icons/fi";
-import { GoGraph } from "react-icons/go";
-import { AiOutlineUser, AiOutlineLock } from "react-icons/ai";
+import { GiSwordman, GiUpgrade, GiFlamingo } from "react-icons/gi";
+import { AiFillInfoCircle } from "react-icons/ai";
+import { IoIosApps } from "react-icons/io";
 import { MdClose } from "react-icons/md";
 
 // Common Project libs
@@ -17,9 +17,11 @@ function Nav() {
 
   const [menuActive, setMenuActive] = useState(false);
   const [links, setLinks] = useState([
-    { icone: <TiGroupOutline />, nome: 'Grupos', url: '/grupos' },
-    { icone: <AiOutlineUser />, nome: 'Usuários', url: '/usuarios' },
-    { icone: <AiOutlineLock />, nome: 'Permissões', url: '/permissoes' },
+    { icone: <AiFillInfoCircle />, nome: 'Sobre', url: '#sobre' },
+    { icone: <GiSwordman />, nome: 'Interesses', url: '#interesses' },
+    { icone: <GiUpgrade />, nome: 'Carreira', url: '#carreira' },
+    { icone: <GiFlamingo />, nome: 'Contato', url: '#contato' },
+    { icone: <IoIosApps />, nome: 'Projetos', url: '/projetos' },
   ]);
 
   function setMenuOpenWithWithSize() {
@@ -46,7 +48,7 @@ function Nav() {
                   noStyle
                 >
                   <div className={styles.seta}>
-                    <img src="/icons/icon126t.png" alt="Site Logo" />
+                    <img src="/imgs/logo.png" alt="Site Logo" />
                   </div>
                 </Button>
               </div>
@@ -54,11 +56,11 @@ function Nav() {
           </ul>
           <ul className={styles.menu}>
             <Button
-              title="Dashboard"
-              href="/dashboard"
+              title="Projetos"
+              href="/projetos"
               noStyle
             >
-              <GoGraph />
+              <IoIosApps />
             </Button>
             <Button
               title="Abrir Menu"
@@ -83,9 +85,9 @@ function Nav() {
             </div>
             <div className={styles.cardmenu}>
               <div>
-                <img src="/icons/icon126t.png" />
+                <img src="/imgs/eu.jpg" />
               </div>
-              <span>Marvel Games Shop</span>
+              <span>Guilherme Maccali</span>
             </div>
             <div className={styles.menulist}>
               {Object.keys(links).map((key) => (

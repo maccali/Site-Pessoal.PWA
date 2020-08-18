@@ -4,6 +4,8 @@ import React from 'react'
 import Head from 'next/head'
 
 // Page Content
+import SpacerContent from '../components/content/spacer'
+import SocialContent from '../components/content/social'
 import AboutContent from '../components/content/about'
 
 function Home() {
@@ -14,6 +16,8 @@ function Home() {
         <title>🕹 Home</title>
       </Head>
       <main>
+        <SpacerContent/>
+        <SocialContent />
         <AboutContent />
       </main>
     </>

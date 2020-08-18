@@ -1,5 +1,5 @@
 .cont{
-  padding-top: 90px;
+  padding-top: 60px;
   padding-bottom: 90px;
   background-color: #ededed;
 }
@@ -11,7 +11,7 @@
 }
 
 .title h2{
-  font-size: 33px;
+  font-size: 32px;
   margin-bottom: 30px;
   font-weight: 100;
 }
@@ -45,7 +45,7 @@
 }
 
 .name{
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 100;
   margin-top: 0;
   margin-bottom: 18px;

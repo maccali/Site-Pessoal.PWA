@@ -1,0 +1,61 @@
+.cont{
+  background-color: #e0e0e0;
+}
+
+.social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+}
+
+.social > *{
+  margin-right: 8px;
+  margin-left: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none !important;
+}
+
+.social a{
+  transition: all .2s;
+}
+
+.social a:hover{
+  transform: scale(1.25);
+}
+
+.social a svg{
+  color: #0a1f3be6 !important;
+  height: 23px;
+  width: 23px;
+}
+
+.social a .linkedin:hover > svg{
+  color: var(--linkedin-color) !important;
+}
+
+.social a .facebook:hover > svg{
+  color: var(--facebook-color) !important;
+}
+
+.social a .instagram:hover > svg{
+  color: var(--instagram-color) !important;
+}
+
+.social a .discord:hover > svg{
+  color: var(--facebook-color) !important;
+}
+
+.social a .github:hover > svg{
+  color: var(--github-color) !important;
+}
+
+.social a .gitlab:hover > svg{
+  color: var(--gitlab-color) !important;
+}
+
+.social a svg path {
+  shape-rendering: geometricPrecision;
+}

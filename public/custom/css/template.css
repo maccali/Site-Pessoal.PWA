@@ -6,7 +6,7 @@
 }
 
 * {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
 }
 
 *::-webkit-scrollbar {
@@ -22,11 +22,22 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #f1555b;
+  background: #637FFF;
 }
 
 body{
   margin: 0;
   padding: 0;
-  background-color: #BABABA;
+  background-color: #ededed;
+}
+
+:root{
+  --github-color: #333;
+  --linkedin-color: #0E76A8;
+  --facebook-color: #3B5998;
+  --whatapp-color: #25D366;
+  --instagram-color: #C13584;
+  --skype-color: #00AFF0;
+  --discord-color: #7080ce;
+  --gitlab-color: #FC6D27;
 }

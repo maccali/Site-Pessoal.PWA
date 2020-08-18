@@ -5,6 +5,9 @@ import Button from '../../utils/button'
 import styles from './about.module.css'
 
 function AboutContent() {
+
+  
+
   return (
     <>
       <section>
