@@ -1,7 +1,7 @@
 {
-    "name": "Apod",
-    "short_name": "Apod",
-    "description": "Amazing Images from Nasa day by day",
+    "name": "Maccali",
+    "short_name": "Maccali",
+    "description": "Um programador muito simpático",
     "display": "standalone",
     "orientation": "portrait",
     "theme_color": "#2c2c7b",

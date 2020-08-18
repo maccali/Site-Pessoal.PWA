@@ -4,7 +4,7 @@ import React from 'react'
 import Head from 'next/head'
 
 // Page Content
-import HomeContent from '../components/content/home'
+// import HomeContent from '../components/content/home'
 
 function Home() {
 
@@ -14,7 +14,7 @@ function Home() {
         <title>🕹 Home</title>
       </Head>
       <main>
-        <HomeContent />
+        {/* <HomeContent /> */}
       </main>
     </>
   )

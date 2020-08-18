@@ -1,7 +1,7 @@
 .cont{
-  width: 100%;
   position: fixed;
   z-index: 100 !important;
+  width: 100%;
   background-color: #202020;
 }
 
@@ -43,6 +43,7 @@
 
 .menu li a:hover{
   background-color: var(--primary-color-var);
+
   text-decoration: none;
   color: #fff;
   transform: scale(1.10);
@@ -60,7 +61,7 @@
 
 .menu a:hover{
   transform: scale(1.11);
-  background-color: #b71e23;
+  background-color: #637FFF;
 }
 
 .menu a svg{
@@ -133,7 +134,7 @@
 }
 
 .headercont a:hover{
-  background-color: #b71e23;
+  background-color: #637FFF;
   transform: scale(1.1);
 }
 
@@ -156,7 +157,7 @@
   transform: scale(1.05);
   text-decoration: none;
   cursor: pointer;
-  background-color: #b71e23 !important;
+  background-color: #637FFF !important;
 }
 
 .menuitem span{
