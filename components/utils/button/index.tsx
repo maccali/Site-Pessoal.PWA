@@ -12,7 +12,8 @@ type ButtonFace = {
   pos?: Boolean;
   iconOnly?: Boolean;
   textOnly?: Boolean;
-  noStyle?: Boolean
+  noStyle?: Boolean;
+  target?: string;
 }
 
 function Button({
@@ -24,7 +25,8 @@ function Button({
   iconOnly,
   textOnly,
   noStyle,
-  load
+  load,
+  target
 }: ButtonFace) {
 
   const ref = useRef(null);
@@ -62,6 +64,7 @@ function Button({
         <a
           title={title}
           className={styles.taglink}
+          target={target}
           href={href}
         >
           {children}
