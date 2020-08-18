@@ -2,25 +2,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #b71e23;
+  background-color: #0e2c54;
+  border: 2px #0e2c54 solid !important;
+  border-radius: 25px;
   padding: 11px 0;
   border: 0;
   color: white;
-  font-weight: bold;
   font-size: 14px;
-  transition: all .3s;
+  transition: all .2s;
 }
 
 .btn:hover{
+  background-color: #ccecec;
+  border: 2px #0e2c54 solid;
   transform: scale(1.05);
 }
 
 .btn span, .btn svg{
-  transition: all .3s;
+  font-weight: 400;
+  transition: all .2s;
 }
 
 .btn:hover span, .btn:hover svg{
-  color: white;
+  font-weight: bold;
+  color: #0e2c54 !important;
 }
 
 .btn svg, .btn p{
