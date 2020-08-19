@@ -27,7 +27,8 @@
 }
 
 .social a svg{
-  color: #0a1f3be6 !important;
+  color: #0a1f3b !important;
+  /* color: #1b1b1b !important; */
   height: 23px;
   width: 23px;
 }

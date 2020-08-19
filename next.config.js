@@ -16,6 +16,7 @@ module.exports = withPWA({
     return config;
   },
   env: {
+    APP_URL: process.env.APP_URL,
     API_URL: process.env.API_URL,
   },
 })

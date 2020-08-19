@@ -10,12 +10,13 @@
   color: white;
   font-size: 14px;
   transition: all .2s;
+  outline: none;
+  box-shadow: 0 0 3px 0 #ddd;
 }
 
 .btn:hover{
   background-color: #ccecec;
   border: 2px #0e2c54 solid;
-  transform: scale(1.05);
 }
 
 .btn span, .btn svg{

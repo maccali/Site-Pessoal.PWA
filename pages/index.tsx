@@ -7,6 +7,7 @@ import Head from 'next/head'
 import SpacerContent from '../components/content/spacer'
 import SocialContent from '../components/content/social'
 import AboutContent from '../components/content/about'
+import CareerContent from '../components/content/career'
 
 function Home() {
 
@@ -19,6 +20,7 @@ function Home() {
         <SpacerContent/>
         <SocialContent />
         <AboutContent />
+        <CareerContent />
       </main>
     </>
   )
