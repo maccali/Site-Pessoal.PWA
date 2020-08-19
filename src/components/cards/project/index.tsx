@@ -1,4 +1,4 @@
-import styles from './productcard.module.css';
+import styles from './product.module.css';
 
 type ProjectFace = {
   title: string;
