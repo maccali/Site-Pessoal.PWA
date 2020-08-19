@@ -1,0 +1,17 @@
+.cont{
+  background-color: #f3f3f3;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  font-weight: 100;
+}
+
+.title h2{
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 100;
+}
