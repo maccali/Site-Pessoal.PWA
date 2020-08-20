@@ -3,7 +3,7 @@ const Dotenv = require("dotenv-webpack");
 
 module.exports = withPWA({
   pwa: {
-    dest: 'src/public',
+    dest: 'public',
     importScripts: [
       '/worker.js'
     ]

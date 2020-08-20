@@ -4,10 +4,10 @@ import React from 'react';
 import type { AppProps /*, AppContext */ } from 'next/app';
 
 // External Libs
-import '../../public/libs/bootstrap/bootstrap.min.css';
+import '../public/libs/bootstrap/bootstrap.min.css';
 
 // Custom styles
-import '../../public/custom/css/template.css';
+import '../public/custom/css/template.css';
 
 // External Components
 import 'react-lazy-load-image-component/src/effects/opacity.css';
