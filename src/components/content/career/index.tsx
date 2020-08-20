@@ -18,8 +18,9 @@ function CareerContent() {
             <div className="col-xs">
               <div className={styles.text}>
                 <p>
-                  Você pode conferir mais sobre mim e minha carreira clicando no
-                  botão abaixo para ver o meu currículo.
+                  Você pode conferir mais sobre mim e minha carreira
+                  <br />
+                  clicando no botão abaixo para ver o meu currículo.
                 </p>
               </div>
             </div>
