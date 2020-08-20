@@ -5,16 +5,17 @@
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  transition: all .2s;
 }
+
+.cont:hover, .cont:focus{
+  transform: scale(1.05);
+} 
 
 .title p::first-letter{
   font-size: 20px;
   font-weight: bold;
   margin-right: 2px;
-}
-
-.imgcont{
-
 }
 
 .imgcont img{

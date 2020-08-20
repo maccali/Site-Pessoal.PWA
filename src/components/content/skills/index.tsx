@@ -46,18 +46,12 @@ function SkillsContent() {
   };
 
   const techs = [
-    { title: 'NextJS', imgUrl: '/imgs/techs/NextJS.png' },
     { title: 'Dart', imgUrl: '/imgs/techs/Dart.png' },
     { title: 'Docker', imgUrl: '/imgs/techs/Docker.png' },
     { title: 'Flutter', imgUrl: '/imgs/techs/Flutter.png' },
-    { title: 'Git', imgUrl: '/imgs/techs/Git.png' },
-    { title: 'Laravel', imgUrl: '/imgs/techs/Laravel.png' },
-    { title: 'NodeJS', imgUrl: '/imgs/techs/NodeJS.png' },
-    { title: 'PHP', imgUrl: '/imgs/techs/PHP.png' },
-    { title: 'React', imgUrl: '/imgs/techs/React.png' },
     { title: 'React Native', imgUrl: '/imgs/techs/React-Native.png' },
-    { title: 'Vue', imgUrl: '/imgs/techs/Vue.png' },
     { title: 'WordPress', imgUrl: '/imgs/techs/WordPress.png' },
+    { title: 'Vue', imgUrl: '/imgs/techs/Vue.png' },
   ];
 
   return (
@@ -68,7 +62,7 @@ function SkillsContent() {
             <div className="col-xs">
               <div className="col-xs">
                 <div className={styles.title}>
-                  <h2>Habilidades</h2>
+                  <h2>Outras que tenho bom conhecimento</h2>
                 </div>
               </div>
               <div>
