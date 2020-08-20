@@ -7,7 +7,7 @@ import styles from './career.module.css';
 function CareerContent() {
   return (
     <>
-      <section>
+      <section id="career">
         <div className={`container-fluid ${styles.cont}`}>
           <div className="container">
             <div className="col-xs">

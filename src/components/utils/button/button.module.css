@@ -12,6 +12,7 @@
   transition: all .2s;
   outline: none;
   box-shadow: 0 0 3px 0 #ddd;
+  user-select: none;
 }
 
 .btn:hover{
@@ -72,5 +73,13 @@
 }
 
 .taglink{
+  display: contents;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
   text-decoration: none !important;
+  justify-content: stretch;
+  user-select: none;
 }

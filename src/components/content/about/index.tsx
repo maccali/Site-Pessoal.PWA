@@ -7,7 +7,7 @@ import styles from './about.module.css';
 function AboutContent() {
   return (
     <>
-      <section>
+      <section id="about">
         <div className={`container-fluid ${styles.cont}`}>
           <div className="container">
             <div className="col-xs">

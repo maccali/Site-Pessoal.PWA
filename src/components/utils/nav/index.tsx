@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 // Icons import
 import { FiMenu } from 'react-icons/fi';
@@ -15,12 +16,40 @@ import styles from './nav.module.css';
 
 function Nav() {
   const [menuActive, setMenuActive] = useState(false);
+
+  const router = useRouter();
+
   const [links, setLinks] = useState([
-    { icone: <AiFillInfoCircle />, nome: 'Sobre', url: '#sobre' },
-    { icone: <GiSwordman />, nome: 'Interesses', url: '#interesses' },
-    { icone: <GiUpgrade />, nome: 'Carreira', url: '#carreira' },
-    { icone: <GiFlamingo />, nome: 'Contato', url: '#contato' },
-    { icone: <IoIosApps />, nome: 'Projetos', url: '/projetos' },
+    {
+      icone: <AiFillInfoCircle />,
+      nome: 'Sobre',
+      url: '/',
+      anchor: 'about',
+    },
+    {
+      icone: <GiSwordman />,
+      nome: 'Interesses',
+      url: '/',
+      anchor: 'interests',
+    },
+    {
+      icone: <GiUpgrade />,
+      nome: 'Carreira',
+      url: '/',
+      anchor: 'career',
+    },
+    {
+      icone: <GiFlamingo />,
+      nome: 'Contato',
+      url: '/',
+      anchor: 'contact',
+    },
+    {
+      icone: <IoIosApps />,
+      nome: 'Projetos',
+      url: '/projetos',
+      anchor: 'projects',
+    },
   ]);
 
   function setMenuOpenWithWithSize() {
@@ -33,6 +62,13 @@ function Nav() {
     });
     setMenuOpenWithWithSize();
   }, []);
+  console.log(router.pathname);
+
+  function setAnchor(anchor: string) {
+    document.getElementById(`${anchor}`).scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
 
   return (
     <>
@@ -88,22 +124,41 @@ function Nav() {
                 <span>Guilherme Maccali</span>
               </div>
               <div className={styles.menulist}>
-                {Object.keys(links).map((key: any) => (
-                  <Button
-                    key={key}
-                    title={links[key].nome}
-                    href={`${links[key].url}`}
-                    noStyle
-                  >
-                    <div
-                      className={styles.menuitem}
-                      aria-label="Calendar Button"
+                {Object.keys(links).map((key: any) =>
+                  router.pathname === links[key].url ? (
+                    <Button
+                      key={key}
+                      title={links[key].nome}
+                      action={() => setAnchor(`${links[key].anchor}`)}
+                      noStyle
                     >
-                      <span>{links[key].icone}</span>
-                      <p>{links[key].nome}</p>
-                    </div>
-                  </Button>
-                ))}
+                      <div
+                        className={styles.menuitem}
+                        aria-label="Calendar Button"
+                      >
+                        <span>{links[key].icone}</span>
+                        <p>{links[key].nome}</p>
+                      </div>
+                    </Button>
+                  ) : (
+                    <Button
+                      key={key}
+                      title={links[key].nome}
+                      href={`${links[key].url}${
+                        links[key].anchor ? `#${links[key].anchor}` : ''
+                      }`}
+                      noStyle
+                    >
+                      <div
+                        className={styles.menuitem}
+                        aria-label="Calendar Button"
+                      >
+                        <span>{links[key].icone}</span>
+                        <p>{links[key].nome}</p>
+                      </div>
+                    </Button>
+                  )
+                )}
               </div>
             </div>
           </div>

@@ -62,7 +62,7 @@ function InterestsContent() {
 
   return (
     <>
-      <section>
+      <section id="interests">
         <div className={`container-fluid ${styles.cont}`}>
           <div className="container">
             <div className="col-xs">

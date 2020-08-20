@@ -14,6 +14,7 @@ type ButtonFace = {
   textOnly?: boolean;
   noStyle?: boolean;
   target?: string;
+  className?: string;
 };
 
 function Button({
@@ -27,6 +28,7 @@ function Button({
   noStyle,
   load,
   target,
+  className,
 }: ButtonFace) {
   const ref = useRef(null);
   const [width, setWidth] = useState<number>(0);
@@ -60,7 +62,12 @@ function Button({
   if (noStyle) {
     if (href) {
       return (
-        <a title={title} className={styles.taglink} target={target} href={href}>
+        <a
+          title={title}
+          className={`${styles.taglink} ${className}`}
+          target={target}
+          href={href}
+        >
           {children}
         </a>
       );
@@ -68,7 +75,7 @@ function Button({
       return (
         <button
           title={title}
-          className={styles.taglink}
+          className={`${styles.taglink} ${className}`}
           onClick={() => (action ? action() : '')}
         >
           {children}
@@ -86,7 +93,7 @@ function Button({
             ${pos ? styles.pos : styles.pre}
             ${iconOnly ? styles.icon : ''}
             ${textOnly ? styles.text : ''}
-            `}
+            ${className}`}
           onClick={() => (href ? hrefReplace(href) : action ? action() : '')}
         >
           {children}

@@ -18,7 +18,7 @@ import styles from './contact.module.css';
 function ContactContent() {
   return (
     <>
-      <section>
+      <section id="contact">
         <div className={`container-fluid ${styles.cont}`}>
           <div className="container">
             <div className="col-xs">
