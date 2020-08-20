@@ -10,6 +10,8 @@ import AboutContent from '../components/content/about';
 import CareerContent from '../components/content/career';
 import InterestsContent from '../components/content/interests';
 import SkillsContent from '../components/content/skills';
+import ContactContent from '../components/content/contact';
+import FooterContent from '../components/content/footer';
 
 function Home() {
   return (
@@ -24,6 +26,8 @@ function Home() {
         <InterestsContent />
         <SkillsContent />
         <CareerContent />
+        <ContactContent />
+        <FooterContent />
       </main>
     </>
   );
