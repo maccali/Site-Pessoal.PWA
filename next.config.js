@@ -1,5 +1,8 @@
-const withPWA = require('next-pwa')
-const Dotenv = require("dotenv-webpack");
+/* eslint-disable prettier/prettier */
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+const withPWA = require('next-pwa');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = withPWA({
   pwa: {
