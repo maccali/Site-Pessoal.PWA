@@ -17,7 +17,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>🕹 Home</title>
+        <title>Maccali, Guilherme</title>
       </Head>
       <main>
         <SpacerContent />

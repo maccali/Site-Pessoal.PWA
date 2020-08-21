@@ -50,7 +50,7 @@
 
 .menu a, .menu button{
   display: flex;
-  background-color: #0e2c54;
+  /* background-color: #0e2c54; */
   outline: none;
   justify-content: center;
   align-items: center;

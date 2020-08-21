@@ -4,7 +4,10 @@ import React from 'react';
 import Head from 'next/head';
 
 // Page Content
-// import CartContent from '../../components/content/cart'
+import SpacerContent from '../../components/content/spacer';
+import SocialContent from '../../components/content/social';
+import ProjectsContent from '../../components/content/projects';
+import FooterContent from '../../components/content/footer';
 
 function Projetos() {
   return (
@@ -13,8 +16,10 @@ function Projetos() {
         <title>Cart</title>
       </Head>
       <main>
-        Projetos
-        {/* <CartContent /> */}
+        <SpacerContent />
+        <SocialContent />
+        <ProjectsContent />
+        <FooterContent />
       </main>
     </>
   );
