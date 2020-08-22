@@ -29,7 +29,7 @@ function Meta() {
         name="robots"
         content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
       />
-      <link rel="canonical" href="https://guilhermemaccali.com/" />
+      <link rel="canonical" href="https://maccali.pictu.one/" />
 
       <meta
         name="viewport"
