@@ -61,9 +61,13 @@ function Meta() {
         content="https://guilhermemaccali.com"
       />
       <meta name="og:image" property="og:image" content={imagemUrl} />
-      <meta property="og:image:secure_url" content={imagemUrl} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta
+        name="og:image:secure_url"
+        property="og:image:secure_url"
+        content={imagemUrl}
+      />
+      <meta name="og:image:width" property="og:image:width" content="1200" />
+      <meta name="og:image:height" property="og:image:height" content="630" />
 
       {/* Twitter Tags */}
       <meta name="twitter:card" content="summary_large_image" />
