@@ -58,7 +58,7 @@ function Meta() {
       <meta
         name="og:url"
         property="og:url"
-        content="https://guilhermemaccali.com"
+        content="https://maccali.pictu.one/"
       />
       <meta name="og:image" property="og:image" content={imagemUrl} />
       <meta
