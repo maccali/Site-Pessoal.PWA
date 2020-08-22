@@ -5,6 +5,12 @@ import Button from '../../utils/button';
 import styles from './about.module.css';
 
 function AboutContent() {
+  function setAnchor(anchor: string) {
+    document.getElementById(`${anchor}`).scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
+
   return (
     <>
       <section id="about">
@@ -52,7 +58,11 @@ function AboutContent() {
                     </Button>
                   </p>
                 </div>
-                <Button title="Entre em contato" href="#" textOnly>
+                <Button
+                  title="Entre em contato"
+                  action={() => setAnchor('contact')}
+                  textOnly
+                >
                   <span>Entre em contato</span>
                 </Button>
               </div>

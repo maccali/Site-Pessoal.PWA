@@ -15,6 +15,7 @@ type ButtonFace = {
   noStyle?: boolean;
   target?: string;
   className?: string;
+  rel?: string;
 };
 
 function Button({
@@ -29,6 +30,7 @@ function Button({
   load,
   target,
   className,
+  rel,
 }: ButtonFace) {
   const ref = useRef(null);
   const [width, setWidth] = useState<number>(0);
@@ -67,6 +69,7 @@ function Button({
           className={`${styles.taglink} ${className}`}
           target={target}
           href={href}
+          rel={rel ? rel : 'noopener noreferrer'}
         >
           {children}
         </a>

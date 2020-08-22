@@ -9,7 +9,6 @@ import {
   FaGithub,
   FaSkype,
   FaGitlab,
-  FaDiscord,
 } from 'react-icons/fa';
 
 import styles from './social.module.css';
@@ -53,13 +52,13 @@ function SocialContent() {
                   </div>
                 </Button>
                 <Button
-                  title="Discord"
+                  title="Skype"
                   href="skype:guimaccali?chat"
                   target="_blank"
                   noStyle
                 >
                   <div className={styles.discord}>
-                    <FaDiscord />
+                    <FaSkype />
                   </div>
                 </Button>
                 <Button

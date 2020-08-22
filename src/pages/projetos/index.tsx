@@ -13,7 +13,7 @@ function Projetos() {
   return (
     <>
       <Head>
-        <title>Cart</title>
+        <title>Maccali, Guilherme - Projetos</title>
       </Head>
       <main>
         <SpacerContent />

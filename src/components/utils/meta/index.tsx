@@ -7,6 +7,7 @@ const title = 'Guilherme Maccali - Programador que da Vida a sua Ideia';
 const description =
   'Olá, sou programador Fullstack, Entusiasta em tecnologias produtivas, Adoro desafios e fazer belas aplicações tomarem vida através de código limpo';
 const imagemUrl = '/imgs/social.png';
+const siteUrl = 'https://maccali.pictu.one/';
 
 function Meta() {
   useEffect(() => {
@@ -29,7 +30,7 @@ function Meta() {
         name="robots"
         content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
       />
-      <link rel="canonical" href="https://maccali.pictu.one/" />
+      <link rel="canonical" href={siteUrl} />
 
       <meta
         name="viewport"
@@ -55,11 +56,7 @@ function Meta() {
         content={description}
       />
       <meta name="og:site_name" property="og:site_name" content={siteName} />
-      <meta
-        name="og:url"
-        property="og:url"
-        content="https://maccali.pictu.one/"
-      />
+      <meta name="og:url" property="og:url" content={siteUrl} />
       <meta name="og:image" property="og:image" content={imagemUrl} />
       <meta
         name="og:image:secure_url"

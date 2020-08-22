@@ -78,7 +78,7 @@ function Nav() {
             <ul className={styles.menu}>
               <li>
                 <div className={styles.img}>
-                  <Button title="Home" href="/dashboard" noStyle>
+                  <Button title="Home" href="/" noStyle>
                     <div className={styles.seta}>
                       <img src="/imgs/logo.png" alt="Site Logo" />
                     </div>
@@ -119,7 +119,7 @@ function Nav() {
               </div>
               <div className={styles.cardmenu}>
                 <div>
-                  <img src="/imgs/eu.jpg" alt="Minha Foto" />
+                  <img src="/icons/icon126.png" alt="Logo do site" />
                 </div>
                 <span>Guilherme Maccali</span>
               </div>
