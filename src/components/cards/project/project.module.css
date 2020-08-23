@@ -1,4 +1,9 @@
 .cont{
+  display: flow-root;
+  margin-bottom: 30px;
+}
+
+.subcont{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,16 +15,16 @@
   padding-bottom: 20px;
   border-radius: 70px;
   margin-top: 80px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   transition: all .2s;
   /* cursor: pointer; */
 }
 
-.cont:hover{
+.subcont:hover{
   transform: scale(1.04);
 }
 
-.cont:hover > .divimg img{
+.subcont:hover > .divimg img{
   transform: scale(1.07);
 }
 

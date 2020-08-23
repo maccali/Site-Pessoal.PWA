@@ -43,7 +43,7 @@ function ProjectsContent() {
             </div>
             <div className="row">
               {projects.map((item, key) => (
-                <div key={key} className="col-xs col-md-3">
+                <div key={key} className="col-xs col-sm-6 col-md-3">
                   <ProjectCard
                     imgUrl={item.imgUrl}
                     title={item.title}

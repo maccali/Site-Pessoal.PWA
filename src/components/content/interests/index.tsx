@@ -62,7 +62,7 @@ function InterestsContent() {
           <div className="container">
             <div className="col-xs">
               <div className={styles.title}>
-                <h2>Tecnologias que mais domino</h2>
+                <h3>Tecnologias que mais domino</h3>
               </div>
             </div>
             <div className="col-xs">

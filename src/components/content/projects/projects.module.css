@@ -16,3 +16,10 @@
   margin-bottom: 30px;
   font-weight: 100;
 }
+
+@media(max-width: 768px){
+  .cont{
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}

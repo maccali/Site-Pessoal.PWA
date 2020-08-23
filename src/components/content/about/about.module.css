@@ -4,6 +4,13 @@
   background-color: #ededed;
 }
 
+@media(max-width: 768px){
+  .cont{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
 .title{
   display: flex;
   justify-content: center;
@@ -20,11 +27,11 @@
   display: flex;
   align-content: center;
   justify-content: center;
-  max-width: 250px;
+  margin-bottom: 30px;
 }
 
 .imgcontainer img{
-  width: 100%;
+  max-width: 220px;
   border-radius: 7px;
   border: 1px solid #bebebe;
 }

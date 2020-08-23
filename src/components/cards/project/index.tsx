@@ -22,49 +22,51 @@ function Project({
   return (
     <>
       <div className={styles.cont}>
-        <div className={styles.divimg}>
-          <img src={imgUrl} alt={`Logo do projeto ${title}`} />
-        </div>
-        <div className={styles.title}>
-          <h3>{title}</h3>
-        </div>
-        <div className={styles.links}>
-          {repoLink ? (
-            <Button
-              title={`Repositório do projeto ${title}`}
-              href={repoLink}
-              target="_blanck"
-              noStyle
-            >
-              <FaGithub />
-            </Button>
-          ) : (
-            ''
-          )}
-          {siteLink ? (
-            <Button
-              title={`Web App do ${title}`}
-              href={siteLink}
-              target="_blanck"
-              noStyle
-            >
-              <FaGlobeAmericas />
-            </Button>
-          ) : (
-            ''
-          )}
-          {googlePlayLink ? (
-            <Button
-              title={`Link para google play do ${title}`}
-              href={googlePlayLink}
-              target="_blanck"
-              noStyle
-            >
-              <FaGooglePlay />
-            </Button>
-          ) : (
-            ''
-          )}
+        <div className={styles.subcont}>
+          <div className={styles.divimg}>
+            <img src={imgUrl} alt={`Logo do projeto ${title}`} />
+          </div>
+          <div className={styles.title}>
+            <h3>{title}</h3>
+          </div>
+          <div className={styles.links}>
+            {repoLink ? (
+              <Button
+                title={`Repositório do projeto ${title}`}
+                href={repoLink}
+                target="_blanck"
+                noStyle
+              >
+                <FaGithub />
+              </Button>
+            ) : (
+              ''
+            )}
+            {siteLink ? (
+              <Button
+                title={`Web App do ${title}`}
+                href={siteLink}
+                target="_blanck"
+                noStyle
+              >
+                <FaGlobeAmericas />
+              </Button>
+            ) : (
+              ''
+            )}
+            {googlePlayLink ? (
+              <Button
+                title={`Link para google play do ${title}`}
+                href={googlePlayLink}
+                target="_blanck"
+                noStyle
+              >
+                <FaGooglePlay />
+              </Button>
+            ) : (
+              ''
+            )}
+          </div>
         </div>
       </div>
     </>

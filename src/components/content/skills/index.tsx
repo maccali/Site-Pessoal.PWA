@@ -62,7 +62,7 @@ function SkillsContent() {
             <div className="col-xs">
               <div className="col-xs">
                 <div className={styles.title}>
-                  <h2>Outras que tenho bom conhecimento</h2>
+                  <h3>Outras que tenho bom conhecimento</h3>
                 </div>
               </div>
               <div>
