@@ -45,8 +45,8 @@
   color: var(--instagram-color) !important;
 }
 
-.social a .discord:hover > svg{
-  color: var(--facebook-color) !important;
+.social a .skype:hover > svg{
+  color: var(--skype-color) !important;
 }
 
 .social a .github:hover > svg{

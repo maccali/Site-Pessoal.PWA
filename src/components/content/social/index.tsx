@@ -57,7 +57,7 @@ function SocialContent() {
                   target="_blank"
                   noStyle
                 >
-                  <div className={styles.discord}>
+                  <div className={styles.skype}>
                     <FaSkype />
                   </div>
                 </Button>

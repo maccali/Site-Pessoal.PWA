@@ -48,7 +48,6 @@ function Nav() {
       icone: <IoIosApps />,
       nome: 'Projetos',
       url: '/projetos',
-      anchor: 'projects',
     },
   ]);
 

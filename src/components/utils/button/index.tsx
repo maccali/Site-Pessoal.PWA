@@ -86,23 +86,43 @@ function Button({
       );
     }
   } else {
-    return (
-      <>
-        <button
+    if (target) {
+      return (
+        <a
           title={title}
           ref={ref}
           className={`
+        ${styles.btn} 
+        ${pos ? styles.pos : styles.pre}
+        ${iconOnly ? styles.icon : ''}
+        ${textOnly ? styles.text : ''}
+        ${className}`}
+          target={target}
+          href={href}
+          rel={rel ? rel : 'noopener noreferrer'}
+        >
+          {children}
+        </a>
+      );
+    } else {
+      return (
+        <>
+          <button
+            title={title}
+            ref={ref}
+            className={`
             ${styles.btn} 
             ${pos ? styles.pos : styles.pre}
             ${iconOnly ? styles.icon : ''}
             ${textOnly ? styles.text : ''}
             ${className}`}
-          onClick={() => (href ? hrefReplace(href) : action ? action() : '')}
-        >
-          {children}
-        </button>
-      </>
-    );
+            onClick={() => (href ? hrefReplace(href) : action ? action() : '')}
+          >
+            {children}
+          </button>
+        </>
+      );
+    }
   }
 }
 

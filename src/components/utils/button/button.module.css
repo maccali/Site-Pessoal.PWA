@@ -16,13 +16,13 @@
 }
 
 .btn:hover{
+  text-decoration: none;
   background-color: #ccecec;
   border: 2px #0e2c54 solid;
 }
 
 .btn span, .btn svg{
   font-weight: 400;
-  transition: all .2s;
 }
 
 .btn:hover span, .btn:hover svg{
