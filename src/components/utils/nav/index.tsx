@@ -67,6 +67,7 @@ function Nav() {
     document.getElementById(`${anchor}`).scrollIntoView({
       behavior: 'smooth',
     });
+    setMenuOpenWithWithSize();
   }
 
   return (
