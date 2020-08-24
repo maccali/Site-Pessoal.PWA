@@ -68,8 +68,7 @@ function SkillsContent() {
               <div>
                 <Slider {...settings}>
                   {techs.map((item) => (
-                    // eslint-disable-next-line react/jsx-key
-                    <div>
+                    <div key={item.title}>
                       <TechCard title={item.title} imgUrl={item.imgUrl} />
                     </div>
                   ))}

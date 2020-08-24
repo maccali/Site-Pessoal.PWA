@@ -69,8 +69,7 @@ function InterestsContent() {
               <div>
                 <Slider {...settings}>
                   {techs.map((item) => (
-                    // eslint-disable-next-line react/jsx-key
-                    <div>
+                    <div key={item.title}>
                       <TechBigCard title={item.title} imgUrl={item.imgUrl} />
                     </div>
                   ))}
