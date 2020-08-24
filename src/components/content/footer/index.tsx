@@ -33,7 +33,12 @@ function FooterContent() {
             <div className={`${styles.dedication} ${styles.right}`}>
               Siga para o repositório
               <span className={`${styles.icon} ${styles.git}`}>
-                <Button title="Open Source" noStyle>
+                <Button
+                  title="Open Source"
+                  href="https://github.com/maccali/Site-Pessoal"
+                  target="_blanck"
+                  noStyle
+                >
                   <FaGithub />
                 </Button>
               </span>

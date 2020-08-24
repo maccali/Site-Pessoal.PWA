@@ -1,7 +1,4 @@
-## Meu Site Pessoal
----
-
-![alt text](https://github.com/maccali/guilhermemaccali.com/blob/master/github.png)
+![alt text](https://github.com/maccali/Site-Pessoal/blob/master/.github/github.png)
 
 > Meu Portfólio feito em NextJS utilizando tecnologias modernas da web
 

@@ -10,21 +10,16 @@
   font-size: 15px;
 }
 
-/* .left{
-  justify-content: left;
-}
-
-.right{
-  justify-content: right;
-} */
-
-.icon button{
+.icon button, 
+.icon a{
   border: none;
   outline: none;
   background-color: transparent;
 }
 
-.icon:hover > button svg{
+.icon:hover > button svg,
+.icon:hover > a svg
+{
   transform: scale(1.7);
 }
 
@@ -36,10 +31,12 @@
   color: #ab7f60;
 }
 
-.icon button svg{
+.icon button svg, 
+.icon a svg{
   height: 20px;
   width: 20px;
   margin-right: 9px;
   margin-left: 9px;
   transition: all .2s;
+  color:aliceblue
 }
