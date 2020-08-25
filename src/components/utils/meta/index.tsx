@@ -7,7 +7,7 @@ const title = 'Guilherme Maccali - Programador que da Vida a sua Ideia';
 const description =
   'Olá, sou programador Fullstack, Entusiasta em tecnologias produtivas, Adoro desafios e fazer belas aplicações tomarem vida através de código limpo';
 const imagemUrl = '/imgs/social.png';
-const siteUrl = 'https://maccali.pictu.one/';
+const siteUrl = 'https://guilhermemaccali.com';
 
 function Meta() {
   useEffect(() => {
