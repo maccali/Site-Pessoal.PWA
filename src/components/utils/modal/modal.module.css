@@ -1,4 +1,4 @@
-.fixedcont{
+.fixedcont {
   position: fixed;
   width: 100%;
   background-color: #1e1e2f;
@@ -9,7 +9,7 @@
   margin-top: 60px;
 }
 
-.contaside{
+.contaside {
   display: block;
   position: fixed;
   right: 0;
@@ -18,7 +18,7 @@
   background-color: #27293d;
   color: #fff;
   width: 0;
-  transition: all .25s;
+  transition: all 0.25s;
   border-left: none;
   overflow-y: auto;
   overflow-x: hidden;
@@ -26,7 +26,7 @@
   z-index: 250;
 }
 
-.bgprimary{
+.bgprimary {
   background-color: #27293d;
 }
 
@@ -34,18 +34,18 @@
   width: 0px !important;
 }
 
-.contasideativado{
+.contasideativado {
   width: 100% !important;
 }
 
-.contasidefix{
+.contasidefix {
   display: flex;
   flex-direction: column;
   background-color: #27293d;
   width: 100vw;
 }
 
-.headercont{
+.headercont {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -55,29 +55,29 @@
   padding-right: 15px;
 }
 
-.headercont p{
+.headercont p {
   display: flex;
   color: white;
   font-size: 20px;
   margin: 0;
 }
 
-.headercont a{
+.headercont a {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  transition: all .3s;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
-.headercont a:hover{
+.headercont a:hover {
   transform: scale(1.1);
 }
 
-.headercont a svg{
+.headercont a svg {
   width: 28px;
   height: 28px;
   color: #fff;
@@ -89,6 +89,6 @@
   align-items: center;
 }
 
-.img img{
+.img img {
   height: 48px;
 }

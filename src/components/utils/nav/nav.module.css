@@ -1,15 +1,15 @@
-.cont{
+.cont {
   position: fixed;
   z-index: 100 !important;
   width: 100%;
   background-color: #0e2c54;
 }
 
-.space{
+.space {
   height: 65px;
 }
 
-.nav{ 
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +17,7 @@
   height: 65px;
 }
 
-.menu{ 
+.menu {
   display: flex;
   align-items: center;
   height: inherit;
@@ -25,48 +25,51 @@
   margin: 0;
   list-style: none;
 }
-.menu li{
+.menu li {
   height: inherit;
 }
 
-.menu li a{
+.menu li a {
   display: inline-flex;
   justify-content: end;
   align-items: center;
   color: #fff;
   font-size: 17px;
-  transition: all .3s;
+  transition: all 0.3s;
   height: inherit;
   border-radius: 45px;
   cursor: pointer;
 }
 
-.menu li a:hover{
+.menu li a:hover {
   background-color: var(--primary-color-var);
   text-decoration: none;
   color: #fff;
   transform: scale(1.3);
 }
 
-.menu a, .menu button{
+.menu a,
+.menu button {
   display: flex;
   /* background-color: #0e2c54; */
   outline: none;
   justify-content: center;
   align-items: center;
   border: none;
-  transition: all .2s;
+  transition: all 0.2s;
   width: 60px !important;
   height: 60px !important;
 }
 
-.menu a:hover, .menu button:hover{
+.menu a:hover,
+.menu button:hover {
   height: 115px !important;
   border-radius: 0 0 30px 30px;
-  background-color: #637FFF;
+  background-color: #637fff;
 }
 
-.menu a svg, .menu button svg{
+.menu a svg,
+.menu button svg {
   width: 25px;
   height: 25px;
   color: #fff !important;
@@ -78,37 +81,37 @@
   align-items: center;
 }
 
-.img img{
+.img img {
   height: 55px;
 }
 
-.contaside{
+.contaside {
   display: block;
   position: fixed;
   right: 0;
   top: 0;
   height: 100vh;
-  background-color:#0e2c54;
+  background-color: #0e2c54;
   color: #fff;
   width: 0;
   overflow: auto;
-  transition: all .20s;
+  transition: all 0.2s;
   border-left: none;
   overflow: hidden;
 }
 
-.contasideativado{
+.contasideativado {
   width: 300px !important;
-  border-left: groove 1px #637FFF;
+  border-left: groove 1px #637fff;
 }
 
-.contasidefix{
+.contasidefix {
   display: flex;
   flex-direction: column;
   width: 300px;
 }
 
-.headercont{
+.headercont {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -117,14 +120,14 @@
   padding-right: 15px;
 }
 
-.headercont p{
+.headercont p {
   display: flex;
   color: white;
   font-size: 20px;
   margin: 0;
 }
 
-.headercont button{
+.headercont button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,77 +137,78 @@
   width: 45px;
   border-radius: 50%;
   background-color: #0e2c54;
-  transition: all .2s;
+  transition: all 0.2s;
   cursor: pointer;
 }
 
-.headercont button:hover{
-  background-color: #637FFF;
+.headercont button:hover {
+  background-color: #637fff;
   transform: scale(1.1);
 }
 
-.headercont button svg{
+.headercont button svg {
   height: 26px;
   width: 26px;
   color: #fff;
 }
 
-.menuitem{
+.menuitem {
   display: flex;
   align-items: center;
   height: 42px;
-  transition: all .2s;
+  transition: all 0.2s;
   padding-left: 35px;
   padding-right: 35px;
 }
 
-.menuitem:hover, .menuitem:focus{
+.menuitem:hover,
+.menuitem:focus {
   transform: scale(1.05);
   text-decoration: none;
   cursor: pointer;
-  background-color: #637FFF !important;
+  background-color: #637fff !important;
 }
 
-.menuitem span{
+.menuitem span {
   display: flex;
   justify-content: start;
   width: 50px;
 }
 
-.menuitem span svg{
+.menuitem span svg {
   height: 20px;
   width: 20px;
   color: white;
-  transition: all .25s;
+  transition: all 0.25s;
 }
 
-.menuitem:hover > span svg{
+.menuitem:hover > span svg {
   transform: scale(1.7);
 }
 
-.menuitem p{
+.menuitem p {
   color: white;
   margin: 0;
   font-size: 16px;
   text-decoration: none;
 }
 
-.cardmenu{
+.cardmenu {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.cardmenu div img{
+.cardmenu div img {
   object-fit: cover;
-  margin-top: 20px; 
-  margin-bottom: 20px; 
+  margin-top: 20px;
+  margin-bottom: 20px;
   /* width: 100px; */
   height: 100px;
 }
 
-.cardmenu span{
+.cardmenu span {
   margin-top: 10px;
   color: white;
   font-weight: bold;

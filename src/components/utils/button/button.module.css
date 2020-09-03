@@ -1,4 +1,4 @@
-.btn{
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,35 +9,38 @@
   border: 0;
   color: white;
   font-size: 14px;
-  transition: all .2s;
+  transition: all 0.2s;
   outline: none;
   box-shadow: 0 0 3px 0 #ddd;
   user-select: none;
 }
 
-.btn:hover{
+.btn:hover {
   text-decoration: none;
   background-color: #ccecec;
   border: 2px #0e2c54 solid;
 }
 
-.btn span, .btn svg{
+.btn span,
+.btn svg {
   font-weight: 400;
 }
 
-.btn:hover span, .btn:hover svg{
+.btn:hover span,
+.btn:hover svg {
   font-weight: bold;
   color: #0e2c54 !important;
 }
 
-.btn svg, .btn p{
+.btn svg,
+.btn p {
   height: 20px;
   width: 20px;
   margin-right: 16px;
   margin-left: 16px;
 }
 
-.btn p{
+.btn p {
   display: flex;
   align-items: center;
   font-size: 18px;
@@ -46,33 +49,34 @@
   margin-left: 16px;
 }
 
-.pos span{
+.pos span {
   margin-left: 16px;
 }
 
-.pre span{
+.pre span {
   margin-right: 16px;
 }
 
-.text span{
+.text span {
   margin-right: 16px;
   margin-left: 16px;
 }
 
-.icon svg, .icon p{
+.icon svg,
+.icon p {
   margin-right: 11px;
   margin-left: 11px;
   margin-bottom: 0;
 }
 
-.load{
+.load {
   display: flex;
   align-items: center;
   content: 'entrar';
   justify-content: center;
 }
 
-.taglink{
+.taglink {
   display: contents;
   background-color: transparent;
   outline: none;

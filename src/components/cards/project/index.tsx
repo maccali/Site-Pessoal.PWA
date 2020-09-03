@@ -21,11 +21,11 @@ function Project({
 }: ProjectFace) {
   return (
     <>
-      <div className={styles.cont}>
+      <article className={styles.cont}>
         <div className={styles.subcont}>
-          <div className={styles.divimg}>
+          <figure className={styles.divimg}>
             <img src={imgUrl} alt={`Logo do projeto ${title}`} />
-          </div>
+          </figure>
           <div className={styles.title}>
             <h3>{title}</h3>
           </div>
@@ -68,7 +68,7 @@ function Project({
             )}
           </div>
         </div>
-      </div>
+      </article>
     </>
   );
 }

@@ -1,84 +1,84 @@
-.cont{
+.cont {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #ededed;
 }
 
-@media(max-width: 768px){
-  .cont{
+@media (max-width: 768px) {
+  .cont {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
-.title{
+.title {
   display: flex;
   justify-content: center;
   font-weight: 100;
 }
 
-.title h2{
+.title h2 {
   font-size: 32px;
   margin-bottom: 30px;
   font-weight: 100;
 }
 
-.imgcontainer{
+.imgcontainer {
   display: flex;
   align-content: center;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.imgcontainer img{
+.imgcontainer img {
   max-width: 220px;
   border-radius: 7px;
   border: 1px solid #bebebe;
 }
 
-.abouttext{
+.abouttext {
   margin-bottom: 35px;
 }
 
-.greetings{
+.greetings {
   font-size: 16px;
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-.greetings b{
+.greetings b {
   font-size: 22px;
   margin-right: 10px;
 }
 
-.name{
+.name {
   font-size: 28px;
   font-weight: 100;
   margin-top: 0;
   margin-bottom: 18px;
 }
 
-.content{
+.content {
   margin-bottom: 35px;
 }
 
-.content > *{
+.content > * {
   margin-bottom: 1rem;
 }
 
-.content p{
+.content p {
   font-size: 16px;
   text-indent: 1.5em;
   text-align: justify;
 }
 
-.content p::first-letter{
+.content p::first-letter {
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.content p a{
+.content p a {
   text-decoration: none;
   color: #005cd4;
 }

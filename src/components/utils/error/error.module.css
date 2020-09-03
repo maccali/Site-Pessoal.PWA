@@ -1,23 +1,23 @@
-.card{
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.card img{
+.card img {
   width: 150px;
   height: 143px;
   margin-bottom: 20px;
 }
 
-.title{
+.title {
   margin-top: 20px;
   margin-bottom: 30px;
   text-align: center;
   color: white;
 }
 
-.btnicon{
+.btnicon {
   height: 20px;
   width: 20px;
   margin-right: 10px;

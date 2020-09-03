@@ -19,7 +19,7 @@ function Nav() {
 
   const router = useRouter();
 
-  const [links, setLinks] = useState([
+  const [links] = useState([
     {
       icone: <AiFillInfoCircle />,
       nome: 'Sobre',

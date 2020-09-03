@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'Montserrat';
-  src:
-    url('/libs/font/Montserrat-Regular.ttf') format('truetype'),
+  src: url('/libs/font/Montserrat-Regular.ttf') format('truetype'),
     url('/libs/font/Montserrat-Bold.ttf') format('truetype');
 }
 
@@ -22,23 +21,23 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #637FFF;
+  background: #637fff;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   background-color: #ededed;
 }
 
-:root{
+:root {
   --github-color: #333;
-  --linkedin-color: #0E76A8;
-  --facebook-color: #3B5998;
-  --whatsapp-color: #25D366;
-  --instagram-color: #C13584;
-  --skype-color: #00AFF0;
+  --linkedin-color: #0e76a8;
+  --facebook-color: #3b5998;
+  --whatsapp-color: #25d366;
+  --instagram-color: #c13584;
+  --skype-color: #00aff0;
   --discord-color: #7080ce;
-  --gitlab-color: #FC6D27;
-  --mail-color: #637FFF;
+  --gitlab-color: #fc6d27;
+  --mail-color: #637fff;
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Button from '../../utils/button';
 import ProjectCard from '../../cards/project';
 
 import styles from './projects.module.css';

@@ -1,1 +1,1 @@
-console.log(`🪐 Bem-vindo ao Meu Submundo 🌌`)
+console.log(`🪐 Bem-vindo ao Meu Submundo 🌌`);

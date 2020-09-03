@@ -1,27 +1,28 @@
-.cont{
+.cont {
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
-.cont:hover, .cont:focus{
+.cont:hover,
+.cont:focus {
   transform: scale(1.05);
-} 
+}
 
-.title p::first-letter{
+.title p::first-letter {
   font-size: 20px;
   font-weight: bold;
   margin-right: 2px;
 }
 
-.imgcont img{
+.imgcont img {
   border-radius: 50% !important;
   -webkit-box-shadow: 0px 0px 12px -6px rgba(17, 13, 13, 0.39) !important;
-  -moz-box-shadow: 0px 0px 12px -6px rgba(0,0,0,0.39) !important;
-  box-shadow: 0px 0px 12px -6px rgba(0,0,0,0.39) !important;
+  -moz-box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.39) !important;
+  box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.39) !important;
   max-height: 100px;
 }

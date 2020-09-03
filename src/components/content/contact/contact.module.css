@@ -1,82 +1,81 @@
-.cont{
+.cont {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #f3f3f3;
 }
 
-.title{
+.title {
   display: flex;
   justify-content: center;
   font-weight: 100;
 }
 
-.title h2{
+.title h2 {
   font-size: 32px;
   margin-bottom: 30px;
   font-weight: 100;
 }
 
-.item a{
+.item a {
   display: inline-flex;
   text-decoration: none;
   align-items: center;
   margin-bottom: 16px;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
-.item a:hover > svg{
+.item a:hover > svg {
   transform: rotate(25deg) scale(1.3);
 }
 
-.item a:hover > p{
+.item a:hover > p {
   margin-left: 20px;
   font-weight: bold;
 }
 
-.item a svg{
+.item a svg {
   height: 25px;
   width: 25px;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
-.item a p{
+.item a p {
   color: black;
   font-size: 14px;
   margin-left: 12px;
   margin-top: 0;
   margin-bottom: 0;
-  transition: all .2s;
-
+  transition: all 0.2s;
 }
 
-.instagram a svg{
+.instagram a svg {
   color: var(--instagram-color);
 }
 
-.linkedin a svg{
+.linkedin a svg {
   color: var(--linkedin-color);
 }
 
-.facebook a svg{
+.facebook a svg {
   color: var(--facebook-color);
 }
 
-.github a svg{
+.github a svg {
   color: var(--github-color);
 }
 
-.gitlab a svg{
+.gitlab a svg {
   color: var(--gitlab-color);
 }
 
-.whatsapp a svg{
+.whatsapp a svg {
   color: var(--whatsapp-color);
 }
 
-.mail a svg{
+.mail a svg {
   color: var(--mail-color);
 }
 
-.skype a svg{
+.skype a svg {
   color: var(--skype-color);
 }

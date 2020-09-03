@@ -1,16 +1,16 @@
-.cont{
+.cont {
   background-color: #f3f3f3;
   padding-top: 30px;
   padding-bottom: 90px;
 }
 
-.title{
+.title {
   display: flex;
   justify-content: center;
   font-weight: 100;
 }
 
-.title h3{
+.title h3 {
   font-size: 25px;
   margin-bottom: 30px;
   font-weight: 100;
