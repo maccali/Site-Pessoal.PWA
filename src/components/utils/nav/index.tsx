@@ -15,7 +15,8 @@ import Button from '../button';
 import styles from './nav.module.css';
 
 function Nav() {
-  const [menuActive, setMenuActive] = useState(false);
+  const [menuActive, setMenuActive] = useState<boolean>(false);
+  const [headerActive, setHeaderActive] = useState<boolean>(false);
 
   const router = useRouter();
 
@@ -52,7 +53,8 @@ function Nav() {
   ]);
 
   function setMenuOpenWithWithSize() {
-    setMenuActive(window.innerWidth >= 1740);
+    setMenuActive(window.innerWidth >= 1800);
+    setHeaderActive(window.innerWidth <= 1800);
   }
 
   useEffect(() => {
@@ -61,7 +63,6 @@ function Nav() {
     });
     setMenuOpenWithWithSize();
   }, []);
-  console.log(router.pathname);
 
   function setAnchor(anchor: string) {
     document.getElementById(`${anchor}`).scrollIntoView({
@@ -89,6 +90,7 @@ function Nav() {
             <ul className={styles.menu}>
               <Button title="Projetos" href="/projetos" noStyle>
                 <IoIosApps />
+                <p>Projetos</p>
               </Button>
               <Button
                 title="Abrir Menu"
@@ -96,6 +98,7 @@ function Nav() {
                 noStyle
               >
                 <FiMenu />
+                <p>Menu</p>
               </Button>
             </ul>
           </nav>
@@ -107,16 +110,20 @@ function Nav() {
             }
           >
             <div className={styles.contasidefix}>
-              <div className={styles.headercont}>
-                <p>Menu</p>
-                <Button
-                  title="Fechar Menu"
-                  action={() => setMenuActive(!menuActive)}
-                  noStyle
-                >
-                  <MdClose />
-                </Button>
-              </div>
+              {headerActive ? (
+                <div className={styles.headercont}>
+                  <p>Menu</p>
+                  <Button
+                    title="Fechar Menu"
+                    action={() => setMenuActive(!menuActive)}
+                    noStyle
+                  >
+                    <MdClose />
+                  </Button>
+                </div>
+              ) : (
+                ''
+              )}
               <div className={styles.cardmenu}>
                 <div>
                   <img src="/icons/icon126.png" alt="Logo do site" />
