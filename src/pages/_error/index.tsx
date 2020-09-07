@@ -10,9 +10,9 @@ function Error({ statusCode }: ErrorFace) {
   let message = '';
 
   if (statusCode == 404) {
-    message = 'Esta página não existe';
+    message = 'This page does not exist';
   } else {
-    message = 'Algum problema ocorreu';
+    message = 'Some error occurred';
   }
 
   function goBack() {
@@ -24,7 +24,7 @@ function Error({ statusCode }: ErrorFace) {
       <ErrorPage statusCode={statusCode} message={message} title="Erro">
         <Button title="Go Back" action={() => goBack()}>
           <AiOutlineArrowLeft />
-          <span>Voltar</span>
+          <span>Go Back</span>
         </Button>
       </ErrorPage>
     </>

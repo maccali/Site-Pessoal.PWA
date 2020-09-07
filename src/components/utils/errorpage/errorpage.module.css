@@ -23,8 +23,7 @@
 }
 
 .text {
-  width: 300px;
-  padding: 20px;
+  align-self: center;
 }
 
 .text > * {
@@ -42,9 +41,9 @@
 }
 
 .text h1 {
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .text h2 {
-  font-size: 25px;
+  font-size: 35px;
 }
