@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Fade from 'react-reveal/Fade';
 
 // Icons import
 import { FiMenu } from 'react-icons/fi';
@@ -78,29 +79,33 @@ function Nav() {
           <nav className={styles.nav}>
             <ul className={styles.menu}>
               <li>
-                <div className={styles.img}>
-                  <Button title="Home" href="/" noStyle>
-                    <div className={styles.seta}>
-                      <img src="/imgs/logo.png" alt="Site Logo" />
-                    </div>
-                  </Button>
-                </div>
+                <Fade left>
+                  <div className={styles.img}>
+                    <Button title="Home" href="/" noStyle>
+                      <div className={styles.seta}>
+                        <img src="/imgs/logo.png" alt="Site Logo" />
+                      </div>
+                    </Button>
+                  </div>
+                </Fade>
               </li>
             </ul>
-            <ul className={styles.menu}>
-              <Button title="Projetos" href="/projetos" noStyle>
-                <IoIosApps />
-                <p>Projetos</p>
-              </Button>
-              <Button
-                title="Abrir Menu"
-                action={() => setMenuActive(!menuActive)}
-                noStyle
-              >
-                <FiMenu />
-                <p>Menu</p>
-              </Button>
-            </ul>
+            <Fade right>
+              <ul className={styles.menu}>
+                <Button title="Projetos" href="/projetos" noStyle>
+                  <IoIosApps />
+                  <p>Projetos</p>
+                </Button>
+                <Button
+                  title="Abrir Menu"
+                  action={() => setMenuActive(!menuActive)}
+                  noStyle
+                >
+                  <FiMenu />
+                  <p>Menu</p>
+                </Button>
+              </ul>
+            </Fade>
           </nav>
           <div
             className={
