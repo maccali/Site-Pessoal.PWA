@@ -25,10 +25,13 @@
     <img alt="Yarn" src="https://img.shields.io/badge/Yarn-1.22.4-0.svg?style=flat-square&color=2c8ebb&labelColor=000000">
   </a>
   <a href="https://nextjs.org" target="_blank">
-    <img alt="NextJS" src="https://img.shields.io/badge/NextJS-9.4.4-0.svg?style=flat-square&color=6191ff&labelColor=000000">
+    <img alt="NextJS" src="https://img.shields.io/badge/NextJS-9.5.3-0.svg?style=flat-square&color=6191ff&labelColor=000000">
   </a>
   <a href="https://getbootstrap.com" target="_blank">
     <img alt="Bootstrap Grid" src="https://img.shields.io/badge/Bootstrap Grid-4.4.1-0.svg?style=flat-square&color=563d7c&labelColor=000000">
+  </a>
+  <a href="https://nextjs.org" target="_blank">
+    <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-4.0.2-0.svg?style=flat-square&color=3178c6&labelColor=000000">
   </a>
   <a href="https://fontawesome.com" target="_blank">
     <img alt="React Icons" src="https://img.shields.io/badge/React Icons--0.svg?style=flat-square&color=e91e63&labelColor=000000">
@@ -86,6 +89,8 @@
 > * NextJS
 > * ReactJS
 > * PWA
+> * TypeScript 4+
+> * Component Oriented (COP)
 > ---
 
 ### Outras Techs
