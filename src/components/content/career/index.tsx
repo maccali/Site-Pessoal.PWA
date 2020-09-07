@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 
 import Button from '../../utils/button';
 
@@ -11,31 +12,37 @@ function CareerContent() {
         <div className={`container-fluid ${styles.cont}`}>
           <div className="container">
             <div className="col-xs">
-              <div className={styles.title}>
-                <h2>Trajetória & Carreira</h2>
-              </div>
+              <Fade bottom>
+                <div className={styles.title}>
+                  <h2>Trajetória & Carreira</h2>
+                </div>
+              </Fade>
             </div>
             <div className="col-xs">
-              <div className={styles.text}>
-                <p>
-                  Você pode conferir mais sobre mim e minha carreira
-                  <br />
-                  clicando no botão abaixo para ver o meu currículo.
-                </p>
-              </div>
+              <Fade bottom>
+                <div className={styles.text}>
+                  <p>
+                    Você pode conferir mais sobre mim e minha carreira
+                    <br />
+                    clicando no botão abaixo para ver o meu currículo.
+                  </p>
+                </div>
+              </Fade>
             </div>
 
             <div className="col-xs">
-              <div className={styles.btn}>
-                <Button
-                  title="Ver meu currículo"
-                  href="https://drive.google.com/open?id=1B5wbEIiO2dle-ppZHGW4u1Vni0MTkKzi"
-                  target="_blank"
-                  textOnly
-                >
-                  <span>Ver meu currículo</span>
-                </Button>
-              </div>
+              <Fade bottom>
+                <div className={styles.btn}>
+                  <Button
+                    title="Ver meu currículo"
+                    href="https://drive.google.com/open?id=1B5wbEIiO2dle-ppZHGW4u1Vni0MTkKzi"
+                    target="_blank"
+                    textOnly
+                  >
+                    <span>Ver meu currículo</span>
+                  </Button>
+                </div>
+              </Fade>
             </div>
           </div>
         </div>

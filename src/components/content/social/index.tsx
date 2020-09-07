@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 
 import Button from '../../utils/button';
 
@@ -20,68 +21,70 @@ function SocialContent() {
         <div className={`container-fluid ${styles.cont}`}>
           <div className="container">
             <div className="col-xs">
-              <div className={styles.social}>
-                <Button
-                  title="LinkedIn"
-                  href="https://www.linkedin.com/in/guilhermemaccali/"
-                  target="_blank"
-                  noStyle
-                >
-                  <div className={styles.linkedin}>
-                    <FaLinkedin />
-                  </div>
-                </Button>
-                <Button
-                  title="Facebook"
-                  href="https://www.facebook.com/guimaccali"
-                  target="_blank"
-                  noStyle
-                >
-                  <div className={styles.facebook}>
-                    <FaFacebook />
-                  </div>
-                </Button>
-                <Button
-                  title="Instagram"
-                  href="https://www.instagram.com/guilherme_maccali"
-                  target="_blank"
-                  noStyle
-                >
-                  <div className={styles.instagram}>
-                    <FaInstagramSquare />
-                  </div>
-                </Button>
-                <Button
-                  title="Skype"
-                  href="skype:guimaccali?chat"
-                  target="_blank"
-                  noStyle
-                >
-                  <div className={styles.skype}>
-                    <FaSkype />
-                  </div>
-                </Button>
-                <Button
-                  title="GitHub"
-                  href="https://github.com/maccali"
-                  target="_blank"
-                  noStyle
-                >
-                  <div className={styles.github}>
-                    <FaGithub />
-                  </div>
-                </Button>
-                <Button
-                  title="GitLab"
-                  href="https://gitlab.com/maccali"
-                  target="_blank"
-                  noStyle
-                >
-                  <div className={styles.gitlab}>
-                    <FaGitlab />
-                  </div>
-                </Button>
-              </div>
+              <Fade left>
+                <div className={styles.social}>
+                  <Button
+                    title="LinkedIn"
+                    href="https://www.linkedin.com/in/guilhermemaccali/"
+                    target="_blank"
+                    noStyle
+                  >
+                    <div className={styles.linkedin}>
+                      <FaLinkedin />
+                    </div>
+                  </Button>
+                  <Button
+                    title="Facebook"
+                    href="https://www.facebook.com/guimaccali"
+                    target="_blank"
+                    noStyle
+                  >
+                    <div className={styles.facebook}>
+                      <FaFacebook />
+                    </div>
+                  </Button>
+                  <Button
+                    title="Instagram"
+                    href="https://www.instagram.com/guilherme_maccali"
+                    target="_blank"
+                    noStyle
+                  >
+                    <div className={styles.instagram}>
+                      <FaInstagramSquare />
+                    </div>
+                  </Button>
+                  <Button
+                    title="Skype"
+                    href="skype:guimaccali?chat"
+                    target="_blank"
+                    noStyle
+                  >
+                    <div className={styles.skype}>
+                      <FaSkype />
+                    </div>
+                  </Button>
+                  <Button
+                    title="GitHub"
+                    href="https://github.com/maccali"
+                    target="_blank"
+                    noStyle
+                  >
+                    <div className={styles.github}>
+                      <FaGithub />
+                    </div>
+                  </Button>
+                  <Button
+                    title="GitLab"
+                    href="https://gitlab.com/maccali"
+                    target="_blank"
+                    noStyle
+                  >
+                    <div className={styles.gitlab}>
+                      <FaGitlab />
+                    </div>
+                  </Button>
+                </div>
+              </Fade>
             </div>
           </div>
         </div>

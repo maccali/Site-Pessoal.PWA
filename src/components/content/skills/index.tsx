@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 
 import TechCard from '../../cards/tech';
 
@@ -61,18 +62,22 @@ function SkillsContent() {
           <div className="container">
             <div className="col-xs">
               <div className="col-xs">
-                <div className={styles.title}>
-                  <h3>Outras que tenho bom conhecimento</h3>
-                </div>
+                <Fade bottom>
+                  <div className={styles.title}>
+                    <h3>Outras que tenho bom conhecimento</h3>
+                  </div>
+                </Fade>
               </div>
               <div>
-                <Slider {...settings}>
-                  {techs.map((item) => (
-                    <div key={item.title}>
-                      <TechCard title={item.title} imgUrl={item.imgUrl} />
-                    </div>
-                  ))}
-                </Slider>
+                <Fade bottom>
+                  <Slider {...settings}>
+                    {techs.map((item) => (
+                      <div key={item.title}>
+                        <TechCard title={item.title} imgUrl={item.imgUrl} />
+                      </div>
+                    ))}
+                  </Slider>
+                </Fade>
               </div>
             </div>
           </div>

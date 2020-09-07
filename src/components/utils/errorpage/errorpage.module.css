@@ -1,11 +1,30 @@
 .card {
+  position: relative;
   display: flex;
   justify-content: center;
-  height: calc(100vh - 200px);
+  margin-top: 65px;
+  height: calc(100vh - 65px);
+}
+
+.figure {
+  object-fit: cover;
+}
+
+.conttext {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-color: rgba(240, 248, 255, 0.42);
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .text {
-  align-self: center;
+  width: 300px;
+  padding: 20px;
 }
 
 .text > * {
@@ -23,9 +42,9 @@
 }
 
 .text h1 {
-  font-size: 40px;
+  font-size: 45px;
 }
 
 .text h2 {
-  font-size: 35px;
+  font-size: 25px;
 }
