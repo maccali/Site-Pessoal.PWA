@@ -21,13 +21,13 @@ function ErrorPage({ statusCode, message, title, children }: ErrorPageFace) {
       <main>
         <div className="container-fluid">
           <div className="row">
-            <Fade right>
-              <div className={styles.card}>
-                <img
-                  className={styles.figure}
-                  src="https://picsum.photos/1400/1400/?blur=1"
-                  alt=""
-                />
+            <div className={styles.card}>
+              <Fade left>
+                <figure className={styles.figure}>
+                  <img src="https://picsum.photos/1400/1400/?blur=1" alt="" />
+                </figure>
+              </Fade>
+              <Fade right>
                 <div className={styles.conttext}>
                   <div className={styles.text}>
                     <h1>{statusCode}</h1>
@@ -35,8 +35,8 @@ function ErrorPage({ statusCode, message, title, children }: ErrorPageFace) {
                     <div>{children}</div>
                   </div>
                 </div>
-              </div>
-            </Fade>
+              </Fade>
+            </div>
           </div>
         </div>
       </main>
