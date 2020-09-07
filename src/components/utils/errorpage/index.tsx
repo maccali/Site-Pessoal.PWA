@@ -19,15 +19,16 @@ function ErrorPage({ statusCode, message, title, children }: ErrorPageFace) {
       </Head>
       <main>
         <div className="container-fluid">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <div className={styles.card}>
-                  <div className={styles.text}>
-                    <h1 className="mt-5">{statusCode}</h1>
-                    <h2 className="mt-3">{message}</h2>
-                    <div className="mt-5">{children}</div>
-                  </div>
+          <div className="row">
+            <div className={styles.card}>
+              <figure className={styles.figure}>
+                <img src="https://picsum.photos/1400/1400/?blur=1" alt="" />
+              </figure>
+              <div className={styles.conttext}>
+                <div className={styles.text}>
+                  <h1>{statusCode}</h1>
+                  <h2>{message}</h2>
+                  <div>{children}</div>
                 </div>
               </div>
             </div>
