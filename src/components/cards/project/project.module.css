@@ -37,6 +37,10 @@
   transition: all 0.35s;
 }
 
+.links {
+  display: flex;
+}
+
 .links a svg {
   margin-left: 7px;
   margin-right: 7px;
