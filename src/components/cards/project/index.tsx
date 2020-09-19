@@ -1,23 +1,23 @@
-import styles from './project.module.css';
+import styles from './project.module.css'
 
-import Button from '../../utils/button';
+import Clickable from '../../utils/clickable'
 
-import { FaGithub, FaGooglePlay, FaGlobeAmericas } from 'react-icons/fa';
+import { FaGithub, FaGooglePlay, FaGlobeAmericas } from 'react-icons/fa'
 
 type ProjectFace = {
-  title: string;
-  imgUrl: string;
-  repoLink?: string;
-  siteLink?: string;
-  googlePlayLink?: string;
-};
+  title: string
+  imgUrl: string
+  repoLink?: string
+  siteLink?: string
+  googlePlayLink?: string
+}
 
 function Project({
   title,
   imgUrl,
   repoLink,
   siteLink,
-  googlePlayLink,
+  googlePlayLink
 }: ProjectFace) {
   return (
     <>
@@ -31,38 +31,38 @@ function Project({
           </div>
           <div className={styles.links}>
             {repoLink ? (
-              <Button
+              <Clickable
                 title={`Repositório do projeto ${title}`}
                 href={repoLink}
                 target="_blanck"
                 noStyle
               >
                 <FaGithub />
-              </Button>
+              </Clickable>
             ) : (
               ''
             )}
             {siteLink ? (
-              <Button
+              <Clickable
                 title={`Web App do ${title}`}
                 href={siteLink}
                 target="_blanck"
                 noStyle
               >
                 <FaGlobeAmericas />
-              </Button>
+              </Clickable>
             ) : (
               ''
             )}
             {googlePlayLink ? (
-              <Button
+              <Clickable
                 title={`Link para google play do ${title}`}
                 href={googlePlayLink}
                 target="_blanck"
                 noStyle
               >
                 <FaGooglePlay />
-              </Button>
+              </Clickable>
             ) : (
               ''
             )}
@@ -70,7 +70,7 @@ function Project({
         </div>
       </article>
     </>
-  );
+  )
 }
 
-export default Project;
+export default Project

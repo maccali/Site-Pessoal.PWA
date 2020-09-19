@@ -1,11 +1,11 @@
-import React from 'react';
-import Fade from 'react-reveal/Fade';
+import React from 'react'
+import Fade from 'react-reveal/Fade'
 
-import TechBigCard from '../../cards/techbig';
+import TechBigCard from '../../cards/techbig'
 
-import styles from './interests.module.css';
+import styles from './interests.module.css'
 
-import Slider from 'react-slick';
+import Slider from 'react-slick'
 
 function InterestsContent() {
   const settings = {
@@ -26,25 +26,25 @@ function InterestsContent() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
-        },
+          slidesToScroll: 3
+        }
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-        },
+          slidesToScroll: 2
+        }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+          slidesToScroll: 1
+        }
+      }
+    ]
+  }
 
   const techs = [
     { title: 'NextJS', imgUrl: '/imgs/techs/NextJS.png' },
@@ -53,8 +53,8 @@ function InterestsContent() {
     { title: 'NodeJS', imgUrl: '/imgs/techs/NodeJS.png' },
     { title: 'PHP', imgUrl: '/imgs/techs/PHP.png' },
     { title: 'React', imgUrl: '/imgs/techs/React.png' },
-    { title: 'PWA', imgUrl: '/imgs/techs/PWA.png' },
-  ];
+    { title: 'PWA', imgUrl: '/imgs/techs/PWA.png' }
+  ]
 
   return (
     <>
@@ -72,7 +72,7 @@ function InterestsContent() {
               <div>
                 <Fade bottom>
                   <Slider {...settings}>
-                    {techs.map((item) => (
+                    {techs.map(item => (
                       <div key={item.title}>
                         <TechBigCard title={item.title} imgUrl={item.imgUrl} />
                       </div>
@@ -85,7 +85,7 @@ function InterestsContent() {
         </div>
       </section>
     </>
-  );
+  )
 }
 
-export default InterestsContent;
+export default InterestsContent

@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react'
 
 // External Libs
-import Head from 'next/head';
+import Head from 'next/head'
 
 // Page Content
-import SpacerContent from '../components/content/spacer';
-import SocialContent from '../components/content/social';
-import AboutContent from '../components/content/about';
-import CareerContent from '../components/content/career';
-import InterestsContent from '../components/content/interests';
-import SkillsContent from '../components/content/skills';
-import ContactContent from '../components/content/contact';
-import FooterContent from '../components/content/footer';
+import SpacerContent from '../components/content/spacer'
+import SocialContent from '../components/content/social'
+import AboutContent from '../components/content/about'
+import CareerContent from '../components/content/career'
+import InterestsContent from '../components/content/interests'
+import SkillsContent from '../components/content/skills'
+import ContactContent from '../components/content/contact'
+import FooterContent from '../components/content/footer'
 
 function Home() {
   return (
@@ -30,7 +30,7 @@ function Home() {
         <FooterContent />
       </main>
     </>
-  );
+  )
 }
 
-export default Home;
+export default Home

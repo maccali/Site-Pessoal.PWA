@@ -1,3 +1,3 @@
 /* eslint-disable prettier/prettier */
-declare module '*.css';
-declare module '*.scss';
+declare module '*.css'
+declare module '*.scss'

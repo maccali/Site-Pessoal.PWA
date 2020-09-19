@@ -1,12 +1,12 @@
-import React from 'react';
-import { AiOutlineReload } from 'react-icons/ai';
-import styles from './error.module.css';
+import React from 'react'
+import { AiOutlineReload } from 'react-icons/ai'
+import styles from './error.module.css'
 
 type ErrorFace = {
-  message: string;
-  reload?: () => void;
-  noImg?: boolean;
-};
+  message: string
+  reload?: () => void
+  noImg?: boolean
+}
 
 function Error({ message, reload, noImg }: ErrorFace) {
   return (
@@ -34,7 +34,7 @@ function Error({ message, reload, noImg }: ErrorFace) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Error;
+export default Error

@@ -1,22 +1,22 @@
-import React, { ReactNode, useRef, useEffect, useState } from 'react';
-import { ClipLoader } from 'react-spinners';
+import React, { ReactNode, useRef, useEffect, useState } from 'react'
+import { ClipLoader } from 'react-spinners'
 
-import styles from './button.module.css';
+import styles from './button.module.css'
 
 type ButtonFace = {
-  title: string;
-  children: ReactNode;
-  href?: string;
-  action?: () => void;
-  load?: boolean;
-  pos?: boolean;
-  iconOnly?: boolean;
-  textOnly?: boolean;
-  noStyle?: boolean;
-  target?: string;
-  className?: string;
-  rel?: string;
-};
+  title: string
+  children: ReactNode
+  href?: string
+  action?: () => void
+  load?: boolean
+  pos?: boolean
+  iconOnly?: boolean
+  textOnly?: boolean
+  noStyle?: boolean
+  target?: string
+  className?: string
+  rel?: string
+}
 
 function Button({
   title,
@@ -30,20 +30,20 @@ function Button({
   load,
   target,
   className,
-  rel,
+  rel
 }: ButtonFace) {
-  const ref = useRef(null);
-  const [width, setWidth] = useState<number>(0);
-  const [height, setHeight] = useState<number>(0);
+  const ref = useRef(null)
+  const [width, setWidth] = useState<number>(0)
+  const [height, setHeight] = useState<number>(0)
 
   function hrefReplace(href: string) {
-    window.location.href = href;
+    window.location.href = href
   }
 
   useEffect(() => {
-    ref.current ? setWidth(ref.current.offsetWidth) : 0;
-    ref.current ? setHeight(ref.current.offsetHeight) : 0;
-  }, [ref.current]);
+    ref.current ? setWidth(ref.current.offsetWidth) : 0
+    ref.current ? setHeight(ref.current.offsetHeight) : 0
+  }, [ref.current])
 
   if (load) {
     return (
@@ -52,13 +52,13 @@ function Button({
           className={styles.load}
           style={{
             width: Number(width),
-            height: Number(height),
+            height: Number(height)
           }}
         >
           <ClipLoader size={23} color="#00d6b4" />
         </div>
       </>
-    );
+    )
   }
 
   if (noStyle) {
@@ -76,7 +76,7 @@ function Button({
         >
           {children}
         </a>
-      );
+      )
     } else {
       return (
         <button
@@ -86,7 +86,7 @@ function Button({
         >
           {children}
         </button>
-      );
+      )
     }
   } else {
     if (target) {
@@ -107,7 +107,7 @@ function Button({
         >
           {children}
         </a>
-      );
+      )
     } else {
       return (
         <>
@@ -126,9 +126,9 @@ function Button({
             {children}
           </button>
         </>
-      );
+      )
     }
   }
 }
 
-export default Button;
+export default Button

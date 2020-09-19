@@ -1,7 +1,7 @@
-import React from 'react';
-import Fade from 'react-reveal/Fade';
+import React from 'react'
+import Fade from 'react-reveal/Fade'
 
-import Button from '../../utils/button';
+import Clickable from '../../utils/clickable'
 
 import {
   FaLinkedin,
@@ -9,10 +9,10 @@ import {
   FaInstagramSquare,
   FaGithub,
   FaSkype,
-  FaGitlab,
-} from 'react-icons/fa';
+  FaGitlab
+} from 'react-icons/fa'
 
-import styles from './social.module.css';
+import styles from './social.module.css'
 
 function SocialContent() {
   return (
@@ -23,7 +23,7 @@ function SocialContent() {
             <div className="col-xs">
               <Fade left>
                 <div className={styles.social}>
-                  <Button
+                  <Clickable
                     title="LinkedIn"
                     href="https://www.linkedin.com/in/guilhermemaccali/"
                     target="_blank"
@@ -32,8 +32,8 @@ function SocialContent() {
                     <div className={styles.linkedin}>
                       <FaLinkedin />
                     </div>
-                  </Button>
-                  <Button
+                  </Clickable>
+                  <Clickable
                     title="Facebook"
                     href="https://www.facebook.com/guimaccali"
                     target="_blank"
@@ -42,8 +42,8 @@ function SocialContent() {
                     <div className={styles.facebook}>
                       <FaFacebook />
                     </div>
-                  </Button>
-                  <Button
+                  </Clickable>
+                  <Clickable
                     title="Instagram"
                     href="https://www.instagram.com/guilherme_maccali"
                     target="_blank"
@@ -52,8 +52,8 @@ function SocialContent() {
                     <div className={styles.instagram}>
                       <FaInstagramSquare />
                     </div>
-                  </Button>
-                  <Button
+                  </Clickable>
+                  <Clickable
                     title="Skype"
                     href="skype:guimaccali?chat"
                     target="_blank"
@@ -62,8 +62,8 @@ function SocialContent() {
                     <div className={styles.skype}>
                       <FaSkype />
                     </div>
-                  </Button>
-                  <Button
+                  </Clickable>
+                  <Clickable
                     title="GitHub"
                     href="https://github.com/maccali"
                     target="_blank"
@@ -72,8 +72,8 @@ function SocialContent() {
                     <div className={styles.github}>
                       <FaGithub />
                     </div>
-                  </Button>
-                  <Button
+                  </Clickable>
+                  <Clickable
                     title="GitLab"
                     href="https://gitlab.com/maccali"
                     target="_blank"
@@ -82,7 +82,7 @@ function SocialContent() {
                     <div className={styles.gitlab}>
                       <FaGitlab />
                     </div>
-                  </Button>
+                  </Clickable>
                 </div>
               </Fade>
             </div>
@@ -90,7 +90,7 @@ function SocialContent() {
         </div>
       </section>
     </>
-  );
+  )
 }
 
-export default SocialContent;
+export default SocialContent

@@ -53,8 +53,7 @@
 .menu a,
 .menu button {
   display: flex;
-  /* background-color: #0e2c54; */
-  height: 100% !important;
+  height: 65px;
   outline: none;
   justify-content: center;
   align-items: center;
@@ -66,7 +65,7 @@
 
 .menu a:hover,
 .menu button:hover {
-  height: 115px !important;
+  height: 115px;
   border-radius: 0 0 30px 30px;
   background-color: #637fff;
 }

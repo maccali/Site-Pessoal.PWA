@@ -1,9 +1,9 @@
-import React from 'react';
-import Fade from 'react-reveal/Fade';
+import React from 'react'
+import Fade from 'react-reveal/Fade'
 
-import Button from '../../utils/button';
+import Clickable from '../../utils/clickable'
 
-import styles from './career.module.css';
+import styles from './career.module.css'
 
 function CareerContent() {
   return (
@@ -33,14 +33,14 @@ function CareerContent() {
             <div className="col-xs">
               <Fade bottom>
                 <div className={styles.btn}>
-                  <Button
+                  <Clickable
                     title="Ver meu currículo"
                     href="https://drive.google.com/open?id=1B5wbEIiO2dle-ppZHGW4u1Vni0MTkKzi"
                     target="_blank"
                     textOnly
                   >
                     <span>Ver meu currículo</span>
-                  </Button>
+                  </Clickable>
                 </div>
               </Fade>
             </div>
@@ -48,7 +48,7 @@ function CareerContent() {
         </div>
       </section>
     </>
-  );
+  )
 }
 
-export default CareerContent;
+export default CareerContent

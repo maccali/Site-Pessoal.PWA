@@ -1,75 +1,75 @@
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import Fade from 'react-reveal/Fade';
+import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import Fade from 'react-reveal/Fade'
 
 // Icons import
-import { FiMenu } from 'react-icons/fi';
-import { GiSwordman, GiUpgrade, GiFlamingo } from 'react-icons/gi';
-import { AiFillInfoCircle } from 'react-icons/ai';
-import { IoIosApps } from 'react-icons/io';
-import { MdClose } from 'react-icons/md';
+import { FiMenu } from 'react-icons/fi'
+import { GiSwordman, GiUpgrade, GiFlamingo } from 'react-icons/gi'
+import { AiFillInfoCircle } from 'react-icons/ai'
+import { IoIosApps } from 'react-icons/io'
+import { MdClose } from 'react-icons/md'
 
 // Common Project libs
-import Button from '../button';
+import Clickable from '../clickable'
 
 // Style Module
-import styles from './nav.module.css';
+import styles from './nav.module.css'
 
 function Nav() {
-  const [menuActive, setMenuActive] = useState<boolean>(false);
-  const [headerActive, setHeaderActive] = useState<boolean>(false);
+  const [menuActive, setMenuActive] = useState<boolean>(false)
+  const [headerActive, setHeaderActive] = useState<boolean>(false)
 
-  const router = useRouter();
+  const router = useRouter()
 
   const [links] = useState([
     {
       icone: <AiFillInfoCircle />,
       nome: 'Sobre',
       url: '/',
-      anchor: 'about',
+      anchor: 'about'
     },
     {
       icone: <GiSwordman />,
       nome: 'Interesses',
       url: '/',
-      anchor: 'interests',
+      anchor: 'interests'
     },
     {
       icone: <GiUpgrade />,
       nome: 'Carreira',
       url: '/',
-      anchor: 'career',
+      anchor: 'career'
     },
     {
       icone: <GiFlamingo />,
       nome: 'Contato',
       url: '/',
-      anchor: 'contact',
+      anchor: 'contact'
     },
     {
       icone: <IoIosApps />,
       nome: 'Projetos',
-      url: '/projetos',
-    },
-  ]);
+      url: '/projetos'
+    }
+  ])
 
   function setMenuOpenWithWithSize() {
-    setMenuActive(window.innerWidth >= 1800);
-    setHeaderActive(window.innerWidth <= 1800);
+    setMenuActive(window.innerWidth >= 1800)
+    setHeaderActive(window.innerWidth <= 1800)
   }
 
   useEffect(() => {
     window.addEventListener('resize', function () {
-      setMenuOpenWithWithSize();
-    });
-    setMenuOpenWithWithSize();
-  }, []);
+      setMenuOpenWithWithSize()
+    })
+    setMenuOpenWithWithSize()
+  }, [])
 
   function setAnchor(anchor: string) {
     document.getElementById(`${anchor}`).scrollIntoView({
-      behavior: 'smooth',
-    });
-    setMenuOpenWithWithSize();
+      behavior: 'smooth'
+    })
+    setMenuOpenWithWithSize()
   }
 
   return (
@@ -81,29 +81,29 @@ function Nav() {
               <li>
                 <Fade left>
                   <div className={styles.img}>
-                    <Button title="Home" href="/" noStyle>
+                    <Clickable title="Home" href="/" noStyle>
                       <div className={styles.seta}>
                         <img src="/imgs/logo.png" alt="Site Logo" />
                       </div>
-                    </Button>
+                    </Clickable>
                   </div>
                 </Fade>
               </li>
             </ul>
             <Fade right>
               <ul className={styles.menu}>
-                <Button title="Projetos" href="/projetos" noStyle>
+                <Clickable title="Projetos" href="/projetos" noStyle>
                   <IoIosApps />
                   <p>Projetos</p>
-                </Button>
-                <Button
+                </Clickable>
+                <Clickable
                   title="Abrir Menu"
                   action={() => setMenuActive(!menuActive)}
                   noStyle
                 >
                   <FiMenu />
                   <p>Menu</p>
-                </Button>
+                </Clickable>
               </ul>
             </Fade>
           </nav>
@@ -118,13 +118,13 @@ function Nav() {
               {headerActive ? (
                 <div className={styles.headercont}>
                   <p>Menu</p>
-                  <Button
+                  <Clickable
                     title="Fechar Menu"
                     action={() => setMenuActive(!menuActive)}
                     noStyle
                   >
                     <MdClose />
-                  </Button>
+                  </Clickable>
                 </div>
               ) : (
                 ''
@@ -138,7 +138,7 @@ function Nav() {
               <div className={styles.menulist}>
                 {Object.keys(links).map((key: any) =>
                   router.pathname === links[key].url ? (
-                    <Button
+                    <Clickable
                       key={key}
                       title={links[key].nome}
                       action={() => setAnchor(`${links[key].anchor}`)}
@@ -151,9 +151,9 @@ function Nav() {
                         <span>{links[key].icone}</span>
                         <p>{links[key].nome}</p>
                       </div>
-                    </Button>
+                    </Clickable>
                   ) : (
-                    <Button
+                    <Clickable
                       key={key}
                       title={links[key].nome}
                       href={`${links[key].url}${
@@ -168,7 +168,7 @@ function Nav() {
                         <span>{links[key].icone}</span>
                         <p>{links[key].nome}</p>
                       </div>
-                    </Button>
+                    </Clickable>
                   )
                 )}
               </div>
@@ -177,7 +177,7 @@ function Nav() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Nav;
+export default Nav

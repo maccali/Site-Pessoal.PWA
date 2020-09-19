@@ -1,7 +1,7 @@
-import React from 'react';
-import Fade from 'react-reveal/Fade';
+import React from 'react'
+import Fade from 'react-reveal/Fade'
 
-import Button from '../../utils/button';
+import Clickable from '../../utils/clickable'
 
 import {
   FaLinkedin,
@@ -11,10 +11,10 @@ import {
   FaGitlab,
   FaWhatsapp,
   FaEnvelope,
-  FaSkype,
-} from 'react-icons/fa';
+  FaSkype
+} from 'react-icons/fa'
 
-import styles from './contact.module.css';
+import styles from './contact.module.css'
 
 function ContactContent() {
   return (
@@ -39,7 +39,7 @@ function ContactContent() {
               </Fade>
               <Fade bottom>
                 <div className={`${styles.item} ${styles.instagram}`}>
-                  <Button
+                  <Clickable
                     title="Instagram"
                     href="https://www.instagram.com/guilherme_maccali"
                     target="_black"
@@ -47,12 +47,12 @@ function ContactContent() {
                   >
                     <FaInstagramSquare />
                     <p>guilherme_maccali</p>
-                  </Button>
+                  </Clickable>
                 </div>
               </Fade>
               <Fade bottom>
                 <div className={`${styles.item} ${styles.linkedin}`}>
-                  <Button
+                  <Clickable
                     title="LinkedIn"
                     href="https://www.linkedin.com/in/guilhermemaccali/"
                     target="_black"
@@ -60,12 +60,12 @@ function ContactContent() {
                   >
                     <FaLinkedin />
                     <p>guilhermemaccali</p>
-                  </Button>
+                  </Clickable>
                 </div>
               </Fade>
               <Fade bottom>
                 <div className={`${styles.item} ${styles.facebook}`}>
-                  <Button
+                  <Clickable
                     title="Facebook"
                     href="https://www.facebook.com/guimaccali"
                     target="_black"
@@ -73,7 +73,7 @@ function ContactContent() {
                   >
                     <FaFacebook />
                     <p>guimaccali</p>
-                  </Button>
+                  </Clickable>
                 </div>
               </Fade>
               <Fade bottom>
@@ -83,7 +83,7 @@ function ContactContent() {
               </Fade>
               <Fade bottom>
                 <div className={`${styles.item} ${styles.github}`}>
-                  <Button
+                  <Clickable
                     title="GitHub"
                     href="https://github.com/maccali"
                     target="_black"
@@ -91,12 +91,12 @@ function ContactContent() {
                   >
                     <FaGithub />
                     <p>maccali</p>
-                  </Button>
+                  </Clickable>
                 </div>
               </Fade>
               <Fade bottom>
                 <div className={`${styles.item} ${styles.gitlab}`}>
-                  <Button
+                  <Clickable
                     title="GitLab"
                     href="https://gitlab.com/maccali"
                     target="_black"
@@ -104,7 +104,7 @@ function ContactContent() {
                   >
                     <FaGitlab />
                     <p>maccali</p>
-                  </Button>
+                  </Clickable>
                 </div>
               </Fade>
             </div>
@@ -116,7 +116,7 @@ function ContactContent() {
               </Fade>
               <Fade bottom>
                 <div className={`${styles.item} ${styles.whatsapp}`}>
-                  <Button
+                  <Clickable
                     title="Whats App"
                     href="https://api.whatsapp.com/send?phone=5551994700045&text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20de%20seu%20site%2C%20pode%20me%20ajudar%3F"
                     target="_black"
@@ -124,7 +124,7 @@ function ContactContent() {
                   >
                     <FaWhatsapp />
                     <p>+55 (51) 99470-0045</p>
-                  </Button>
+                  </Clickable>
                 </div>
               </Fade>
               <Fade bottom>
@@ -134,7 +134,7 @@ function ContactContent() {
               </Fade>
               <Fade bottom>
                 <div className={`${styles.item} ${styles.mail}`}>
-                  <Button
+                  <Clickable
                     title="Meu Email"
                     href="mailto:guimaccali@gmail.com"
                     target="_black"
@@ -142,7 +142,7 @@ function ContactContent() {
                   >
                     <FaEnvelope />
                     <p>guimaccali@gmail.com</p>
-                  </Button>
+                  </Clickable>
                 </div>
               </Fade>
             </div>
@@ -154,7 +154,7 @@ function ContactContent() {
               </Fade>
               <Fade bottom>
                 <div className={`${styles.item} ${styles.skype}`}>
-                  <Button
+                  <Clickable
                     title="Skype"
                     href="skype:guimaccali?chat"
                     target="_black"
@@ -162,7 +162,7 @@ function ContactContent() {
                   >
                     <FaSkype />
                     <p>guimaccali</p>
-                  </Button>
+                  </Clickable>
                 </div>
               </Fade>
             </div>
@@ -170,7 +170,7 @@ function ContactContent() {
         </div>
       </section>
     </>
-  );
+  )
 }
 
-export default ContactContent;
+export default ContactContent

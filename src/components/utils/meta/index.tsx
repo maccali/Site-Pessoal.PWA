@@ -1,21 +1,21 @@
-import React, { useEffect } from 'react';
-import Head from 'next/head';
-import ReactGA from 'react-ga';
+import React, { useEffect } from 'react'
+import Head from 'next/head'
+import ReactGA from 'react-ga'
 
-const siteName = 'Guilherme Maccali';
-const title = 'Guilherme Maccali - Programador que da Vida a sua Ideia';
+const siteName = 'Guilherme Maccali'
+const title = 'Guilherme Maccali - Programador que da Vida a sua Ideia'
 const description =
-  'Olá, sou programador Fullstack, Entusiasta em tecnologias produtivas, Adoro desafios e fazer belas aplicações tomarem vida através de código limpo';
-const imagemUrl = '/imgs/social.png';
-const siteUrl = 'https://guilhermemaccali.com';
+  'Olá, sou programador Fullstack, Entusiasta em tecnologias produtivas, Adoro desafios e fazer belas aplicações tomarem vida através de código limpo'
+const imagemUrl = '/imgs/social.png'
+const siteUrl = 'https://guilhermemaccali.com'
 
 function Meta() {
   useEffect(() => {
     if (window.location.hostname !== 'localhost') {
-      ReactGA.initialize('UA-158633079-1');
-      ReactGA.pageview(window.location.pathname + window.location.search);
+      ReactGA.initialize('UA-158633079-1')
+      ReactGA.pageview(window.location.pathname + window.location.search)
     }
-  });
+  })
 
   return (
     <Head>
@@ -76,7 +76,7 @@ function Meta() {
 
       {/* <script data-ad-client="ca-pub-8175357641608662" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> */}
     </Head>
-  );
+  )
 }
 
-export default Meta;
+export default Meta

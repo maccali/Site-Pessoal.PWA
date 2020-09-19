@@ -1,9 +1,9 @@
-import styles from './tech.module.css';
+import styles from './tech.module.css'
 
 type TechCardFace = {
-  title: string;
-  imgUrl: string;
-};
+  title: string
+  imgUrl: string
+}
 
 function TechCard({ title, imgUrl }: TechCardFace) {
   return (
@@ -17,7 +17,7 @@ function TechCard({ title, imgUrl }: TechCardFace) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default TechCard;
+export default TechCard

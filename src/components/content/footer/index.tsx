@@ -1,12 +1,12 @@
-import React from 'react';
-import Fade from 'react-reveal/Fade';
+import React from 'react'
+import Fade from 'react-reveal/Fade'
 
-import { GiTechnoHeart, GiCoffeeCup } from 'react-icons/gi';
-import { FaGithub } from 'react-icons/fa';
+import { GiTechnoHeart, GiCoffeeCup } from 'react-icons/gi'
+import { FaGithub } from 'react-icons/fa'
 
-import Button from '../../utils/button';
+import Clickable from '../../utils/clickable'
 
-import styles from './footer.module.css';
+import styles from './footer.module.css'
 
 function FooterContent() {
   return (
@@ -18,15 +18,15 @@ function FooterContent() {
               <div className={`${styles.dedication} ${styles.left}`}>
                 Com todo o meu
                 <span className={`${styles.icon} ${styles.heart}`}>
-                  <Button title="Amor" noStyle>
+                  <Clickable title="Amor" noStyle>
                     <GiTechnoHeart />
-                  </Button>
+                  </Clickable>
                 </span>
                 e
                 <span className={`${styles.icon} ${styles.coffee}`}>
-                  <Button title="Café" noStyle>
+                  <Clickable title="Café" noStyle>
                     <GiCoffeeCup />
-                  </Button>
+                  </Clickable>
                 </span>
                 .
               </div>
@@ -37,14 +37,14 @@ function FooterContent() {
               <div className={`${styles.dedication} ${styles.right}`}>
                 Siga para o repositório
                 <span className={`${styles.icon} ${styles.git}`}>
-                  <Button
+                  <Clickable
                     title="Open Source"
                     href="https://github.com/maccali/Site-Pessoal"
                     target="_blanck"
                     noStyle
                   >
                     <FaGithub />
-                  </Button>
+                  </Clickable>
                 </span>
                 .
               </div>
@@ -53,7 +53,7 @@ function FooterContent() {
         </div>
       </footer>
     </>
-  );
+  )
 }
 
-export default FooterContent;
+export default FooterContent

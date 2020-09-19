@@ -1,43 +1,43 @@
-import React, { ReactNode, useEffect } from 'react';
+import React, { ReactNode, useEffect } from 'react'
 
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai'
 
-import Button from '../button';
+import Clickable from '../clickable'
 
-import styles from './modal.module.css';
+import styles from './modal.module.css'
 
 type ModalFace = {
-  open: boolean;
-  setClose: (flag: boolean) => void;
-  children: ReactNode;
-};
+  open: boolean
+  setClose: (flag: boolean) => void
+  children: ReactNode
+}
 
 function Modal({ open, setClose, children }: ModalFace) {
   function bodyControl(flag: boolean) {
-    const { body } = document;
+    const { body } = document
     if (flag) {
-      body.classList.remove('scroll-off');
+      body.classList.remove('scroll-off')
     } else {
-      body.classList.add('scroll-off');
+      body.classList.add('scroll-off')
     }
   }
 
   function openModal() {
-    bodyControl(false);
-    document.getElementById('scroll').scrollTop = 0;
+    bodyControl(false)
+    document.getElementById('scroll').scrollTop = 0
   }
 
   function closeModal() {
-    bodyControl(true);
+    bodyControl(true)
   }
 
   useEffect(() => {
     if (open) {
-      openModal();
+      openModal()
     } else {
-      closeModal();
+      closeModal()
     }
-  }, [open]);
+  }, [open])
 
   return (
     <>
@@ -58,13 +58,13 @@ function Modal({ open, setClose, children }: ModalFace) {
                     <div className={styles.img}>
                       <img src="/icons/icon126t.png" alt="Site Logo" />
                     </div>
-                    <Button
+                    <Clickable
                       title="Fechar menu"
                       action={() => setClose(!open)}
                       iconOnly
                     >
                       <AiOutlineClose />
-                    </Button>
+                    </Clickable>
                   </div>
                 </div>
               </div>
@@ -78,7 +78,7 @@ function Modal({ open, setClose, children }: ModalFace) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Modal;
+export default Modal

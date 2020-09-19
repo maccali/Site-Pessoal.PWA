@@ -1,9 +1,9 @@
-import styles from './techbig.module.css';
+import styles from './techbig.module.css'
 
 type TechBigCardFace = {
-  title: string;
-  imgUrl: string;
-};
+  title: string
+  imgUrl: string
+}
 
 function TechBigCard({ title, imgUrl }: TechBigCardFace) {
   return (
@@ -17,7 +17,7 @@ function TechBigCard({ title, imgUrl }: TechBigCardFace) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default TechBigCard;
+export default TechBigCard

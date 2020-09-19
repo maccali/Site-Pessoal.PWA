@@ -1,15 +1,15 @@
-import React from 'react';
-import Fade from 'react-reveal/Fade';
+import React from 'react'
+import Fade from 'react-reveal/Fade'
 
-import Button from '../../utils/button';
+import Clickable from '../../utils/clickable'
 
-import styles from './about.module.css';
+import styles from './about.module.css'
 
 function AboutContent() {
   function setAnchor(anchor: string) {
     document.getElementById(`${anchor}`).scrollIntoView({
-      behavior: 'smooth',
-    });
+      behavior: 'smooth'
+    })
   }
 
   return (
@@ -55,23 +55,23 @@ function AboutContent() {
                     <p>
                       Atualmente estou cursando o Bacharelado em Engenharia de
                       Software na
-                      <Button
+                      <Clickable
                         title="UNIVATES"
                         href="https://www.univates.br"
                         target="_blank"
                         noStyle
                       >
                         <span> Universidade do vale do Taquari, UNIVATES.</span>
-                      </Button>
+                      </Clickable>
                     </p>
                   </div>
-                  <Button
+                  <Clickable
                     title="Entre em contato"
                     action={() => setAnchor('contact')}
                     textOnly
                   >
                     <span>Entre em contato</span>
-                  </Button>
+                  </Clickable>
                 </div>
               </Fade>
             </div>
@@ -79,7 +79,7 @@ function AboutContent() {
         </div>
       </section>
     </>
-  );
+  )
 }
 
-export default AboutContent;
+export default AboutContent

@@ -1,21 +1,21 @@
-import React from 'react';
+import React from 'react'
 
 // import App from "next/app";
-import type { AppProps /*, AppContext */ } from 'next/app';
+import type { AppProps /*, AppContext */ } from 'next/app'
 
 // External Libs
-import '../../public/libs/bootstrap/bootstrap.min.css';
+import '../../public/libs/bootstrap/bootstrap.min.css'
 
 // Custom styles
-import '../../public/custom/css/template.css';
+import '../../public/custom/css/template.css'
 
 // External Components
-import 'react-lazy-load-image-component/src/effects/opacity.css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import 'react-lazy-load-image-component/src/effects/opacity.css'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
-import Nav from '../components/utils/nav';
-import Meta from '../components/utils/meta';
+import Nav from '../components/utils/nav'
+import Meta from '../components/utils/meta'
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }: AppProps) {
@@ -25,5 +25,5 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Nav />
       <Component {...pageProps} />
     </>
-  );
+  )
 }

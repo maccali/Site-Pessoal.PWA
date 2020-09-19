@@ -1,16 +1,16 @@
-import React, { ReactNode } from 'react';
-import Fade from 'react-reveal/Fade';
+import React, { ReactNode } from 'react'
+import Fade from 'react-reveal/Fade'
 
-import Head from 'next/head';
+import Head from 'next/head'
 
-import styles from './errorpage.module.css';
+import styles from './errorpage.module.css'
 
 type ErrorPageFace = {
-  statusCode: number;
-  title: string;
-  message: string;
-  children: ReactNode;
-};
+  statusCode: number
+  title: string
+  message: string
+  children: ReactNode
+}
 
 function ErrorPage({ statusCode, message, title, children }: ErrorPageFace) {
   return (
@@ -41,7 +41,7 @@ function ErrorPage({ statusCode, message, title, children }: ErrorPageFace) {
         </div>
       </main>
     </>
-  );
+  )
 }
 
-export default ErrorPage;
+export default ErrorPage
