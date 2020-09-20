@@ -1,9 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { ReactNode, useRef, useEffect, useState } from 'react'
+import Link from 'next/link'
+
 import { ClickableStyle, ClickableSpiner, Neutral } from './styles'
 
 import { ClipLoader } from 'react-spinners'
-
-// import styles from './button.module.css'
 
 type ClickableFace = {
   title: string
@@ -64,14 +65,15 @@ function Clickable({
     if (href) {
       return (
         <Neutral>
-          <a
-            title={title}
-            target={target}
-            href={href}
-            rel={rel ? rel : 'noopener noreferrer'}
-          >
-            {children}
-          </a>
+          <Link href={href}>
+            <a
+              title={title}
+              target={target}
+              rel={rel ? rel : 'noopener noreferrer'}
+            >
+              {children}
+            </a>
+          </Link>
         </Neutral>
       )
     } else {
@@ -87,22 +89,16 @@ function Clickable({
     if (target) {
       return (
         <ClickableStyle textOnly={textOnly} iconOnly={iconOnly} pos={pos}>
-          <a
-            title={title}
-            ref={ref}
-            //     className={`
-            // ${styles.btn}
-            // ${pos ? styles.pos : styles.pre}
-            // ${iconOnly ? styles.icon : ''}
-            // ${textOnly ? styles.text : ''}
-            // ${className ? styles.className : ''}
-            // `}
-            target={target}
-            href={href}
-            rel={rel ? rel : 'noopener noreferrer'}
-          >
-            {children}
-          </a>
+          <Link href={href}>
+            <a
+              title={title}
+              ref={ref}
+              target={target}
+              rel={rel ? rel : 'noopener noreferrer'}
+            >
+              {children}
+            </a>
+          </Link>
         </ClickableStyle>
       )
     } else {
