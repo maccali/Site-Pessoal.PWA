@@ -9,7 +9,7 @@ function ProjectsContent() {
   const projects = [
     {
       title: 'Apod Pictu',
-      imgUrl: 'imgs/projects/apod.png',
+      imgUrl: '/imgs/projects/apod.png',
       repoLink: 'https://github.com/maccali/Apod',
       siteLink: 'https://apod.pictu.one',
       googlePlayLink:
@@ -17,13 +17,13 @@ function ProjectsContent() {
     },
     {
       title: 'Meu Site',
-      imgUrl: 'imgs/projects/maccali.png',
+      imgUrl: '/imgs/projects/maccali.png',
       repoLink: 'https://github.com/maccali/Site-Pessoal',
       siteLink: 'https://guilhermemaccali.com'
     },
     {
       title: 'Marvel Shop',
-      imgUrl: 'imgs/projects/marvel-shop.png',
+      imgUrl: '/imgs/projects/marvel-shop.png',
       repoLink: 'https://github.com/maccali/marvel-shop',
       siteLink: 'https://marvel-shop.pictu.one'
     }

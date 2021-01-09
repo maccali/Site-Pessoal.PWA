@@ -81,7 +81,7 @@ function Nav() {
               <li>
                 <Fade left>
                   <div className={styles.img}>
-                    <Clickable title="Home" href="/" noStyle>
+                    <Clickable type="link" title="Home" href="/" noStyle>
                       <div className={styles.seta}>
                         <img src="/imgs/logo.png" alt="Site Logo" />
                       </div>
@@ -92,11 +92,17 @@ function Nav() {
             </ul>
             <Fade right>
               <ul className={styles.menu}>
-                <Clickable title="Projetos" href="/projetos" noStyle>
+                <Clickable
+                  type="link"
+                  title="Projetos"
+                  href="/projetos"
+                  noStyle
+                >
                   <IoIosApps />
                   <p>Projetos</p>
                 </Clickable>
                 <Clickable
+                  type="buttom"
                   title="Abrir Menu"
                   action={() => setMenuActive(!menuActive)}
                   noStyle
@@ -119,6 +125,7 @@ function Nav() {
                 <div className={styles.headercont}>
                   <p>Menu</p>
                   <Clickable
+                    type="buttom"
                     title="Fechar Menu"
                     action={() => setMenuActive(!menuActive)}
                     noStyle
@@ -140,6 +147,7 @@ function Nav() {
                   router.pathname === links[key].url ? (
                     <Clickable
                       key={key}
+                      type="buttom"
                       title={links[key].nome}
                       action={() => setAnchor(`${links[key].anchor}`)}
                       noStyle
@@ -155,6 +163,7 @@ function Nav() {
                   ) : (
                     <Clickable
                       key={key}
+                      type="link"
                       title={links[key].nome}
                       href={`${links[key].url}${
                         links[key].anchor ? `#${links[key].anchor}` : ''

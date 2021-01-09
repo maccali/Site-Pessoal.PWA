@@ -18,13 +18,13 @@ function FooterContent() {
               <div className={`${styles.dedication} ${styles.left}`}>
                 Com todo o meu
                 <span className={`${styles.icon} ${styles.heart}`}>
-                  <Clickable title="Amor" noStyle>
+                  <Clickable type="link" title="Amor" noStyle>
                     <GiTechnoHeart />
                   </Clickable>
                 </span>
                 e
                 <span className={`${styles.icon} ${styles.coffee}`}>
-                  <Clickable title="Café" noStyle>
+                  <Clickable type="link" title="Café" noStyle>
                     <GiCoffeeCup />
                   </Clickable>
                 </span>
@@ -38,9 +38,10 @@ function FooterContent() {
                 Siga para o repositório
                 <span className={`${styles.icon} ${styles.git}`}>
                   <Clickable
+                    type="link"
                     title="Open Source"
                     href="https://github.com/maccali/Site-Pessoal"
-                    target="_blanck"
+                    external
                     noStyle
                   >
                     <FaGithub />

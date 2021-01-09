@@ -24,9 +24,10 @@ function SocialContent() {
               <Fade left>
                 <div className={styles.social}>
                   <Clickable
+                    type="link"
                     title="LinkedIn"
                     href="https://www.linkedin.com/in/guilhermemaccali/"
-                    target="_blank"
+                    external
                     noStyle
                   >
                     <div className={styles.linkedin}>
@@ -34,9 +35,10 @@ function SocialContent() {
                     </div>
                   </Clickable>
                   <Clickable
+                    type="link"
                     title="Facebook"
                     href="https://www.facebook.com/guimaccali"
-                    target="_blank"
+                    external
                     noStyle
                   >
                     <div className={styles.facebook}>
@@ -44,9 +46,10 @@ function SocialContent() {
                     </div>
                   </Clickable>
                   <Clickable
+                    type="link"
                     title="Instagram"
                     href="https://www.instagram.com/guilherme_maccali"
-                    target="_blank"
+                    external
                     noStyle
                   >
                     <div className={styles.instagram}>
@@ -54,9 +57,10 @@ function SocialContent() {
                     </div>
                   </Clickable>
                   <Clickable
+                    type="link"
                     title="Skype"
                     href="skype:guimaccali?chat"
-                    target="_blank"
+                    external
                     noStyle
                   >
                     <div className={styles.skype}>
@@ -64,9 +68,10 @@ function SocialContent() {
                     </div>
                   </Clickable>
                   <Clickable
+                    type="link"
                     title="GitHub"
                     href="https://github.com/maccali"
-                    target="_blank"
+                    external
                     noStyle
                   >
                     <div className={styles.github}>
@@ -74,9 +79,10 @@ function SocialContent() {
                     </div>
                   </Clickable>
                   <Clickable
+                    type="link"
                     title="GitLab"
                     href="https://gitlab.com/maccali"
-                    target="_blank"
+                    external
                     noStyle
                   >
                     <div className={styles.gitlab}>

@@ -7,7 +7,6 @@ export const ClickableStyle = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #0e2c54;
-    border-radius: 25px;
     padding: 12px;
     border: 0;
     color: #fff;
@@ -16,11 +15,13 @@ export const ClickableStyle = styled.div`
     box-shadow: 0 0 4px 0 #637fff;
     user-select: none;
     text-decoration: none;
+    transform: skewX(42deg);
+    border-radius: 42px 0 42px 0;
     transition: all 0.2s;
 
     & > * {
-      margin-left: 8px;
-      margin-right: 8px;
+      margin-left: 16px;
+      margin-right: 16px;
     }
 
     & svg {
@@ -32,19 +33,29 @@ export const ClickableStyle = styled.div`
 
     &:hover {
       text-decoration: none;
-      background-color: #ccecec;
+      background-color: #637fff;
+      color: #fff;
       box-shadow: 0 0 4px 0 #0e2c54;
+      border-radius: 0 42px 0 42px;
+      transform: skewX(-42deg);
+    }
+
+    &:hover > span {
+      font-weight: bold !important;
+      transform: skewX(42deg);
     }
 
     & span,
     & svg {
+      transition: all 0.2s;
       font-weight: bold;
+      transform: skewX(-42deg);
     }
 
     &:hover span,
     &:hover svg {
       font-weight: 500;
-      color: #001b2e;
+      /* color: #001b2e; */
     }
 
     & svg,

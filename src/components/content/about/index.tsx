@@ -1,5 +1,6 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
+import Image from 'next/image'
 
 import Clickable from '../../utils/clickable'
 
@@ -27,7 +28,7 @@ function AboutContent() {
             <div className="col-xs col-md-4">
               <Fade left>
                 <div className={styles.imgcontainer}>
-                  <img src="/imgs/eu.jpg" alt="Minha Foto" />
+                  <Image src="/imgs/eu.jpg" alt="Minha Foto" layout="fill" />
                 </div>
               </Fade>
             </div>
@@ -56,9 +57,10 @@ function AboutContent() {
                       Atualmente estou cursando o Bacharelado em Engenharia de
                       Software na
                       <Clickable
+                        type="link"
                         title="UNIVATES"
                         href="https://www.univates.br"
-                        target="_blank"
+                        external
                         noStyle
                       >
                         <span> Universidade do vale do Taquari, UNIVATES.</span>
@@ -66,6 +68,7 @@ function AboutContent() {
                     </p>
                   </div>
                   <Clickable
+                    type="buttom"
                     title="Entre em contato"
                     action={() => setAnchor('contact')}
                     textOnly

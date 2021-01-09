@@ -40,9 +40,10 @@ function ContactContent() {
               <Fade bottom>
                 <div className={`${styles.item} ${styles.instagram}`}>
                   <Clickable
+                    type="link"
                     title="Instagram"
                     href="https://www.instagram.com/guilherme_maccali"
-                    target="_black"
+                    external
                     noStyle
                   >
                     <FaInstagramSquare />
@@ -53,9 +54,10 @@ function ContactContent() {
               <Fade bottom>
                 <div className={`${styles.item} ${styles.linkedin}`}>
                   <Clickable
+                    type="link"
                     title="LinkedIn"
                     href="https://www.linkedin.com/in/guilhermemaccali/"
-                    target="_black"
+                    external
                     noStyle
                   >
                     <FaLinkedin />
@@ -66,9 +68,10 @@ function ContactContent() {
               <Fade bottom>
                 <div className={`${styles.item} ${styles.facebook}`}>
                   <Clickable
+                    type="link"
                     title="Facebook"
                     href="https://www.facebook.com/guimaccali"
-                    target="_black"
+                    external
                     noStyle
                   >
                     <FaFacebook />
@@ -84,9 +87,10 @@ function ContactContent() {
               <Fade bottom>
                 <div className={`${styles.item} ${styles.github}`}>
                   <Clickable
+                    type="link"
                     title="GitHub"
                     href="https://github.com/maccali"
-                    target="_black"
+                    external
                     noStyle
                   >
                     <FaGithub />
@@ -97,9 +101,10 @@ function ContactContent() {
               <Fade bottom>
                 <div className={`${styles.item} ${styles.gitlab}`}>
                   <Clickable
+                    type="link"
                     title="GitLab"
                     href="https://gitlab.com/maccali"
-                    target="_black"
+                    external
                     noStyle
                   >
                     <FaGitlab />
@@ -117,9 +122,10 @@ function ContactContent() {
               <Fade bottom>
                 <div className={`${styles.item} ${styles.whatsapp}`}>
                   <Clickable
+                    type="link"
                     title="Whats App"
                     href="https://api.whatsapp.com/send?phone=5551994700045&text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20de%20seu%20site%2C%20pode%20me%20ajudar%3F"
-                    target="_black"
+                    external
                     noStyle
                   >
                     <FaWhatsapp />
@@ -135,9 +141,10 @@ function ContactContent() {
               <Fade bottom>
                 <div className={`${styles.item} ${styles.mail}`}>
                   <Clickable
+                    type="link"
                     title="Meu Email"
                     href="mailto:guimaccali@gmail.com"
-                    target="_black"
+                    external
                     noStyle
                   >
                     <FaEnvelope />
@@ -155,9 +162,10 @@ function ContactContent() {
               <Fade bottom>
                 <div className={`${styles.item} ${styles.skype}`}>
                   <Clickable
+                    type="link"
                     title="Skype"
                     href="skype:guimaccali?chat"
-                    target="_black"
+                    external
                     noStyle
                   >
                     <FaSkype />

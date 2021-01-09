@@ -23,7 +23,7 @@ function Error({ statusCode }: ErrorFace) {
   return (
     <>
       <ErrorPage statusCode={statusCode} message={message} title="Erro">
-        <Clickable title="Go Back" action={() => goBack()}>
+        <Clickable type="buttom" title="Go Back" action={() => goBack()}>
           <AiOutlineArrowLeft />
           <span>Voltar</span>
         </Clickable>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from './project.module.css'
 
 import Clickable from '../../utils/clickable'
@@ -24,7 +25,14 @@ function Project({
       <article className={styles.cont}>
         <div className={styles.subcont}>
           <figure className={styles.divimg}>
-            <img src={imgUrl} alt={`Logo do projeto ${title}`} />
+            <Image
+              src={imgUrl}
+              alt={`Logo do projeto ${title}`}
+              layout="responsive"
+              width={192}
+              height={192}
+              quality={100}
+            />
           </figure>
           <div className={styles.title}>
             <h3>{title}</h3>
@@ -32,9 +40,10 @@ function Project({
           <div className={styles.links}>
             {repoLink ? (
               <Clickable
+                type="link"
                 title={`Repositório do projeto ${title}`}
                 href={repoLink}
-                target="_blanck"
+                external
                 noStyle
               >
                 <FaGithub />
@@ -44,9 +53,10 @@ function Project({
             )}
             {siteLink ? (
               <Clickable
+                type="link"
                 title={`Web App do ${title}`}
                 href={siteLink}
-                target="_blanck"
+                external
                 noStyle
               >
                 <FaGlobeAmericas />
@@ -56,9 +66,10 @@ function Project({
             )}
             {googlePlayLink ? (
               <Clickable
+                type="link"
                 title={`Link para google play do ${title}`}
                 href={googlePlayLink}
-                target="_blanck"
+                external
                 noStyle
               >
                 <FaGooglePlay />

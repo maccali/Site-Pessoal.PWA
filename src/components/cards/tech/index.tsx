@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from './tech.module.css'
 
 type TechCardFace = {
@@ -10,7 +11,14 @@ function TechCard({ title, imgUrl }: TechCardFace) {
     <>
       <div className={styles.cont}>
         <div className={styles.imgcont}>
-          <img src={imgUrl} alt={`Logo da tecnologia ${title}`} />
+          <Image
+            src={imgUrl}
+            alt={`Logo da tecnologia ${title}`}
+            layout="responsive"
+            width={200}
+            height={200}
+            quality={100}
+          />
         </div>
         <div className={styles.title}>
           <p>{title}</p>

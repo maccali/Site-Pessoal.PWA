@@ -34,9 +34,10 @@ function CareerContent() {
               <Fade bottom>
                 <div className={styles.btn}>
                   <Clickable
+                    type="link"
                     title="Ver meu currículo"
                     href="https://drive.google.com/open?id=1B5wbEIiO2dle-ppZHGW4u1Vni0MTkKzi"
-                    target="_blank"
+                    external
                     textOnly
                   >
                     <span>Ver meu currículo</span>

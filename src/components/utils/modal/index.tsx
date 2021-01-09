@@ -59,6 +59,7 @@ function Modal({ open, setClose, children }: ModalFace) {
                       <img src="/icons/icon126t.png" alt="Site Logo" />
                     </div>
                     <Clickable
+                      type="buttom"
                       title="Fechar menu"
                       action={() => setClose(!open)}
                       iconOnly

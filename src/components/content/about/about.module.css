@@ -28,12 +28,14 @@
   align-content: center;
   justify-content: center;
   margin-bottom: 30px;
+  height: 300px;
 }
 
-.imgcontainer img {
-  max-width: 220px;
-  border-radius: 7px;
-  border: 1px solid #bebebe;
+.imgcontainer div img {
+  min-width: 250px !important;
+  border-radius: 7px !important;
+  border: 1px solid #bebebe !important;
+  object-fit: cover;
 }
 
 .abouttext {
