@@ -25,7 +25,7 @@
     <img alt="Yarn" src="https://img.shields.io/badge/Yarn-1.22.4-0.svg?style=flat-square&color=2c8ebb&labelColor=000000">
   </a>
   <a href="https://nextjs.org" target="_blank">
-    <img alt="NextJS" src="https://img.shields.io/badge/NextJS-9.5.3-0.svg?style=flat-square&color=6191ff&labelColor=000000">
+    <img alt="NextJS" src="https://img.shields.io/badge/NextJS-10.0.x-0.svg?style=flat-square&color=6191ff&labelColor=000000">
   </a>
   <a href="https://getbootstrap.com" target="_blank">
     <img alt="Bootstrap Grid" src="https://img.shields.io/badge/Bootstrap Grid-4.4.1-0.svg?style=flat-square&color=563d7c&labelColor=000000">
@@ -44,7 +44,11 @@
 <p align="center">
   <i>Best Practices</i>
 </p>
+
 <p align="center">
+  <a href="https://nextjs.org/docs/basic-features/image-optimization" target="_blank">
+    <img alt="Next Image Optimization" src="https://img.shields.io/badge/Next Image-Optimization-0.svg?style=flat-square&color=022ba7&labelColor=000000" />
+  </a>
   <a href="https://accounts.google.com/" target="_blank">
     <img alt="Google Analytics" src="https://img.shields.io/badge/Google-Analytics-0.svg?style=flat-square&color=f27904&labelColor=000000" />
   </a>
@@ -83,21 +87,26 @@
 
 </p>
 
-
 ### Tecnologias
+
 > ---
-> * NextJS
-> * ReactJS
-> * PWA
-> * TypeScript 4+
-> * Component Oriented (COP)
+>
+> - NextJS
+> - ReactJS
+> - PWA
+> - TypeScript 4+
+> - Component Oriented (COP)
+>
 > ---
 
 ### Outras Techs
+
 > ---
-> * PageSpeed Insights
-> * Google Analytics
-> * LightHouse 
-> * Search Console
-> * InkScape
+>
+> - PageSpeed Insights
+> - Google Analytics
+> - LightHouse
+> - Search Console
+> - InkScape
+>
 > ---
