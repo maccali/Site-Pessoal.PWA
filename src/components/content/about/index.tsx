@@ -46,7 +46,7 @@ function AboutContent() {
                       sobre mim e minha carreira. Sinta-se em casa.
                     </p>
                     <p>
-                      Sou programador Fullstack a aproximadamente 2 anos, desde
+                      Sou programador Fullstack a aproximadamente 3 anos, desde
                       os 15 anos sou muito ligado a tecnologia tendo desde cedo
                       o contato com ela. Sou entusiasta em novas tecnologias de
                       alto desempenho, escalabilidade e produtividade. Adoro
@@ -54,8 +54,7 @@ function AboutContent() {
                       código limpo.
                     </p>
                     <p>
-                      Atualmente estou cursando o Bacharelado em Engenharia de
-                      Software na
+                      Sou formado em Engenharia de Software na
                       <Clickable
                         type="link"
                         title="UNIVATES"
