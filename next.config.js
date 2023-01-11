@@ -37,6 +37,7 @@ module.exports = withPWA({
     API_URL: process.env.API_URL
   },
   images: {
+    unoptimized: true,
     deviceSizes: [320, 640, 768, 1024, 1600]
   }
 })
