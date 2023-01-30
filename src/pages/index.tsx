@@ -8,6 +8,7 @@ import SpacerContent from '../components/content/spacer'
 import SocialContent from '../components/content/social'
 import AboutContent from '../components/content/about'
 import CareerContent from '../components/content/career'
+import EducationContent from '../components/content/education'
 import InterestsContent from '../components/content/interests'
 import SkillsContent from '../components/content/skills'
 import ContactContent from '../components/content/contact'
@@ -26,6 +27,7 @@ function Home() {
         <InterestsContent />
         <SkillsContent />
         <CareerContent />
+        <EducationContent />
         <ContactContent />
         <FooterContent />
       </main>

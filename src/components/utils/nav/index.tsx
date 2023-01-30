@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade'
 
 // Icons import
 import { FiMenu } from 'react-icons/fi'
-import { GiSwordman, GiUpgrade, GiFlamingo } from 'react-icons/gi'
+import { GiSwordman, GiUpgrade, GiFlamingo, GiBrain } from 'react-icons/gi'
 import { AiFillInfoCircle } from 'react-icons/ai'
 import { IoIosApps } from 'react-icons/io'
 import { MdClose } from 'react-icons/md'
@@ -39,6 +39,12 @@ function Nav() {
       nome: 'Carreira',
       url: '/',
       anchor: 'career'
+    },
+    {
+      icone: <GiBrain />,
+      nome: 'Educacional',
+      url: '/',
+      anchor: 'education'
     },
     {
       icone: <GiFlamingo />,
