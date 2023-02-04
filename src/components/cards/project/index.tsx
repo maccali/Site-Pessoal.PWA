@@ -28,7 +28,6 @@ function Project({
             <Image
               src={imgUrl}
               alt={`Logo do projeto ${title}`}
-              layout="responsive"
               width={192}
               height={192}
               quality={100}

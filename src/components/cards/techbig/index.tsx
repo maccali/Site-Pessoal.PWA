@@ -14,10 +14,9 @@ function TechBigCard({ title, imgUrl }: TechBigCardFace) {
           <Image
             src={imgUrl}
             alt={`Logo da tecnologia ${title}`}
-            layout="responsive"
-            width={300}
-            height={300}
-            quality={100}
+            width={175}
+            height={175}
+            quality={80}
           />
           {/* <img src={imgUrl} alt={`Logo da tecnologia ${title}`} /> */}
         </div>

@@ -6,7 +6,8 @@ export const ClickableStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0e2c54;
+    background-color: #0e2c54 !important;
+    background: #0e2c54 !important;
     padding: 12px;
     border: 0;
     color: #fff;

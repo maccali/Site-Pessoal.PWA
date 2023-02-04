@@ -14,10 +14,9 @@ function TechCard({ title, imgUrl }: TechCardFace) {
           <Image
             src={imgUrl}
             alt={`Logo da tecnologia ${title}`}
-            layout="responsive"
-            width={200}
-            height={200}
-            quality={100}
+            width={130}
+            height={130}
+            quality={80}
           />
         </div>
         <div className={styles.title}>

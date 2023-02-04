@@ -21,7 +21,8 @@
     "strict": true,
     "target": "esnext",
     "noUnusedLocals": false,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "incremental": true
   },
   "exclude": [
     "node_modules"

@@ -51,16 +51,14 @@ function Clickable({
     if (external) {
       if (noStyle) {
         return (
-          <Neutral>
-            <a
-              href={href ? href : ''}
-              title={title}
-              target={target ? target : '_blank'}
-              rel={rel ? rel : 'noopener noreferrer'}
-            >
-              {children}
-            </a>
-          </Neutral>
+          <a
+            href={href ? href : ''}
+            title={title}
+            target={target ? target : '_blank'}
+            rel={rel ? rel : 'noopener noreferrer'}
+          >
+            {children}
+          </a>
         )
       } else {
         return (
@@ -81,20 +79,16 @@ function Clickable({
       if (noStyle) {
         return (
           <Neutral>
-            <Link href={href ? href : ''}>
-              <a title={title} ref={ref}>
-                {children}
-              </a>
+            <Link title={title} ref={ref} href={href ? href : ''}>
+              {children}
             </Link>
           </Neutral>
         )
       } else {
         return (
           <ClickableStyle textOnly={textOnly} iconOnly={iconOnly} pos={pos}>
-            <Link href={href ? href : ''}>
-              <a title={title} ref={ref}>
-                {children}
-              </a>
+            <Link title={title} href={href ? href : ''} ref={ref}>
+              {children}
             </Link>
           </ClickableStyle>
         )

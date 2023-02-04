@@ -42,6 +42,10 @@
   cursor: pointer;
 }
 
+.menu ul button {
+  background-color: #0e2c54;
+}
+
 .menu li a:hover,
 .menu li button:hover {
   background-color: var(--primary-color-var);

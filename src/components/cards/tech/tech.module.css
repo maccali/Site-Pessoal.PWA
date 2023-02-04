@@ -19,15 +19,10 @@
   margin-right: 2px;
 }
 
-.imgcont {
-  padding: 10px !important;
-  height: 130px !important;
-  width: 130px !important;
-}
-
-.imgcont div {
+.title {
+  display: flex;
   width: 100%;
-  height: 100%;
+  justify-content: center;
 }
 
 .imgcont img {
