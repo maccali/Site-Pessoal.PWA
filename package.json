@@ -15,11 +15,6 @@
   "lint-staged": {
     "src/**/*.{ts,tsx}": "npm run lint:fix"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "dependencies": {
     "axios": "^0.21.1",
     "chart.js": "^2.9.3",
