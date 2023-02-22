@@ -28,7 +28,11 @@ function AboutContent() {
             <div className="col-xs col-md-4">
               <Fade left>
                 <div className={styles.imgcontainer}>
-                  <Image src="/imgs/eu.jpg" alt="Minha Foto" layout="fill" />
+                  <Image
+                    src="/imgs/eu.jpg"
+                    alt="Minha Foto"
+                    fill
+                  />
                 </div>
               </Fade>
             </div>
