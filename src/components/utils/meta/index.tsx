@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Head from 'next/head'
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4'
 
 const siteName = 'Guilherme Maccali'
 const title = 'Guilherme Maccali - Programador que da Vida a sua Ideia'
@@ -12,8 +12,7 @@ const siteUrl = 'https://guilhermemaccali.com'
 function Meta() {
   useEffect(() => {
     if (window.location.hostname !== 'localhost') {
-      ReactGA.initialize('UA-158633079-1')
-      ReactGA.pageview(window.location.pathname + window.location.search)
+      ReactGA.initialize('G-JQJKNXGFHG')
     }
   })
 
