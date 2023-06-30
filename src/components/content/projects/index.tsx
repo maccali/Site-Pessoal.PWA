@@ -16,16 +16,16 @@ function ProjectsContent() {
         'https://play.google.com/store/apps/details?id=one.pictu.apod.twa'
     },
     {
+      title: 'Marvel Heroes',
+      imgUrl: '/imgs/projects/marvel-heroes.png',
+      repoLink: 'https://github.com/maccali/Marvel.PWA',
+      siteLink: 'https://marvel-heroes.pictu.one'
+    },
+    {
       title: 'Meu Site',
       imgUrl: '/imgs/projects/maccali.png',
       repoLink: 'https://github.com/maccali/Site-Pessoal',
       siteLink: 'https://guilhermemaccali.com'
-    },
-    {
-      title: 'Marvel Shop',
-      imgUrl: '/imgs/projects/marvel-shop.png',
-      repoLink: 'https://github.com/maccali/marvel-shop',
-      siteLink: 'https://marvel-shop.pictu.one'
     }
   ]
 
