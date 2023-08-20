@@ -50,7 +50,7 @@ function AboutContent() {
                       sobre mim e minha carreira. Sinta-se em casa.
                     </p>
                     <p>
-                      Sou programador Fullstack a aproximadamente 3 anos, desde
+                      Sou programador Fullstack a aproximadamente 6 anos, desde
                       os 15 anos sou muito ligado a tecnologia tendo desde cedo
                       o contato com ela. Sou entusiasta em novas tecnologias de
                       alto desempenho, escalabilidade e produtividade. Adoro
