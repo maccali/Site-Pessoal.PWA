@@ -36,7 +36,7 @@ function CareerContent() {
                   <Clickable
                     type="link"
                     title="Ver meu currículo"
-                    href="https://drive.google.com/file/d/1hwDhw7bGM3-T9VpPRP_k7854DgAZLqXZ/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1460pRWSez9wvyzEB2_p8oxvB8o86MLUj/view?usp=drive_link"
                     external
                     textOnly
                   >

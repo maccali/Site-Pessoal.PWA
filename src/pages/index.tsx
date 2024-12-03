@@ -24,8 +24,8 @@ function Home() {
         <SpacerContent />
         <SocialContent />
         <AboutContent />
-        <InterestsContent />
-        <SkillsContent />
+        {/* <InterestsContent /> */}
+        {/* <SkillsContent /> */}
         <CareerContent />
         <EducationContent />
         <ContactContent />
