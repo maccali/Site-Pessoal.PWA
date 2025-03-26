@@ -48,7 +48,7 @@ function SocialContent() {
                   <Clickable
                     type="link"
                     title="Instagram"
-                    href="https://www.instagram.com/guilherme_maccali"
+                    href="https://www.instagram.com/guilherme.maccali"
                     external
                     noStyle
                   >
