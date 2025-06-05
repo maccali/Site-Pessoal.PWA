@@ -1,5 +1,5 @@
 import React from 'react'
-import Fade from 'react-reveal/Fade'
+// import Fade from 'react-reveal/Fade'
 
 import TechBigCard from '../../cards/techbig'
 
@@ -62,23 +62,23 @@ function InterestsContent() {
         <div className={`container-fluid ${styles.cont}`}>
           <div className="container">
             <div className="col-xs">
-              <Fade buttom>
-                <div className={styles.title}>
-                  <h3>Tecnologias que mais domino</h3>
-                </div>
-              </Fade>
+              {/* <Fade buttom> */}
+              <div className={styles.title}>
+                <h3>Tecnologias que mais domino</h3>
+              </div>
+              {/* </Fade> */}
             </div>
             <div className="col-xs">
               <div>
-                <Fade bottom>
-                  <Slider {...settings}>
-                    {techs.map(item => (
-                      <div key={item.title}>
-                        <TechBigCard title={item.title} imgUrl={item.imgUrl} />
-                      </div>
-                    ))}
-                  </Slider>
-                </Fade>
+                {/* <Fade bottom> */}
+                <Slider {...settings}>
+                  {techs.map(item => (
+                    <div key={item.title}>
+                      <TechBigCard title={item.title} imgUrl={item.imgUrl} />
+                    </div>
+                  ))}
+                </Slider>
+                {/* </Fade> */}
               </div>
             </div>
           </div>

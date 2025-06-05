@@ -1,5 +1,5 @@
 import React from 'react'
-import Fade from 'react-reveal/Fade'
+// import Fade from 'react-reveal/Fade'
 
 import ProjectCard from '../../cards/project'
 
@@ -36,25 +36,25 @@ function ProjectsContent() {
           <div className="container">
             <div className="row">
               <div className="col-xs">
-                <Fade bottom>
-                  <div className={styles.title}>
-                    <h2>Meus projetos</h2>
-                  </div>
-                </Fade>
+                {/* <Fade bottom> */}
+                <div className={styles.title}>
+                  <h2>Meus projetos</h2>
+                </div>
+                {/* </Fade> */}
               </div>
             </div>
             <div className="row">
               {projects.map((item, key) => (
                 <div key={key} className="col-xs col-sm-6 col-md-3">
-                  <Fade bottom>
-                    <ProjectCard
-                      imgUrl={item.imgUrl}
-                      title={item.title}
-                      googlePlayLink={item.googlePlayLink}
-                      repoLink={item.repoLink}
-                      siteLink={item.siteLink}
-                    />
-                  </Fade>
+                  {/* <Fade bottom> */}
+                  <ProjectCard
+                    imgUrl={item.imgUrl}
+                    title={item.title}
+                    googlePlayLink={item.googlePlayLink}
+                    repoLink={item.repoLink}
+                    siteLink={item.siteLink}
+                  />
+                  {/* </Fade> */}
                 </div>
               ))}
             </div>

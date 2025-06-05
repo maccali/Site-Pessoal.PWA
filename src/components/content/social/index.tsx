@@ -1,16 +1,9 @@
 import React from 'react'
-import Fade from 'react-reveal/Fade'
 
 import Clickable from '../../utils/clickable'
 
-import {
-  FaLinkedin,
-  FaFacebook,
-  FaInstagramSquare,
-  FaGithub,
-  FaSkype,
-  FaGitlab
-} from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaTiktok } from 'react-icons/fa'
+import { PiMicrosoftTeamsLogoFill } from 'react-icons/pi'
 
 import styles from './social.module.css'
 
@@ -21,76 +14,52 @@ function SocialContent() {
         <div className={`container-fluid ${styles.cont}`}>
           <div className="container">
             <div className="col-xs">
-              <Fade left>
-                <div className={styles.social}>
-                  <Clickable
-                    type="link"
-                    title="LinkedIn"
-                    href="https://www.linkedin.com/in/guilhermemaccali/"
-                    external
-                    noStyle
-                  >
-                    <div className={styles.linkedin}>
-                      <FaLinkedin />
-                    </div>
-                  </Clickable>
-                  <Clickable
-                    type="link"
-                    title="Facebook"
-                    href="https://www.facebook.com/guimaccali"
-                    external
-                    noStyle
-                  >
-                    <div className={styles.facebook}>
-                      <FaFacebook />
-                    </div>
-                  </Clickable>
-                  <Clickable
-                    type="link"
-                    title="Instagram"
-                    href="https://www.instagram.com/guilherme.maccali"
-                    external
-                    noStyle
-                  >
-                    <div className={styles.instagram}>
-                      <FaInstagramSquare />
-                    </div>
-                  </Clickable>
-                  <Clickable
-                    type="link"
-                    title="Skype"
-                    href="skype:guimaccali?chat"
-                    external
-                    noStyle
-                  >
-                    <div className={styles.skype}>
-                      <FaSkype />
-                    </div>
-                  </Clickable>
-                  <Clickable
-                    type="link"
-                    title="GitHub"
-                    href="https://github.com/maccali"
-                    external
-                    noStyle
-                  >
-                    <div className={styles.github}>
-                      <FaGithub />
-                    </div>
-                  </Clickable>
-                  <Clickable
-                    type="link"
-                    title="GitLab"
-                    href="https://gitlab.com/maccali"
-                    external
-                    noStyle
-                  >
-                    <div className={styles.gitlab}>
-                      <FaGitlab />
-                    </div>
-                  </Clickable>
-                </div>
-              </Fade>
+              <div className={styles.social}>
+                <Clickable
+                  type="link"
+                  title="LinkedIn"
+                  href="https://www.linkedin.com/in/guilhermemaccali/"
+                  external
+                  noStyle
+                >
+                  <div className={styles.linkedin}>
+                    <FaLinkedin />
+                  </div>
+                </Clickable>
+                <Clickable
+                  type="link"
+                  title="Microsoft Teams"
+                  href="https://teams.microsoft.com/l/chat/0/0?users=guimaccali@outlook.com"
+                  external
+                  noStyle
+                >
+                  <div className={styles.teams}>
+                    <PiMicrosoftTeamsLogoFill />
+                  </div>
+                </Clickable>
+                <Clickable
+                  type="link"
+                  title="GitHub"
+                  href="https://github.com/maccali"
+                  external
+                  noStyle
+                >
+                  <div className={styles.github}>
+                    <FaGithub />
+                  </div>
+                </Clickable>
+                <Clickable
+                  type="link"
+                  title="TikTok"
+                  href="https://www.tiktok.com/@guilhermemaccali"
+                  external
+                  noStyle
+                >
+                  <div className={styles.tiktok}>
+                    <FaTiktok />
+                  </div>
+                </Clickable>
+              </div>
             </div>
           </div>
         </div>

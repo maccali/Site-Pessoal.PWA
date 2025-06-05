@@ -79,3 +79,11 @@
 .skype a svg {
   color: var(--skype-color);
 }
+
+.tiktok a svg {
+  color: var(--tiktok-color);
+}
+
+.teams a svg {
+  color: var(--teams-color);
+}

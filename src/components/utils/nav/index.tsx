@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import Fade from 'react-reveal/Fade'
+// import Fade from 'react-reveal/Fade'
 
 // Icons import
 import { FiMenu } from 'react-icons/fi'
@@ -85,39 +85,34 @@ function Nav() {
           <nav className={styles.nav}>
             <ul className={styles.menu}>
               <li>
-                <Fade left>
-                  <div className={styles.img}>
-                    <Clickable type="link" title="Home" href="/" noStyle>
-                      <div className={styles.seta}>
-                        <img src="/imgs/logo.png" alt="Site Logo" />
-                      </div>
-                    </Clickable>
-                  </div>
-                </Fade>
+                {/* <Fade left> */}
+                <div className={styles.img}>
+                  <Clickable type="link" title="Home" href="/" noStyle>
+                    <div className={styles.seta}>
+                      <img src="/imgs/logo.png" alt="Site Logo" />
+                    </div>
+                  </Clickable>
+                </div>
+                {/* </Fade> */}
               </li>
             </ul>
-            <Fade right>
-              <ul className={styles.menu}>
-                <Clickable
-                  type="link"
-                  title="Projetos"
-                  href="/projetos"
-                  noStyle
-                >
-                  <IoIosApps />
-                  <p>Projetos</p>
-                </Clickable>
-                <Clickable
-                  type="buttom"
-                  title="Abrir Menu"
-                  action={() => setMenuActive(!menuActive)}
-                  noStyle
-                >
-                  <FiMenu />
-                  <p>Menu</p>
-                </Clickable>
-              </ul>
-            </Fade>
+            {/* <Fade right> */}
+            <ul className={styles.menu}>
+              <Clickable type="link" title="Projetos" href="/projetos" noStyle>
+                <IoIosApps />
+                <p>Projetos</p>
+              </Clickable>
+              <Clickable
+                type="buttom"
+                title="Abrir Menu"
+                action={() => setMenuActive(!menuActive)}
+                noStyle
+              >
+                <FiMenu />
+                <p>Menu</p>
+              </Clickable>
+            </ul>
+            {/* </Fade> */}
           </nav>
           <div
             className={
