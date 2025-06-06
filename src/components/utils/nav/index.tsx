@@ -69,7 +69,7 @@ function Nav() {
   }
 
   return (
-    <div className="fixed z-50 w-full bg-[#0e2c54]">
+    <aside className="fixed z-50 w-full bg-[#0e2c54]">
       <div className="container mx-auto ">
         <nav className="flex justify-between items-center h-[65px] px-2.5">
           <ul className="flex items-center h-full m-0 p-0">
@@ -131,7 +131,7 @@ function Nav() {
                 action={() => setMenuActive(false)}
                 noStyle
               >
-                <button className="flex items-center justify-center w-[45px] h-[45px] bg-[#0e2c54] rounded-full hover:bg-[#637fff] transition">
+                <button className="flex items-center justify-center w-[45px] h-[45px] bg-[#0e2c54] rounded-full hover:bg-[#637fff] hover:scale-110 transition">
                   <MdClose className="text-white w-[26px] h-[26px]" />
                 </button>
               </Clickable>
@@ -160,8 +160,8 @@ function Nav() {
                   action={() => setAnchor(link.anchor!)}
                   noStyle
                 >
-                  <div className="flex items-center px-8 py-2 hover:bg-[#637fff] transition cursor-pointer">
-                    <span className="w-[50px] flex justify-start">
+                  <div className="group flex items-center px-8 py-3 hover:bg-[#637fff] transition duration-400 cursor-pointer">
+                    <span className="group-hover:scale-150 w-[50px] flex justify-start transition">
                       {link.icone}
                     </span>
                     <p className="m-0 text-xm font-montserrat">{link.nome}</p>
@@ -175,8 +175,8 @@ function Nav() {
                   href={`${link.url}${link.anchor ? `#${link.anchor}` : ''}`}
                   noStyle
                 >
-                  <div className="flex items-center px-8 py-2 hover:bg-[#637fff] transition cursor-pointer">
-                    <span className="w-[50px] flex justify-start">
+                  <div className="group flex items-center px-8 py-3 hover:bg-[#637fff] duration-400 transition cursor-pointer">
+                    <span className="group-hover:scale-150 w-[50px] flex justify-start transition">
                       {link.icone}
                     </span>
                     <p className="m-0 text-xm font-montserrat">{link.nome}</p>
@@ -187,7 +187,7 @@ function Nav() {
           </div>
         </div>
       </div>
-    </div>
+    </aside>
   )
 }
 

@@ -1,5 +1,3 @@
-// app/layout.tsx
-
 import './globals.css'
 import { Montserrat } from 'next/font/google'
 import type { Metadata } from 'next'
@@ -11,7 +9,7 @@ const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-montserrat',
   display: 'swap',
-  weight: ['400', '500', '700']
+  weight: ['300', '400', '500', '600', '700', '800', '900']
 })
 
 export const metadata: Metadata = {
