@@ -46,10 +46,33 @@ function Clickable({
     }
   }, [ref.current])
 
-  const defaultClasses =
-    'flex items-center justify-center px-4 py-2 text-white text-sm font-bold bg-[#0e2c54] shadow-md transition-all duration-200 transform skew-x-[42deg] rounded-tr-[42px] rounded-bl-[42px] hover:bg-[#637fff] hover:skew-x-[-42deg] hover:rounded-tl-[42px] hover:rounded-br-[42px]'
+  const defaultClasses = `
+  group
+  flex items-center justify-center 
+  px-8 py-3 
+  text-white text-sm font-bold 
+  bg-[#0e2c54] shadow-md 
+  transition-all duration-300 
+  transform
+  
+  skew-x-[42deg] 
+  rounded-tr-[0px] rounded-bl-[0px] 
+  rounded-tl-[45px] rounded-br-[45px] 
+  
+  hover:bg-[#637fff] 
+  hover:skew-x-[-42deg] 
+  hover:rounded-tl-[0px] hover:rounded-br-[0px]
+  hover:rounded-tr-[45px] hover:rounded-bl-[45px] 
+`
 
-  const innerSkewFix = 'transform -skew-x-[42deg] flex items-center gap-2'
+  const innerSkewFix = `
+  transform 
+  skew-x-[-42deg] 
+  group-hover:skew-x-[42deg] 
+  flex items-center gap-2   
+  transition-all duration-200 
+  transform
+  `
 
   if (type === 'link') {
     if (external) {
