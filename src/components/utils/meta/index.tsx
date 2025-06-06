@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect } from 'react'
 import Head from 'next/head'
 import ReactGA from 'react-ga4'

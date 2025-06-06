@@ -1,13 +1,10 @@
-/* eslint-disable react/jsx-no-target-blank */
-/* eslint-disable jsx-a11y/anchor-is-valid */
+'use client'
+
 import React, { ReactNode, useRef, useEffect, useState } from 'react'
 import Link from 'next/link'
-
-import { ClickableStyle, ClickableSpiner, Neutral } from './styles'
-
 import { ClipLoader } from 'react-spinners'
 
-type ClickableFace = {
+type ClickableProps = {
   type: 'link' | 'buttom'
   title: string
   children: ReactNode
@@ -21,6 +18,7 @@ type ClickableFace = {
   external?: boolean
   action?: () => void
   load?: boolean
+  className?: string
 }
 
 function Clickable({
@@ -33,111 +31,105 @@ function Clickable({
   iconOnly,
   load,
   noStyle,
-  pos,
   rel,
   target,
-  textOnly
-}: ClickableFace) {
+  className
+}: ClickableProps) {
   const ref = useRef(null)
-  const [width, setWidth] = useState<number>(0)
-  const [height, setHeight] = useState<number>(0)
+  const [width, setWidth] = useState(0)
+  const [height, setHeight] = useState(0)
 
   useEffect(() => {
-    ref.current ? setWidth(ref.current.offsetWidth) : 0
-    ref.current ? setHeight(ref.current.offsetHeight) : 0
+    if (ref.current) {
+      setWidth((ref.current as any).offsetWidth)
+      setHeight((ref.current as any).offsetHeight)
+    }
   }, [ref.current])
+
+  const defaultClasses =
+    'flex items-center justify-center px-4 py-2 text-white text-sm font-bold bg-[#0e2c54] shadow-md transition-all duration-200 transform skew-x-[42deg] rounded-tr-[42px] rounded-bl-[42px] hover:bg-[#637fff] hover:skew-x-[-42deg] hover:rounded-tl-[42px] hover:rounded-br-[42px]'
+
+  const innerSkewFix = 'transform -skew-x-[42deg] flex items-center gap-2'
 
   if (type === 'link') {
     if (external) {
       if (noStyle) {
         return (
           <a
-            href={href ? href : ''}
+            href={href || ''}
             title={title}
-            target={target ? target : '_blank'}
-            rel={rel ? rel : 'noopener noreferrer'}
+            target={target || '_blank'}
+            rel={rel || 'noopener noreferrer'}
+            className={className}
           >
             {children}
           </a>
         )
       } else {
         return (
-          <ClickableStyle textOnly={textOnly} iconOnly={iconOnly} pos={pos}>
-            <a
-              title={title}
-              ref={ref}
-              target={target ? target : '_blank'}
-              rel={rel ? rel : 'noopener noreferrer'}
-              href={href ? href : ''}
-            >
-              {children}
-            </a>
-          </ClickableStyle>
+          <a
+            title={title}
+            ref={ref}
+            target={target || '_blank'}
+            rel={rel || 'noopener noreferrer'}
+            href={href || ''}
+            className={`${defaultClasses} ${className || ''}`}
+          >
+            <span className={innerSkewFix}>{children}</span>
+          </a>
         )
       }
     } else {
       if (noStyle) {
         return (
-          <Neutral>
-            <Link title={title} ref={ref} href={href ? href : ''}>
-              {children}
-            </Link>
-          </Neutral>
+          <Link title={title} ref={ref} href={href || ''} className={className}>
+            {children}
+          </Link>
         )
       } else {
         return (
-          <ClickableStyle textOnly={textOnly} iconOnly={iconOnly} pos={pos}>
-            <Link title={title} href={href ? href : ''} ref={ref}>
-              {children}
-            </Link>
-          </ClickableStyle>
+          <Link
+            title={title}
+            href={href || ''}
+            ref={ref}
+            className={`${defaultClasses} ${className || ''}`}
+          >
+            <span className={innerSkewFix}>{children}</span>
+          </Link>
         )
       }
     }
   } else {
     if (load) {
       return (
-        <>
-          <ClickableSpiner
-            style={{
-              width: Number(width),
-              height: Number(height)
-            }}
-          >
-            <ClipLoader size={23} color="#00d6b4" />
-          </ClickableSpiner>
-        </>
+        <div
+          style={{ width, height }}
+          className="flex justify-center items-center"
+        >
+          <ClipLoader size={23} color="#00d6b4" />
+        </div>
       )
     }
 
     if (noStyle) {
       return (
-        <Neutral>
-          <button title={title} onClick={() => (action ? action() : '')}>
-            {children}
-          </button>
-        </Neutral>
+        <button title={title} onClick={() => action?.()} className={className}>
+          {children}
+        </button>
       )
     } else {
       return (
-        <ClickableStyle textOnly={textOnly} iconOnly={iconOnly} pos={pos}>
-          <button
-            title={title}
-            ref={ref}
-            onClick={() => (action ? action() : '')}
-          >
-            {children}
-          </button>
-        </ClickableStyle>
+        <button
+          title={title}
+          ref={ref}
+          onClick={() => action?.()}
+          className={`${defaultClasses} ${className || ''}`}
+        >
+          <span className={innerSkewFix}>{children}</span>
+        </button>
       )
     }
   }
-
-  return (
-    <Neutral>
-      <p>Problem</p>
-    </Neutral>
-  )
 }
 
 export default Clickable
