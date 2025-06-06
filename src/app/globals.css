@@ -2,6 +2,17 @@
 
 @theme {
   --font-montserrat: 'Montserrat', 'sans-serif';
+  --color-github: #333;
+  --color-linkedin: #0e76a8;
+  --color-facebook: #3b5998;
+  --color-whatsapp: #25d366;
+  --color-instagram: #c13584;
+  --color-skype: #00aff0;
+  --color-discord: #7080ce;
+  --color-gitlab: #fc6d27;
+  --color-mail: #637fff;
+  --color-tiktok: #010101;
+  --color-teams: #464eb8;
 }
 
 @font-face {
