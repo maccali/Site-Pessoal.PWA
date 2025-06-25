@@ -1,59 +1,60 @@
 import React from 'react'
-// import Fade from 'react-reveal/Fade'
-
 import { GiTechnoHeart, GiCoffeeCup } from 'react-icons/gi'
 import { FaGithub } from 'react-icons/fa'
 
 import Clickable from '../../utils/clickable'
 
-import styles from './footer.module.css'
-
 function FooterContent() {
+  const iconBase =
+    'transition-transform duration-200 text-[aliceblue] h-[20px] w-[20px] mx-[9px]'
+  const iconHover = 'group-hover:scale-[1.7]'
+  const textHoverHeart = 'group-hover:text-[#e31b23]'
+  const textHoverCoffee = 'group-hover:text-[#ab7f60]'
+
   return (
-    <>
-      <footer className={`container-fluid ${styles.cont}`}>
-        <div className="container">
-          <div className="col-xs col-md-6">
-            {/* <Fade left> */}
-            <div className={`${styles.dedication} ${styles.left}`}>
-              Com todo o meu
-              <span className={`${styles.icon} ${styles.heart}`}>
-                <Clickable type="link" title="Amor" noStyle>
-                  <GiTechnoHeart />
-                </Clickable>
-              </span>
-              e
-              <span className={`${styles.icon} ${styles.coffee}`}>
-                <Clickable type="link" title="Café" noStyle>
-                  <GiCoffeeCup />
-                </Clickable>
-              </span>
-              .
-            </div>
-            {/* </Fade> */}
+    <footer className="bg-[#0e2c54] py-4 font-montserrat">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center text-[aliceblue] text-sm">
+          {/* Esquerda */}
+          <div className="flex items-center my-2">
+            Com todo o meu
+            <span className="group inline-flex items-center">
+              <Clickable type="link" title="Amor" noStyle>
+                <GiTechnoHeart
+                  className={`${iconBase} ${iconHover} ${textHoverHeart}`}
+                />
+              </Clickable>
+            </span>
+            e
+            <span className="group inline-flex items-center">
+              <Clickable type="link" title="Café" noStyle>
+                <GiCoffeeCup
+                  className={`${iconBase} ${iconHover} ${textHoverCoffee}`}
+                />
+              </Clickable>
+            </span>
+            .
           </div>
-          <div className="col-xs col-md-6">
-            {/* <Fade right> */}
-            <div className={`${styles.dedication} ${styles.right}`}>
-              Siga para o repositório
-              <span className={`${styles.icon} ${styles.git}`}>
-                <Clickable
-                  type="link"
-                  title="Open Source"
-                  href="https://github.com/maccali/Site-Pessoal"
-                  external
-                  noStyle
-                >
-                  <FaGithub />
-                </Clickable>
-              </span>
-              .
-            </div>
-            {/* </Fade> */}
+
+          {/* Direita */}
+          <div className="flex items-center my-2">
+            Siga para o repositório
+            <span className="group inline-flex items-center">
+              <Clickable
+                type="link"
+                title="Open Source"
+                href="https://github.com/maccali/Site-Pessoal"
+                external
+                noStyle
+              >
+                <FaGithub className={`${iconBase} ${iconHover}`} />
+              </Clickable>
+            </span>
+            .
           </div>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   )
 }
 

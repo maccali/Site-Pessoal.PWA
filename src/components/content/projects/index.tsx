@@ -1,9 +1,5 @@
 import React from 'react'
-// import Fade from 'react-reveal/Fade'
-
 import ProjectCard from '../../cards/project'
-
-import styles from './projects.module.css'
 
 function ProjectsContent() {
   const projects = [
@@ -30,38 +26,31 @@ function ProjectsContent() {
   ]
 
   return (
-    <>
-      <section id="projects">
-        <div className={`container-fluid ${styles.cont}`}>
-          <div className="container">
-            <div className="row">
-              <div className="col-xs">
-                {/* <Fade bottom> */}
-                <div className={styles.title}>
-                  <h2>Meus projetos</h2>
-                </div>
-                {/* </Fade> */}
-              </div>
-            </div>
-            <div className="row">
-              {projects.map((item, key) => (
-                <div key={key} className="col-xs col-sm-6 col-md-3">
-                  {/* <Fade bottom> */}
-                  <ProjectCard
-                    imgUrl={item.imgUrl}
-                    title={item.title}
-                    googlePlayLink={item.googlePlayLink}
-                    repoLink={item.repoLink}
-                    siteLink={item.siteLink}
-                  />
-                  {/* </Fade> */}
-                </div>
-              ))}
-            </div>
-          </div>
+    <section
+      id="projects"
+      className="bg-[#ededed] py-10 md:py-20 min-h-[calc(100vh-163px)]"
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex justify-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-light font-montserrat">
+            Meus projetos
+          </h2>
         </div>
-      </section>
-    </>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          {projects.map((item, key) => (
+            <div key={key}>
+              <ProjectCard
+                imgUrl={item.imgUrl}
+                title={item.title}
+                googlePlayLink={item.googlePlayLink}
+                repoLink={item.repoLink}
+                siteLink={item.siteLink}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 
