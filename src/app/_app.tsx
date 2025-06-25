@@ -2,7 +2,7 @@ import React from 'react'
 
 // import App from "next/app";
 import type { AppProps /*, AppContext */ } from 'next/app'
-
+import { GoogleAnalytics } from 'nextjs-google-analytics'
 // External Libs
 import '../../public/libs/bootstrap/bootstrap.min.css'
 
@@ -21,9 +21,9 @@ import Meta from '../components/utils/meta'
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Meta />
       <Nav />
       <Component {...pageProps} />
+      <GoogleAnalytics trackPageViews />
     </>
   )
 }

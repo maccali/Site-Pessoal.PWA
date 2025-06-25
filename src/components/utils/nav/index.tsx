@@ -130,10 +130,9 @@ function Nav() {
                 title="Fechar Menu"
                 action={() => setMenuActive(false)}
                 noStyle
+                className="flex items-center justify-center w-[45px] h-[45px] bg-[#0e2c54] rounded-full hover:bg-[#637fff] hover:scale-110 transition"
               >
-                <button className="flex items-center justify-center w-[45px] h-[45px] bg-[#0e2c54] rounded-full hover:bg-[#637fff] hover:scale-110 transition">
-                  <MdClose className="text-white w-[26px] h-[26px]" />
-                </button>
+                <MdClose className="text-white w-[26px] h-[26px]" />
               </Clickable>
             </div>
           )}

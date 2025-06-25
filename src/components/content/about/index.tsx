@@ -25,10 +25,10 @@ function AboutContent() {
             <div className="w-full md:w-1/3 flex justify-center mb-8 md:mb-0">
               <div className="relative w-[300px] h-[400px]">
                 <Image
-                  src="/imgs/eu.jpg"
+                  src="/imgs/eu2025.jpg"
                   alt="Minha Foto"
                   fill
-                  className="rounded border border-gray-400 object-cover"
+                  className="rounded-3xl border border-gray-400 object-cover"
                 />
               </div>
             </div>

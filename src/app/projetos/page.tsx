@@ -10,15 +10,12 @@ import ProjectsContent from '../../components/content/projects'
 import FooterContent from '../../components/content/footer'
 
 export const metadata: Metadata = {
-  title: 'Maccali, Guilherme'
+  title: 'Projetos'
 }
 
 function Projetos() {
   return (
     <>
-      <Head>
-        <title>Maccali, Guilherme - Projetos</title>
-      </Head>
       <main>
         <SpacerContent />
         <SocialContent />

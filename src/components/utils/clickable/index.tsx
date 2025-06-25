@@ -28,7 +28,6 @@ function Clickable({
   action,
   external,
   href,
-  iconOnly,
   load,
   noStyle,
   rel,

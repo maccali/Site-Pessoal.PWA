@@ -2,7 +2,6 @@ import './globals.css'
 import { Montserrat } from 'next/font/google'
 import type { Metadata } from 'next'
 import { ReactNode } from 'react'
-import { Analytics } from './_analytics'
 import Nav from '../components/utils/nav'
 
 const montserrat = Montserrat({
@@ -14,7 +13,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Guilherme Maccali - Programador que da Vida a sua Ideia',
+    default: 'Guilherme Maccali - Vida a sua Ideia',
     template: '%s | Guilherme Maccali'
   },
   description:
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://guilhermemaccali.com'),
   themeColor: '#0E2C54',
   openGraph: {
-    title: 'Guilherme Maccali - Programador que da Vida a sua Ideia',
+    title: 'Guilherme Maccali - Vida a sua Ideia',
     description:
       'Olá, sou programador Fullstack, Entusiasta em tecnologias produtivas, Adoro desafios e fazer belas aplicações tomarem vida através de código limpo',
     url: '/',
@@ -40,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Guilherme Maccali - Programador que da Vida a sua Ideia',
+    title: 'Guilherme Maccali - Vida a sua Ideia',
     description:
       'Olá, sou programador Fullstack, Entusiasta em tecnologias produtivas, Adoro desafios e fazer belas aplicações tomarem vida através de código limpo',
     creator: 'Guilherme Maccali',
@@ -58,13 +57,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
-      <Nav />
       <body
         className={`${montserrat.variable} ${montserrat.variable} antialiased`}
       >
+        <Nav />
         {children}
       </body>
-      <Analytics />
     </html>
   )
 }

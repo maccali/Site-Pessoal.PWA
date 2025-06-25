@@ -80,7 +80,7 @@ function ContactContent() {
             </div>
           </div>
           <div>
-            <h3 className="font-bold mb-4">
+            <h3 className="font-montserrat font-bold mb-4">
               Mandar mensagens para mim no WhatsApp:
             </h3>
             <div className="group inline-flex items-center mb-4 transition-all">
